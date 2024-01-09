@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <!-- Mirrored from IEPS.dreamguystech.com/html/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jan 2023 10:43:37 GMT -->
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=0"
+    />
+    <title>Agriverse Login</title>
+
+    <link rel="icon" type="image/x-icon" href="{% static 'app/img/main_logo.png' %} ">
+
+    <link rel="stylesheet" href="/static/app/login_static/css/bootstrap.min.css" />
+
+    <link
+      rel="stylesheet"
+      href="/static/app/login_static/plugins/fontawesome/css/fontawesome.min.css"
+    />
+    <link rel="stylesheet" href="/static/app/login_static/plugins/fontawesome/css/all.min.css" />
+
+    <link rel="stylesheet" href="/static/app/login_static/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="/static/app/login_static/css/owl.theme.default.min.css" />
+
+    <link rel="stylesheet" href="/static/app/login_static/plugins/feather/feather.css" />
+
+    <link rel="stylesheet" href="/static/app/login_static/css/style.css" />
+
+
+    
+    <style>
+
+
+        .or_line {
+            display: flex;
+            align-items: center;
+            margin: 5px 0px;
+        }
+
+        .left_line {
+            width: 100%;
+            height: 2px;
+            background: #cdcdcd;
+        }
+
+        .or_text {
+            margin: 0px 10px;
+        }
+
+        .rigth_line {
+            width: 100%;
+            height: 2px;
+            background: #cdcdcd;
+        }
+
+
+        .socialaccount_provider.google {
+          background: #970000;
+          padding: 10px;
+          margin: 7px 0px;
+          text-align: center;
+          color: white;
+          border-radius: 5px;
+          width: 100%;
+          border: none;
+      }
+
+
+      body {
+        background-color: #e7e7e7;
+        background-image: url(/static/app/img/bg-2.png);
+        background-size: 100vw 100vh;
+        background-repeat: no-repeat;
+
+    }
+
+    .login-wrap-bg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 12px;
+    }
+
+    .log-wrap .login-wrapper {
+  
+      height: auto;
+      background: white;
+      
+    border-radius: 13px;
+
+  }
+
+
+  .forgot {
+    margin-bottom: 10px;
+}
+
+
+  .login-wrapper .loginbox {
+ 
+    padding: 20px 25px;
+}
+
+
+.login-wrapper .loginbox label {
+  margin-bottom: 0px;
+ 
+}
+
+
+.login-wrapper .loginbox h1 {
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 9px;
+  color: #000;
+}
+
+
+.login-wrapper .loginbox .img-logo {
+  margin-bottom: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+
+.login-wrapper .loginbox .img-logo img {
+  width: 50px;
+}
+
+
+.mail_footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+
+@media screen and (max-width:770px){
+  
+  .login-wrap-bg {
+    flex: 0 0 auto;
+   
+    padding: 20px;
+    position: unset;
+    transform: unset;
+  }
+  .mail_footer {
+    position: unset;
+
+  }
+  
+
+  
+
+  }
+  
+
+
+
+    </style>
+
+
+  </head>
+  <body>
+    <div class="main-wrapper log-wrap">
+      <div class="row">
+       
+        <div class="col-md-3 login-wrap-bg">
+          <div class="login-wrapper">
+            <div class="loginbox">
+              <div class="w-100">
+                <div class="img-logo">
+                  <img
+                    src="/static/app/img/main_logo.png"
+                    class="img-fluid"
+                    alt="Logo"
+                  />
+                  <div class="back-home">
+                    <a href="/">Back to Home</a>
+                  </div>
+                </div>
+                <h1>Login into Your Account</h1>
+                <div class="msg">
+                    {%if messages %}
+                    {%for message in messages %}
+                    {% load static %}
+    
+
+                    <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+                        <strong></strong>{{message}}.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+
+                    {%endfor%}
+                    {%endif%}
+                </div>
+                <form
+                 method="POST"
+                >
+                {% csrf_token %}
+                  <div class="form-group">
+                    <label class="form-control-label">Username</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter your Username"
+                      name="loginusername"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-control-label">Password</label>
+                    <div class="pass-group">
+                      <input
+                        type="password"
+                        class="form-control pass-input"
+                        placeholder="Enter your password"
+                        name="loginPassword"
+                      />
+                      <span class="feather-eye toggle-password"></span>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                   {{form.captcha}}
+                  </div>
+
+                  <div class="forgot">
+                    <span
+                      ><a class="forgot-link" href="/password_reset/"
+                        >Forgot Password ?</a
+                      ></span
+                    >
+                  </div>
+                  {% comment %} <div class="remember-me">
+                    <label
+                      class="custom_check mr-2 mb-0 d-inline-flex remember-me"
+                    >
+                      Remember me
+                      <input type="checkbox" name="radio" />
+                      <span class="checkmark"></span>
+                    </label>
+                  </div> {% endcomment %}
+                  <div class="d-grid">
+                    <button class="btn button-green  btn-start" type="submit">
+                      Log In
+                    </button>
+                  </div>
+
+                </form>
+
+                  <div class="or_line">
+					<div class="left_line"></div>
+					<div class="or_text">OR</div>
+					<div class="rigth_line"></div>
+				</div>
+
+                <div class="d-grid">
+                    <button class="btn btn-primary btn-start" type="button">
+                      <a href="/signup/" class="text-white d-block w-100">sign Up</a> 
+                    </button>
+                </div>
+
+                <div class="d-grid">
+                  <form action="/accounts/google/login/?next=/profile/" method="POST">
+                    {% csrf_token %}
+                    <button type="submit" class="socialaccount_provider google"><i class="fab fa-google-plus-g"></i> Login With Google</button>
+                  <form>   
+                </div>
+
+
+
+               
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="mail_footer" style="padding: 12px 0px;">
+      <div class="" style="">
+        <div style="padding: 10px; text-align: center">
+          <a href="https://www.facebook.com/theagriverse/" target="_blank" class=""><img src="/static/app/img/facebook.png" alt="icon" style="width: 30px; height: 30px"></a>
+          <a href="https://instagram.com/theagriverse" target="_blank" class=""><img src="/static/app/img/instagram.png" alt="icon" style="width: 30px; height: 30px"></a>
+          <a href="https://www.linkedin.com/in/agriverse/" target="_blank" class=""><img src="/static/app/img/linkedin.png" alt="icon" style="width: 30px; height: 30px"></a>
+          <a href="https://twitter.com/TheAgriverse" target="_blank" class=""><img src="/static/app/img/twitter.png" alt="icon" style="width: 30px; height: 30px"></a>
+          <a href="https://youtube.com/channel/UCcstqRwtxzEJSz2ItuRdsSA" target="_blank" class=""><img src="/static/app/img/youtube.png" alt="icon" style="width: 30px; height: 30px"></a>
+        </div>
+      </div>
+
+      <div class="footer_contect_details">
+        <p style="
+text-align: center;
+margin: 0px 0px;
+color: #6e6e6e;
+">For More Information : info@agriverse.com</p>
+      </div>
+
+      <div class="mail_footer_copyright">
+        <p style="
+text-align: center;
+margin: 3px 0px;
+color: #6e6e6e;
+font-size: 13px;
+">
+{% now "Y" as current_year %}
+© AGRIVERSE {{current_year}}. All rights reserved</p>
+      </div>
+
+    </div>
+</div>
+
+
+    <script src="/static/app/login_static/js/jquery-3.6.0.min.js"></script>
+
+
+    <script src="/static/app/login_static/js/bootstrap.bundle.min.js"></script>
+
+    <script src="/static/app/login_static/js/owl.carousel.min.js"></script>
+
+    <script src="/static/app/login_static/js/script.js"></script>
+
+
+  </body>
+
+  <!-- Mirrored from IEPS.dreamguystech.com/html/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jan 2023 10:43:38 GMT -->
+</html>

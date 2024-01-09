@@ -1,0 +1,108 @@
+{% extends 'app/dashboard_base.html' %}
+{% block title %}Swap{% endblock title %}
+{% block head %}{% endblock head %}
+{% block css %}{% endblock css %}
+
+
+{% block body %}
+
+{% comment %} style="background-image:url('/static/app/img/swap-bg.png')" {% endcomment %}
+
+<div class="middle swap-bg px-0" >
+    <div
+    style="justify-content: flex-start !important; padding:30px;"
+    class="user-greet-div"
+    >
+    <img src="/static/app/img/swap.png" alt="swap-img" class="main-swap-img" />
+    <div><div class="swap-head">Swap</div></div>
+    </div>
+    <div class="exchange-main">
+    <iframe
+        style="
+        width: -webkit-fill-available;
+        height: 100vh;
+        min-height: 100px;
+        overflow: hidden;
+        "
+        class="swap-iframe"
+        src="https://mellow-sable-685229.netlify.app/#/swap?outputCurrency=0x32F738738F238865f8506593c6e2613647eCE478"
+        title="Agriverse Swap"
+    ></iframe>
+    </div>
+</div>
+<div class="right">
+    <p class="stats-head">Live Statistics</p>
+    <div class="total-stats-div">
+    <div class="NFTrees-planted">
+        <div class="stats-info">
+        <div class="stats-num-left">574</div>
+        <div class="stats-txt">Total NFTrees Planted</div>
+        </div>
+    </div>
+    <div class="co2-absorbed">
+        <div class="stats-info">
+        <div class="stats-num-right">53.7k</div>
+        <div class="stats-txt">Total Co2 Absorbed (kg)</div>
+        </div>
+    </div>
+    </div>
+    <p class="stats-head">New NFTrees Releases</p>
+    <div class="new-nftrees-release-div">
+    <div class="row">
+        <div
+        class="new-nftrees-release-item col col-12 col-md-12 col-lg-5"
+        >
+        <img src="/static/app/img/cow.png" alt="nft-img" />
+        <div class="new-nftrees-info">
+            <div class="nftree-release-name">Cow</div>
+            <div class="nftree-release-location">
+            <img src="/static/app/img/location-icon.svg" alt="" />Nairobi, Kenya
+            </div>
+        </div>
+        </div>
+        <div
+        class="new-nftrees-release-item col col-12 col-md-12 col-lg-5"
+        >
+        <img src="/static/app/img/two-trees.png" alt="nft-img" />
+        <div class="new-nftrees-info">
+            <div class="nftree-release-name">Olive Tree NFT</div>
+            <div class="nftree-release-location">
+            <img src="/static/app/img/location-icon.svg" alt="" />Porto, Portugal
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="row">
+        <div
+        class="new-nftrees-release-item col col-12 col-md-12 col-lg-5"
+        >
+        <img src="/static/app/img/two-trees.png" alt="nft-img" />
+        <div class="new-nftrees-info">
+            <div class="nftree-release-name">Olive Tree NFT</div>
+            <div class="nftree-release-location">
+            <img src="/static/app/img/location-icon.svg" alt="" />Porto, Portugal
+            </div>
+        </div>
+        </div>
+        <div
+        class="new-nftrees-release-item col col-12 col-md-12 col-lg-5"
+        >
+        <img src="/static/app/img/two-trees.png" alt="nft-img" />
+        <div class="new-nftrees-info">
+            <div class="nftree-release-name">Olive Tree NFT</div>
+            <div class="nftree-release-location">
+            <img src="/static/app/img/location-icon.svg" alt="" />Porto, Portugal
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+
+
+{% endblock body %}
+
+
+
+{% block js %}{% endblock js %}

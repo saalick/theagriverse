@@ -1,0 +1,55 @@
+
+{% extends 'app/dashboard_base.html' %}
+{% block title %}BUY NOW{% endblock title %}
+{% block head %}{% endblock head %}
+{% block css %}{% endblock css %}
+
+
+{% block body %}
+
+
+
+<div class="middle buy-middle">
+    <div class="buy-one w-100 mx-0">
+    <div
+        style="justify-content: flex-start !important"
+        class="user-greet-div"
+    >
+        <img src="/static/app/img/buy.png" alt="swap-img" class="main-buy-img" />
+        <div><div class="swap-head">Buy</div></div>
+    </div>
+    <div class="exchange-main">
+        {% comment %} <iframe
+        src="https://widget.onramper.com?color=266677&amp;supportSell=false&amp;defaultCrypto=BNB&amp;defaultFiat=INR&amp;onlyCryptos=BNB&amp;darkMode=true&amp;supportSwap=false&amp;apiKey=pk_test_x5M_5fdXzn1fxK04seu0JgFjGsu7CH8lOvS9xZWzuSM0"
+        height="660px"
+        width="900px"
+        style="border-radius: 20px"
+        title="Onramper widget"
+        frameborder="0"
+        allow="accelerometer; autoplay; camera; gyroscope; payment"
+        ></iframe>  {% endcomment %}
+
+        <iframe
+        style="border-radius: 20px; margin: auto"
+        src="https://buy.onramper.com?color=266677&amp;defaultFiat=INR&amp;themeName={% if request.user.userprofile_set.first.color_theme == "Dark" or request.session.theme_mode == "Dark" %}dark{% else %}light{% endif %}&amp;supportSwap=false&amp;"
+        height="660px"
+        width="100%"
+        title="Onramper widget"
+        frameborder="0"
+        allow="accelerometer; autoplay; camera; gyroscope; payment">
+      </iframe>
+
+
+
+    </div>
+    </div>
+</div>
+
+    
+
+
+{% endblock body %}
+
+
+    
+{% block js %}{% endblock js %}

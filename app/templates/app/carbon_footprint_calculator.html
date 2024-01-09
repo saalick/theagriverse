@@ -1,0 +1,71 @@
+{% extends 'app/dashboard_base.html' %}
+{% block title %}Carbon Footprint Calculator{% endblock title %}
+{% block head %}{% endblock head %}
+{% block css %}
+div#integrate {
+    background: aqua;
+}
+
+
+
+.middle{
+    width:88%
+}
+
+
+
+@media screen and (max-width:700px){
+
+    .middle{
+        width: 100%;
+        padding: 16px 10px;
+    }
+
+}
+
+
+
+
+{% endblock css %}
+
+
+{% block body %}
+
+
+<div class="middle">
+
+<div class="main_calcu_container">
+
+    {% comment %} <iframe width="710" height="1300" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" src="https://calculator.carbonfootprint.com/calculator.aspx"></iframe> {% endcomment %}
+
+    <iframe src="https://coolclimate-calculator-ui.firebaseapp.com?utm_source=indigo&amp;utm_medium=iframe&amp;utm_campaign=carboncalculator" id="cc-calculator" frameborder="0"  style="width: 100%; min-width: 100%; height: 100vh;"></iframe>
+
+
+</div>
+
+</div>
+
+
+
+{% endblock body %}
+
+
+    
+{% block js %}
+
+
+<script>
+
+
+
+window.onload = function() {
+    let myiFrame = document.getElementById("#cc-calculator");
+    let doc = myiFrame.contentDocument;
+    console.log(myiFrame)
+    doc.body.innerHTML = doc.body.innerHTML + '<style>body{background:black;}</style>';
+}
+
+
+</script>
+
+{% endblock js %}

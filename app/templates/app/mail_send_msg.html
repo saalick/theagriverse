@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <!-- Mirrored from IEPS.dreamguystech.com/html/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jan 2023 10:43:37 GMT -->
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=0"
+    />
+    <title>Agriverse Login</title>
+
+    <link rel="icon" type="image/x-icon" href="{% static 'app/img/main_logo.png' %} ">
+
+    <link rel="stylesheet" href="/static/app/login_static/css/bootstrap.min.css" />
+
+    <link
+      rel="stylesheet"
+      href="/static/app/login_static/plugins/fontawesome/css/fontawesome.min.css"
+    />
+    <link rel="stylesheet" href="/static/app/login_static/plugins/fontawesome/css/all.min.css" />
+
+    <link rel="stylesheet" href="/static/app/login_static/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="/static/app/login_static/css/owl.theme.default.min.css" />
+
+    <link rel="stylesheet" href="/static/app/login_static/plugins/feather/feather.css" />
+
+    <link rel="stylesheet" href="/static/app/login_static/css/style.css" />
+
+
+    
+    <style>
+
+
+        .or_line {
+            display: flex;
+            align-items: center;
+            margin: 5px 0px;
+        }
+
+        .left_line {
+            width: 100%;
+            height: 2px;
+            background: #cdcdcd;
+        }
+
+        .or_text {
+            margin: 0px 10px;
+        }
+
+        .rigth_line {
+            width: 100%;
+            height: 2px;
+            background: #cdcdcd;
+        }
+
+
+        .socialaccount_provider.google {
+          background: #970000;
+          padding: 10px;
+          margin: 7px 0px;
+          text-align: center;
+          color: white;
+          border-radius: 5px;
+          width: 100%;
+          border: none;
+      }
+
+
+      body {
+        background-color: #e7e7e7;
+        background-image: url(/static/app/img/bg-2.png);
+        background-size: 100vw 100vh;
+        background-repeat: no-repeat;
+
+    }
+
+    .login-wrap-bg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 12px;
+    }
+
+    .log-wrap .login-wrapper {
+  
+      height: auto;
+      background: white;
+      
+    border-radius: 13px;
+
+  }
+
+
+  .forgot {
+    margin-bottom: 10px;
+}
+
+
+  .login-wrapper .loginbox {
+ 
+    padding: 20px 25px;
+}
+
+
+.login-wrapper .loginbox label {
+  margin-bottom: 0px;
+ 
+}
+
+
+.login-wrapper .loginbox h1 {
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 9px;
+  color: #000;
+}
+
+
+.login-wrapper .loginbox .img-logo {
+  margin-bottom: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+
+.login-wrapper .loginbox .img-logo img {
+  width: 50px;
+}
+
+
+.mail_footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+
+.mail_sent_img{
+  width: 140px;
+  height: 140px;
+}
+
+
+.alert-info {
+  color: #b4ffa6;
+  background-color: #77f7aa52;
+}
+
+
+.text-info, .dropdown-menu>li>a.text-info {
+  color: #23b260 !important;
+}
+
+.card-body {
+  padding: 0px 12px;
+}
+
+@media screen and (max-width:770px){
+  
+  .login-wrap-bg {
+    flex: 0 0 auto;
+   
+    padding: 20px;
+    position: unset;
+    transform: unset;
+  }
+  .mail_footer {
+    position: unset;
+
+  }
+  
+
+  
+
+  }
+  
+
+
+
+    </style>
+
+
+  </head>
+  <body>
+    <div class="main-wrapper log-wrap">
+      <div class="row">
+       
+        <div class="col-md-5 login-wrap-bg">
+          <div class="login-wrapper">
+            <div class="loginbox">
+              <div class="w-100">
+                <div class="img-logo">
+                  <img
+                    src="/static/app/img/main_logo.png"
+                    class="img-fluid"
+                    alt="Logo"
+                  />
+                  <div class="back-home">
+                    <a href="/">Back to Home</a>
+                  </div>
+                </div>
+                <h1>Please Verify Account</h1>
+                
+              
+
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                      <h4 class="text-success mb-0"><i class="fas fa-check-circle"></i> Email Sent!</h4>
+                    </div>
+                
+                    <div class="card-body">
+             
+                        <div class="text-center">
+                        <img class="mail_sent_img" src="{% static 'app/img/mail-sent.png' %}" alt="mail-sent">
+                        </div>
+                        <div class="alert alert-info">
+                        {% if messages  %}
+                        {% for msg in messages %}
+                        <p class="text-info text-center">{{msg}}</p>
+                        {% endfor %}
+                        {% endif %}
+                        <p class="text-info m-0 text-center">We Sent Verification mail to this Email Address:{{email}}</p>
+                            <P class="m-0 text-info text-center">Please confirm your email address to complete the registration</P>
+                            {% comment %} <a href="https://{{request.get_host}}{% url 'activate' uidb64=uid token=token %}?next={{next_redirect}}" target="_blank" style="color: #9f2283;">https://{{request.get_host}}{% url 'activate' uidb64=uid token=token %}?next={{next_redirect}}</a> {% endcomment %}
+                        </div>
+                        
+                        <hr>
+    
+    
+                        <div class="text-center">
+                                <a class="btn btn-danger" href="https://mail.google.com/">Go To Mail</a>
+                        </div>
+    
+                       
+                       
+                    </div>
+                    
+                </div>
+                
+
+
+               
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="mail_footer" style="padding: 12px 0px;">
+      <div class="" style="">
+        <div style="padding: 10px; text-align: center">
+          <a href="https://www.facebook.com/theagriverse/" target="_blank" class=""><img src="/static/app/img/facebook.png" alt="icon" style="width: 30px; height: 30px"></a>
+          <a href="https://instagram.com/theagriverse" target="_blank" class=""><img src="/static/app/img/instagram.png" alt="icon" style="width: 30px; height: 30px"></a>
+          <a href="https://www.linkedin.com/in/agriverse/" target="_blank" class=""><img src="/static/app/img/linkedin.png" alt="icon" style="width: 30px; height: 30px"></a>
+          <a href="https://twitter.com/TheAgriverse" target="_blank" class=""><img src="/static/app/img/twitter.png" alt="icon" style="width: 30px; height: 30px"></a>
+          <a href="https://youtube.com/channel/UCcstqRwtxzEJSz2ItuRdsSA" target="_blank" class=""><img src="/static/app/img/youtube.png" alt="icon" style="width: 30px; height: 30px"></a>
+        </div>
+      </div>
+
+      <div class="footer_contect_details">
+        <p style="
+text-align: center;
+margin: 0px 0px;
+color: #6e6e6e;
+">For More Information : info@agriverse.com</p>
+      </div>
+
+      <div class="mail_footer_copyright">
+        <p style="
+text-align: center;
+margin: 3px 0px;
+color: #6e6e6e;
+font-size: 13px;
+">
+{% now "Y" as current_year %}
+© AGRIVERSE {{current_year}}. All rights reserved</p>
+      </div>
+
+    </div>
+</div>
+
+
+    <script src="/static/app/login_static/js/jquery-3.6.0.min.js"></script>
+
+    <script src="/static/app/login_static/js/bootstrap.bundle.min.js"></script>
+
+    <script src="/static/app/login_static/js/owl.carousel.min.js"></script>
+
+    <script src="/static/app/login_static/js/script.js"></script>
+
+
+  </body>
+
+  <!-- Mirrored from IEPS.dreamguystech.com/html/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jan 2023 10:43:38 GMT -->
+</html>

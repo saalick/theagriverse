@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+{% load static %}
+{% load i18n %}
+
+<html lang="en">
+<head>
+    <title>Agriverse {% block title %}{% endblock title %}</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'app/img/main_logo.png' %} ">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{% static 'app/css/index.css' %} ">
+    <!-- <link href="https://fonts.cdnfonts.com/css/lufga" rel="stylesheet"> -->
+    <link href="{% static 'app/fonts/LufgaRegular.ttf' %} ">
+
+    <!-- <link rel="stylesheet" type="text/css" href="owlcarousel/owl.carousel.min.css">
+  <link rel="stylesheet" type="text/css" href="owlcarousel/owl.theme.default.min.css"> -->
+
+    <link rel="stylesheet" type="text/css"
+        href="{% static 'app/OwlCarousel2-2.3.4/docs/assets/owlcarousel/assets/owl.carousel.min.css' %} ">
+    <link rel="stylesheet" type="text/css"
+        href="{% static 'app/OwlCarousel2-2.3.4/docs/assets/owlcarousel/assets/owl.theme.default.min.css' %} ">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    {% block head %}{% endblock head %}
+
+    <style>
+
+        .top-logo > img {
+            width: 56px;
+            height: 56px;
+        }
+
+        ul.menu-links-mobile {
+            margin: 0px;
+        }
+        
+        li.btn.cust-btn.button-white {
+            padding: 10px 9px;
+            background: linear-gradient(173deg, #01a700, #205200);
+            border: none;
+        }
+        
+        li.btn.cust-btn.button-white > a {
+            color: white;
+        }
+
+      
+        .msg_contact {
+            width: 640px;
+        }
+
+
+        @media screen and (max-width:770px){
+            .top-logo > img {
+                width: 40px;
+                height: 40px;
+            }
+    
+
+            .msg_contact{
+                width:auto;
+            }
+
+
+            ul.menu-links-mobile {
+                margin: 0px;
+            }
+            
+            li.btn.cust-btn.button-white {
+                padding: 10px 9px;
+                background: linear-gradient(173deg, #01a700, #205200);
+                border: none;
+            }
+            
+            li.btn.cust-btn.button-white > a {
+                color: white;
+            }
+
+            .top-navbar {
+                background: #ffffff;
+                padding: 7px 0px;
+                position: fixed;
+                top: 0;
+            }
+    
+
+            .banner-text-content{
+                background: linear-gradient(1deg, #1f6a000d , #008536ba, #1f6a000d);
+                margin: 42px auto;
+                padding: 35px 12px;
+                width: 100%;
+                height: 100vh;
+            }
+            
+
+            .cta>a {
+                padding: 9px 0px;
+                font-size: 13px;
+            }
+
+
+            .grow-farm-desc{
+                text-align:left;
+                color: #ffffff;
+                
+
+            }
+
+            
+
+            .growing-h1 {
+            
+                color: #ffffff;
+            }
+
+            .about-agriverse-col-text{
+                text-align:left;
+            }
+
+            .tokenomics {
+                margin: auto;
+                width: 95%;
+             
+            }
+
+
+{% comment %} 
+            .blu {
+              
+                color: #92ff96;
+            } {% endcomment %}
+
+
+        }
+
+
+
+        {% block css %}{% endblock css %}
+
+    </style>
+
+
+</head>
+
+
+<body>
+    <div class="main">
+
+
+        <div class="">
+
+            
+            {% url 'home' as homepage %}
+            
+            <header class="top-header"  {% if request.get_full_path == homepage %} style="    background: url(/static/app/img/bg.png);    background-repeat: no-repeat;
+            background-size: cover;"{% endif %}>
+                <!-- <img src="/static/app/img/bg.png" alt="" class="img-responsive"> -->
+                <div class="fill_nav_gaps" style="    height: 7px;">
+                
+                </div>
+               
+                <div class="top-navbar">
+                    <a href="" class="top-logo"><img src="{% static 'app/img/main_logo.png' %}" alt="" class="img-responsive"></a>
+                    <ul class="menu-links-desktop">
+                        <li><a href="/#about-agriverse">About</a></li>
+                        <li><a href="/#roadmap">Roadmap</a></li>
+                        <li><a href="{% static 'app/doc/AgriVerse WhitePaper🌳.pdf' %}" target="_blank">Whitepaper</a></li>
+                        <li><a href="/#tokenomics-main">Tokenomics</a></li>
+                        {% comment %} {% if request.user.is_authenticated %} {% endcomment %}
+                        <li class=" button-white dApp-btn"><a href="/dashboard/" target="_blank">dApp portal</a>
+                        </li>
+                        <li class="  button-green"><a href="">buy NFTrees</a></li>
+
+                        {% comment %} {% else %}
+                        <li class=" button-white dApp-btn"><a href="/login/"><i class="bi bi-box-arrow-in-right"></i> Login</a>
+                        </li>
+                        <li class="  button-green"><a href="/signup/"><i class="bi bi-plus-square"></i> SignUp</a></li>
+
+                        {% endif %} {% endcomment %}
+
+                        <li class=" button-white game-btn" type="button" data-bs-toggle="collapse"
+                            data-bs-target="/#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                            Games
+                            <img src="/static/app/img/dropdown-arrow.svg" alt="" class="drop-arrow-icon">
+                            <div class="collapse games-collapse" id="collapseExample">
+                                <div class=" game-card-body">
+                                    <a href="" class="">AgriMetaverse</a>
+                                    <a href="" class="">AgriFarmVille</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="menu-links-mobile">
+
+                        <li class="btn cust-btn button-white "><a href="/dashboard/" target="_blank"
+                                class="btn-cta">dApp
+                                portal</a></li>
+                        <li>
+                            <a class="btn py-0 px-2" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                                aria-controls="offcanvasExample">
+                                <img src="/static/app/img/hamburger-icon.svg" alt="icon" class="hamburger-icon">
+                            </a>
+                        </li>
+                        <div class="offcanvas offcanvas-start " tabindex="-1" id="offcanvasExample"
+                            aria-labelledby="offcanvasExampleLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasExampleLabel"><a href="" class="top-logo"><img
+                                            src="/static/app/img/main_logo.png" alt="" class="img-responsive"></a></h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+
+                                <ul class="menu-links-mobile ">
+                                    <li><a href="#about-agriverse">About</a></li>
+                                    <li><a href="#roadmap">Roadmap</a></li>
+                                    <li><a href="/static/app/doc/AgriVerse WhitePaper🌳.pdf" target="_blank">Whitepaper</a></li>
+                                    <li><a href="#tokenomics-main">Tokenomics</a></li>
+                                    {% comment %} {% if request.user.is_authenticated %} {% endcomment %}
+                                    <li><a href="/dashboard/" target="_blank" class="">dApp portal</a></li>
+                                    <li class="button-green btn-cta"><a href="">buy NFTrees</a></li>
+                                    {% comment %} {% else %}
+                                    <li><a href="/login/" class="">Login</a></li>
+                                    <li class="button-green btn-cta"><a href="/signup/">SignUp</a></li>
+                                    {% endif %} {% endcomment %}
+                                </ul>
+                            </div>
+                        </div>
+
+                    </ul>
+                </div>
+
+                {% block banner %}{% endblock banner %}
+
+            </header>
+        </div>
+
+
+        {% block body %}
+
+        {% endblock body %}
+
+        <section class="footer">
+            <!-- <img src="/static/app/img/footer-img.png" alt=""> -->
+            <a href="" class="footer-logo"><img src="/static/app/img/main_logo.png" alt="" class="img-responsive"></a>
+
+            <div class="contact-us">Contact Us</div>
+            <div class="contact-us-div">
+                <div class="contact-item">
+                    <img src="/static/app/img/address-icon.png" alt="" class="contact-icons">
+                    <div class="contact-type">ADDRESS</div>
+                    <a href="https://www.theagriverse.com/" target="_blank" class="contact-link">theagriverse.com</a>
+                </div>
+                <div class="contact-item">
+                    <img src="/static/app/img/support-icon.png" alt="" class="contact-icons">
+                    <div class="contact-type">SUPPORT</div>
+                    <a href="mailto:support@theagriverse.com" target="_blank"
+                        class="contact-link">support@agriverse.com</a>
+                </div>
+                <div class="contact-item">
+                    <img src="/static/app/img/makerting-icon.png" alt="" class="contact-icons">
+                    <div class="contact-type">MARKETING</div>
+                    <a href="mailto:marketing@theagriverse.com" target="_blank"
+                        class="contact-link">marketing@theagriverse.com</a>
+                </div>
+                <div class="contact-item">
+                    <img src="/static/app/img/joinus-icon.png" alt="" class="contact-icons">
+                    <div class="contact-type">JOIN US</div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf2Vf3yYEO6HqqRSO1kKKpf8_7saY06t4GR2YvMKnK0q6Lk_Q/viewform?usp=sf_link"
+                        target="_blank" class="contact-link">Click Here </a>
+                </div>
+            </div>
+
+            <div class="contact-us">Queries</div>
+            
+            <div class="queries-div" id="queries-div">
+                
+                <form action="/contact/" method="post" class="queries-form">
+                    {% csrf_token %}
+                    {%if messages %}
+                    {%for message in messages %}
+                    <div class="msg msg_contact">
+                        <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+                            {{message}}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+        
+                    </div>
+                    {% endfor %}
+                    {% endif %}
+
+                    <div class="queries-row">
+                        <input type="text" name="fname" class="form-control queries-inp-name" placeholder="First Name">
+                        <input type="text" name="lname" class="form-control queries-inp-name" placeholder="Last Name">
+
+                    </div>
+                    <div class="">
+                        <input type="email" name="email" class="form-control" placeholder="Email Address">
+                    </div>
+                    <div class="">
+                        <input type="text" name="phone" class="form-control" placeholder="Mobile Number">
+                    </div>
+                    <div>
+                        <textarea name="msg" id="" cols="30" rows="10" placeholder="Your Message..."></textarea>
+                    </div>
+                    <button class=" btn queries-send-btn" type="submit">Send</button>
+                </form>
+                <div class="join-our-community">
+                    <div class="join-com-head">Join Our Community</div>
+                    <div class="community-div">
+                        <div>
+                            <a href="https://www.facebook.com/theagriverse/" target="_blank"
+                                class="community-circle"><img src="/static/app/img/facebook.png" alt="icon"></a>
+                            <a href="https://instagram.com/theagriverse" target="_blank" class="community-circle"><img
+                                    src="/static/app/img/instagram.png" alt="icon"></a>
+                            <a href="https://www.linkedin.com/in/agriverse/" target="_blank"
+                                class="community-circle"><img src="/static/app/img/linkedin.png" alt="icon"></a>
+                            <a href="https://twitter.com/TheAgriverse" target="_blank" class="community-circle"><img
+                                    src="/static/app/img/twitter.png" alt="icon"></a>
+                        </div>
+
+                        <div>
+                            <a href="https://reddit.com/r/theagriverse" target="_blank" class="community-circle"><img
+                                    src="/static/app/img/reddit.png" alt="icon"></a>
+                            <a href="https://t.me/theagriverse" target="_blank" class="community-circle"><img
+                                    src="/static/app/img/telegram.png" alt="icon"></a>
+                            <a href="https://medium.com/@theagriverse" target="_blank" class="community-circle"><img
+                                    src="/static/app/img/medium.png" alt="icon"></a>
+                            <a href="https://youtube.com/channel/UCcstqRwtxzEJSz2ItuRdsSA" target="_blank"
+                                class="community-circle"><img src="/static/app/img/youtube.png" alt="icon"></a>
+                        </div>
+                        <div>
+                            <a href="https://discord.gg/paFen4Ys3s" target="_blank" class="community-circle"><img
+                                    src="/static/app/img/discord.png" alt="icon"></a>
+                        </div>
+                    </div>
+                    <div class="join-com-head">For More Information :</div>
+                    <a href="mailto:info@agriverse.com" target="_blank"
+                        class="community-info-link">info@agriverse.com</a>
+                </div>
+            </div>
+            <div class="rights-reserved">
+                <img src="/static/app/img/island-6.png" alt="" class="bottom-img-2">
+                <img src="/static/app/img/island3.png" alt="" class="bottom-img-1">
+                <div class="rights-reserved-txt">© AGRIVERSE 2022. All rights reserved</div>
+            </div>
+
+        </section>
+
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script src="{% static 'app/OwlCarousel2-2.3.4/docs/assets/owlcarousel/owl.carousel.min.js' %} "></script>
+
+    <!-- <script>
+    auditKyc.onclick = function () {
+      open('./doc/Agriverse_KYCCertificate.pdf');
+      open('./doc/AgriVerse_AuditReport_InterFi.pdf');
+    }
+  </script> -->
+    <script>
+        $(document).ready(function () {
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: true,
+                // autoHeight: true,
+                dots: false,
+                navText: ['<a class="carousel-control-prev bgk-carousel-control-prev" href="#recipeCarousel" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon marketplace-carousel-control-prev-icon" aria-hidden="true"><img src="/static/app/img/left-arrow.png" alt=""></span><span class="visually-hidden">Previous</span></a>', '<a class="carousel-control-next bgk-carousel-control-next" href="#recipeCarousel" role="button"data-bs-slide="next"><span class="carousel-control-next-icon marketplace-carousel-control-next-icon " aria-hidden="true"><img src="/static/app/img/right-arrow.png" alt=""></span><span class="visually-hidden">Next</span></a>'],
+                autoplay: true,
+                autoplayTimeout: 5000,
+                responsive: {
+                    0: {
+                        items: 1.4
+                    },
+                    500: {
+                        items: 3
+                    },
+                    600: {
+                        items: 3
+                    },
+
+                    700: {
+                        items: 3
+                    },
+                    770: {
+                        items: 2
+                    },
+
+                    1000: {
+                        items: 2.5
+                    },
+                    1200: {
+                        items: 3
+                    },
+                    1500: {
+                        items: 4
+                    },
+                    1800: {
+                        items: 5
+                    }
+                }
+            })
+        });
+
+    </script>
+
+    {% block js %}{% endblock js %}
+
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+{% extends 'app/dashboard_base.html' %}
+{% block title %}{% endblock title %}
+{% block head %}{% endblock head %}
+{% block css %}{% endblock css %}
+
+
+{% block body %}
+
+
+{% endblock body %}
+
+
+    
+{% block js %}{% endblock js %}
+
+
+

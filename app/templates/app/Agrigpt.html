@@ -1,0 +1,583 @@
+{% extends 'app/dashboard_base.html' %}
+{% block title %}AgriChat{% endblock title %}
+{% block head %}{% endblock head %}
+{% block css %}
+
+
+.agriGPT_logo_dic > img {
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+}
+
+
+.agriGPT_logo_dic {
+    text-align: center;
+}
+
+.welcome_txt {
+    text-align: center;
+    margin: 13px 0px;
+}
+
+.gpt_welcome_container {
+}
+
+.popular_question_container {
+    background: #e6e6eb;
+    padding: 18px 13px;
+    border-radius: 12px;
+}
+
+.question_list_div > ul {
+    margin-bottom: 0;
+}
+
+.question_list_div > ul > li {
+    margin: 7px 0px;
+    cursor: pointer;
+}
+
+
+
+.input_form_div {
+    position: absolute;
+    bottom: 0px;
+    border-radius: 0px 0px 25px 25px;
+    width: 100%;
+    left: 0;
+    right: 0;
+    z-index: 4;
+    padding: 13px 32px;
+    background: linear-gradient(45deg, #61b23f, #229845);
+}
+
+
+.chat_main_container {
+   
+    padding: 25px 0px 91px 0px;
+}
+
+
+.gpt_parent_container {
+    height: 75vh;
+    overflow-y: scroll;
+}
+
+
+
+.gpt_parent_container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .gpt_parent_container {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+.form_child_div {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: #e6e6eb;
+    border-radius: 13px;
+}
+
+input#question_inp {
+    background: #e6e6eb;
+    outline: none;
+    border: none;
+    padding: 0px 17px;
+    height: 46px;
+    width: -webkit-fill-available;
+    border-radius: 13px;
+}
+
+.input_div {
+    width: 100%;
+}
+
+button#send_msg_btn {
+    height: 46px;
+    border: none;
+    background: none;
+    padding: 0px 14px;
+}
+
+button#send_msg_btn > svg {
+    width: 25px;
+    height: 24px;
+}
+
+
+
+input#question_inp:focus{
+    outline: none;
+    border: none;
+}
+
+
+
+.user_icon_container , .agrigpt_icon_container{
+    width: 35px;
+    height: 35px;
+}
+
+.user_icon_container > img {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    border-radius: 8px;
+    <!-- border: 1px solid #727272; -->
+}
+
+
+.agrigpt_icon_container > img {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #afafaf;
+    background: #ffffff;
+}
+
+
+
+
+.chat_question_container {
+    display: flex;
+
+    padding: 24px 12px;
+}
+
+.user_question_txt > p {
+    margin: 0 20px;
+    font-size: 17px;
+
+}
+
+
+
+.chat_answer_container {
+    display: flex;
+    background: #e6e6eb;
+    padding: 22px 12px;
+    border-radius: 16px;
+}
+
+.agrigpt_answer_txt {
+    margin: 0px 20px;
+}
+
+
+
+.agrigpt_answer_container {
+    width: 100%;
+}
+
+
+
+pre {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0;
+    overflow: unset;
+    font-size: .875em;
+    white-space: break-spaces;
+    font-family: sans-serif;
+}
+
+.middle {
+
+    min-height: fit-content;
+   
+    height: 80vh;
+}
+
+
+.scroll_container{
+    width:100%;
+}
+
+.speech_txt{
+    color:grey;
+}
+
+
+.send_btn_loading {
+    display: none;
+    width: 56px;
+    justify-content: space-around;
+    padding: 3px 6px;
+}
+
+.save_chat_delete_btn{
+    background: none;
+    border: none;
+}
+
+
+
+.save_chat_empty_msg > img {
+    width: 140px;
+}
+
+.save_chat_empty_msg {
+    text-align: center;
+    background: white;
+    padding: 51px 0px;
+}
+
+.tashIcon_div > svg {
+    width: 83px;
+    height: 103px;
+    fill: #d1d1d1;
+}
+
+.save_chat_empty_msg > p {
+    color: #999999;
+    font-size: 17px;
+}
+
+.login_a_div > a  , .signup_a_div > a {
+    text-decoration: none;
+    background: #249945;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    display: block;
+    width: 85px;
+}
+
+.login_btn {
+    display: flex;
+    margin: 14px 0px;
+    justify-content: center;
+}
+
+.login_a_div , .signup_a_div{
+    margin: 0px 4px;
+}
+
+
+.nft-holder-div {
+    height: 45vh;
+    overflow-y: scroll;
+}
+
+
+.chat_history_open {
+    color: black;
+    display:none;
+}
+
+.close_history {
+    color: black;
+    display:none;
+}
+
+@media screen and (max-width:600px){
+    .input_form_div {
+        position: fixed;
+        bottom: 0;
+        border-radius: 0px 0px 0px 0px;
+        
+        padding: 8px 8px;
+    }
+
+    .history_container{
+        position: fixed;
+        background: #ffffff;
+        transition: 500ms;
+        left: -660px;
+    }
+
+    .history-chat_clsoe_div {
+        display: flex;
+        color: white;
+        font-size: 20px;
+        align-items: center;
+    }
+    
+    .history-chat_clsoe_div > p {
+        font-size: 15px;
+        margin-left: 9px;
+    }
+
+
+    .chat_history_open {
+        color: black;
+        display:block;
+    }
+
+    .close_history {
+        color: black;
+        display:block;
+    }
+
+
+
+    .middle {
+
+        padding: 5vw 10px;
+    }
+
+
+    .user_question_txt > p {
+        margin: 0 11px;
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+    .agrigpt_answer_txt {
+        margin: 0px 14px;
+    }
+}
+
+
+
+
+
+
+{% endblock css %}
+
+
+{% block body %}
+
+
+
+
+
+<div class="middle">
+    <input type="hidden"  {% if request.user.is_authenticated %} value="/media/{{request.user.userprofile_set.first.Profile_DP}}" {% else %} value="/static/app/img/user_placeholder.png" {% endif %} id="user_dp_link">
+    <input type="hidden"  {% if request.user.is_authenticated %} value="/media/{{request.user.userprofile_set.first.First_Name}}" {% else %} value="" {% endif %} id="user_name_val">
+
+    {% csrf_token %}    
+    
+    <div class="gpt_parent_container">
+        <div class="scroll_container">
+            <div class="save_chat_list_and_switch d-flex justify-content-end mb-4 align-items-center">
+                
+                    <p class="speech_txt mb-0 me-2">Speech</p>
+                    <label class="switch">
+                        <input type="checkbox" id="chat_speech_switch_btn" checked >
+                        <span class="slider round"></span>
+                    </label>
+                    <div class="chat_history_open px-2" onclick="open_chat_history()">
+                        <i class="bi bi-clock-history"></i>
+                    </div>
+               
+                
+            </div>
+        <div class="gpt_welcome_container">
+            <div class="agriGPT_logo_dic">
+                <img src="/static/app/img/lx_agrigpt.png" alt="">
+            </div>
+
+            <div class="title_and_popular_container">
+                
+           
+                <div class="welcome_txt">
+                    <h3>Introducing AgriGPT</h3>
+                    <p>The dialogue format makes it possible for AgriGPT to answer followup questions</p>
+                </div>
+
+                <div class="popular_question_container">
+
+                    <div class="question_list_div">
+                        <ul>
+                            <li class="popular_question_li">What is a Forest Garden and are they unique to Trees for the Future? </li>
+                            <li class="popular_question_li">How long has Trees for the Future been around? What experience do you have?</li>
+                            <li class="popular_question_li">How do Forest Gardens improve the land and support the environment?</li>
+                            <li class="popular_question_li">What does tree planting have to do with hunger and poverty?</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="chat_main_container" id="chat_main_container_focus">
+           
+
+        </div>
+
+        <div class="question_input_box">
+            <div class="input_form_div">
+                <form action="" id="agrigpt_form">
+                    <div class="form_child_div">
+                        <div class="input_div">
+                            <input type="text" placeholder="Send a Message" id="question_inp">
+                        </div>
+
+                        <div class="send_msg_btn">
+                            <button type="submit" class="send_msg_btn" id="send_msg_btn">
+                                <svg fill="#3dad00" height="113px" width="113px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 491.022 491.022" xml:space="preserve" stroke="#3dad00"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M490.916,13.991c-0.213-1.173-0.64-2.347-1.28-3.307c-0.107-0.213-0.213-0.533-0.32-0.747 c-0.107-0.213-0.32-0.32-0.533-0.533c-0.427-0.533-0.96-1.067-1.493-1.493c-0.427-0.32-0.853-0.64-1.28-0.96 c-0.213-0.107-0.32-0.32-0.533-0.427c-0.32-0.107-0.747-0.32-1.173-0.427c-0.533-0.213-1.067-0.427-1.6-0.533 c-0.64-0.107-1.28-0.213-1.92-0.213c-0.533,0-1.067,0-1.6,0c-0.747,0.107-1.493,0.32-2.133,0.533 c-0.32,0.107-0.747,0.107-1.067,0.213L6.436,209.085c-5.44,2.347-7.893,8.64-5.547,14.08c1.067,2.347,2.88,4.373,5.227,5.44 l175.36,82.453v163.947c0,5.867,4.8,10.667,10.667,10.667c3.733,0,7.147-1.92,9.067-5.12l74.133-120.533l114.56,60.373 c5.227,2.773,11.627,0.747,14.4-4.48c0.427-0.853,0.747-1.813,0.96-2.667l85.547-394.987c0-0.213,0-0.427,0-0.64 c0.107-0.64,0.107-1.173,0.213-1.707C491.022,15.271,491.022,14.631,490.916,13.991z M190.009,291.324L36.836,219.218 L433.209,48.124L190.009,291.324z M202.809,437.138V321.831l53.653,28.267L202.809,437.138z M387.449,394.898l-100.8-53.013 l-18.133-11.2l-0.747,1.28l-57.707-30.4L462.116,49.298L387.449,394.898z"></path> </g> </g> </g></svg>
+                            </button>
+                        </div>
+                        <div class="send_btn_loading">
+                            <div class="spinner-grow spinner-grow-sm" style="color: #8f0000;width: 10px; height: 10px;" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                            <div class="spinner-grow spinner-grow-sm" style="color: #00028f;width: 10px; height: 10px;" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                            <div class="spinner-grow spinner-grow-sm" style="color: #448f00;width: 10px; height: 10px;" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    </div>
+
+   
+</div>
+<div class="right history_container">
+    <div class="save_chat_list_and_switch d-flex justify-content-between mb-4 align-items-center">
+        <div class="history-chat_clsoe_div" onclick="close_history_func()">
+            <div class="close_history">
+                <i class="bi bi-x-lg"></i>
+            </div>
+            <p class="stats-head mb-0">
+                Chats Save History ?
+            </p>
+        </div>
+        <label class="switch">
+            <input type="checkbox" id="chat_save_switch_btn" checked >
+            <span class="slider round"></span>
+          </label>
+    </div>
+    <div class="nft-holder-div">
+        {% if save_chat %}
+        {% for i in save_chat %}
+
+        <div class="nft-holder-item w-100" id="chat_list_parent{{i.id}}">
+            <img src="/media/{{request.user.userprofile_set.first.Profile_DP}}" alt="profile-img" class="nft-holder-img" />
+            <div>
+                <div class="nft-holder-name save_qt_box" data-saveqt="{{i.question}}" >{{i.question}}</div>
+                <div class="nft-holder-num">
+                    <button class="save_chat_delete_btn" data-chatid="{{i.id}}" data-parent="#chat_list_parent{{i.id}}">
+                    <svg fill="#6f0101" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23px" height="23px" viewBox="0 0 482.428 482.429" xml:space="preserve" stroke="#b80000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M381.163,57.799h-75.094C302.323,25.316,274.686,0,241.214,0c-33.471,0-61.104,25.315-64.85,57.799h-75.098 c-30.39,0-55.111,24.728-55.111,55.117v2.828c0,23.223,14.46,43.1,34.83,51.199v260.369c0,30.39,24.724,55.117,55.112,55.117 h210.236c30.389,0,55.111-24.729,55.111-55.117V166.944c20.369-8.1,34.83-27.977,34.83-51.199v-2.828 C436.274,82.527,411.551,57.799,381.163,57.799z M241.214,26.139c19.037,0,34.927,13.645,38.443,31.66h-76.879 C206.293,39.783,222.184,26.139,241.214,26.139z M375.305,427.312c0,15.978-13,28.979-28.973,28.979H136.096 c-15.973,0-28.973-13.002-28.973-28.979V170.861h268.182V427.312z M410.135,115.744c0,15.978-13,28.979-28.973,28.979H101.266 c-15.973,0-28.973-13.001-28.973-28.979v-2.828c0-15.978,13-28.979,28.973-28.979h279.897c15.973,0,28.973,13.001,28.973,28.979 V115.744z"></path> <path d="M171.144,422.863c7.218,0,13.069-5.853,13.069-13.068V262.641c0-7.216-5.852-13.07-13.069-13.07 c-7.217,0-13.069,5.854-13.069,13.07v147.154C158.074,417.012,163.926,422.863,171.144,422.863z"></path> <path d="M241.214,422.863c7.218,0,13.07-5.853,13.07-13.068V262.641c0-7.216-5.854-13.07-13.07-13.07 c-7.217,0-13.069,5.854-13.069,13.07v147.154C228.145,417.012,233.996,422.863,241.214,422.863z"></path> <path d="M311.284,422.863c7.217,0,13.068-5.853,13.068-13.068V262.641c0-7.216-5.852-13.07-13.068-13.07 c-7.219,0-13.07,5.854-13.07,13.07v147.154C298.213,417.012,304.067,422.863,311.284,422.863z"></path> </g> </g> </g></svg>
+                    </button>
+
+
+                </div>
+            </div>
+        </div>
+
+        
+        {% endfor %}
+        <div class="pageingation">
+   
+            <ul class="pagination justify-content-center m-0">
+            {% if page_obj.has_previous %} 
+            <li class="page-num">
+            <a href="/agrigpt/?page={{page_obj.previous_page_number}}" class="prev-arrow" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+            </li>
+            {% endif %}
+    
+            {% for i in paginator.page_range%}
+    
+            {% if page_obj.number == i %}
+            <li class="{% if i == page_number%} pageinationactive {% else %}  page-num {% endif %}" ><a href="/agrigpt/?page={{ i }}"
+            >{{ i }}</a></li>
+    
+            {% elif i > page_obj.number|add:'-3' and i < page_obj.number|add:'3' %}
+    
+            <li class="{% if i == page_number%} pageinationactive {% else %}  page-num {% endif %}"><a href="/agrigpt/?page={{ i }}"
+            >{{ i }}</a></li>
+            {% endif %}
+    
+            {% endfor %}
+    
+            {% if page_obj.has_next %}
+            <li class="page-num">
+            <a aria-label="Next" href="/agrigpt/?page={{page_obj.next_page_number}}"  class="next-arrow"><span aria-hidden="true">&raquo;</span></a>
+            </li>
+            {% endif %}
+            </ul>
+           
+        </div>
+        {% else %}
+
+        <div class="save_chat_empty_div">
+            <div class="save_chat_empty_msg">
+                <p>Chat history is Empty</p>
+                <div class="tashIcon_div">
+                    <svg fill="#393939" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="800px" height="800px" viewBox="0 0 482.428 482.429" xml:space="preserve">
+
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                        
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                        
+                        <g id="SVGRepo_iconCarrier"> <g> <g> <path d="M381.163,57.799h-75.094C302.323,25.316,274.686,0,241.214,0c-33.471,0-61.104,25.315-64.85,57.799h-75.098 c-30.39,0-55.111,24.728-55.111,55.117v2.828c0,23.223,14.46,43.1,34.83,51.199v260.369c0,30.39,24.724,55.117,55.112,55.117 h210.236c30.389,0,55.111-24.729,55.111-55.117V166.944c20.369-8.1,34.83-27.977,34.83-51.199v-2.828 C436.274,82.527,411.551,57.799,381.163,57.799z M241.214,26.139c19.037,0,34.927,13.645,38.443,31.66h-76.879 C206.293,39.783,222.184,26.139,241.214,26.139z M375.305,427.312c0,15.978-13,28.979-28.973,28.979H136.096 c-15.973,0-28.973-13.002-28.973-28.979V170.861h268.182V427.312z M410.135,115.744c0,15.978-13,28.979-28.973,28.979H101.266 c-15.973,0-28.973-13.001-28.973-28.979v-2.828c0-15.978,13-28.979,28.973-28.979h279.897c15.973,0,28.973,13.001,28.973,28.979 V115.744z"/> <path d="M171.144,422.863c7.218,0,13.069-5.853,13.069-13.068V262.641c0-7.216-5.852-13.07-13.069-13.07 c-7.217,0-13.069,5.854-13.069,13.07v147.154C158.074,417.012,163.926,422.863,171.144,422.863z"/> <path d="M241.214,422.863c7.218,0,13.07-5.853,13.07-13.068V262.641c0-7.216-5.854-13.07-13.07-13.07 c-7.217,0-13.069,5.854-13.069,13.07v147.154C228.145,417.012,233.996,422.863,241.214,422.863z"/> <path d="M311.284,422.863c7.217,0,13.068-5.853,13.068-13.068V262.641c0-7.216-5.852-13.07-13.068-13.07 c-7.219,0-13.07,5.854-13.07,13.07v147.154C298.213,417.012,304.067,422.863,311.284,422.863z"/> </g> </g> </g>
+                        
+                        </svg>
+                </div>
+                {% if request.user.is_authenticated %}
+                {% else %}
+                    <div class="login_btn">
+                        <div class="login_a_div">
+                            <a href="/login/">Login</a>
+                        </div>
+
+                        <div class="signup_a_div">
+                            <a href="/signup/">Sign up</a>
+                        </div>
+
+                    </div>
+                {% endif %}
+
+
+            </div>
+        </div>
+
+        {% endif %}
+
+      
+       
+    </div>
+</div>
+
+
+
+{% endblock body %}
+
+
+    
+{% block js %}
+
+
+
+<script src="/static/app/js/agrigpt.js"></script>
+
+<script>
+
+    function open_chat_history(){
+        $(".history_container").css({'left':'0px'})
+
+    }
+
+    function close_history_func(){
+        $(".history_container").css({'left':'-660px'})
+    }
+
+
+
+</script>
+
+
+
+{% endblock js %}
+

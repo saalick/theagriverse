@@ -1,0 +1,892 @@
+{% extends 'app/dashboard_base.html' %}
+{% block title %}Marketplace{% endblock title %}
+{% block head %}{% endblock head %}
+{% block css %}{% endblock css %}
+
+
+{% block body %}
+
+
+        
+        <div class="middle">
+          <div class="user-greet-div">
+            <div>
+              <img
+                src="/static/app/img/marketplace-icon.png"
+                alt="icon"
+                class="main-swap-img"
+              />
+              <div class="swap-head">Marketplace</div>
+            </div>
+          </div>
+          <ul
+            class="nav nav-pills mb-3 market-type-nav-pills"
+            id="pills-tab"
+            role="tablist"
+          >
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link nft-type-nav-link active"
+                id="pills-lt-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-all"
+                type="button"
+                role="tab"
+                aria-controls="pills-lt"
+                aria-selected="true"
+              >
+                All NFTs
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nft-type-nav-link nav-link"
+                id="pills-mt-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-at"
+                type="button"
+                role="tab"
+                aria-controls="pills-mt"
+                aria-selected="false"
+              >
+                Long Term
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nft-type-nav-link nav-link"
+                id="pills-st-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-ls"
+                type="button"
+                role="tab"
+                aria-controls="pills-st"
+                aria-selected="false"
+              >
+                Mid Term
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nft-type-nav-link nav-link"
+                id="pills-ls-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-ft"
+                type="button"
+                role="tab"
+                aria-controls="pills-ls"
+                aria-selected="false"
+              >
+                Short Term
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nft-type-nav-link nav-link"
+                id="pills-ls-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-herbs"
+                type="button"
+                role="tab"
+                aria-controls="pills-ls"
+                aria-selected="false"
+              >
+                Livestock
+              </button>
+            </li>
+          </ul>
+          <div class="tab-content" id="pills-tabContent">
+            <div
+              class="tab-pane fade show active"
+              id="pills-all"
+              role="tabpanel"
+              aria-labelledby="pills-lt-tab"
+              tabindex="0"
+            >
+              <div class="row">
+                <div
+                  class="myfarm-nftrees-release-item col col-12 col-sm-6 col-md-6 col-lg-3"
+                >
+                  <div>
+                    <img src="/static/app/img/nft-1.png" alt="nft-img" />
+                    <div class="new-nftrees-info">
+                      <div class="nftree-release-name">Mango Tree NFT</div>
+                      <div class="nftree-release-location">
+                        <img src="/static/app/img/location-icon.svg" alt="" />Porto,
+                        Portugal
+                      </div>
+                    </div>
+                    <button class="btn myfarm-viewnft-btn">View NFTree</button>
+                  </div>
+                </div>
+                <div
+                  class="myfarm-nftrees-release-item col col-12 col-sm-6 col-md-6 col-lg-3"
+                >
+                  <div>
+                    <img src="/static/app/img/two-trees.png" alt="nft-img" />
+                    <div class="new-nftrees-info">
+                      <div class="nftree-release-name">Mango Tree NFT</div>
+                      <div class="nftree-release-location">
+                        <img src="/static/app/img/location-icon.svg" alt="" />Porto,
+                        Portugal
+                      </div>
+                    </div>
+                    <button class="btn myfarm-viewnft-btn">View NFTree</button>
+                  </div>
+                </div>
+                <div
+                  class="myfarm-nftrees-release-item col col-12 col-sm-6 col-md-6 col-lg-3"
+                >
+                  <div>
+                    <img src="/static/app/img/nft-1.png" alt="nft-img" />
+                    <div class="new-nftrees-info">
+                      <div class="nftree-release-name">Mango Tree NFT</div>
+                      <div class="nftree-release-location">
+                        <img src="/static/app/img/location-icon.svg" alt="" />Porto,
+                        Portugal
+                      </div>
+                    </div>
+                    <button class="btn myfarm-viewnft-btn">View NFTree</button>
+                  </div>
+                </div>
+                <div
+                  class="myfarm-nftrees-release-item col col-12 col-sm-6 col-md-6 col-lg-3"
+                >
+                  <div>
+                    <img src="/static/app/img/two-trees.png" alt="nft-img" />
+                    <div class="new-nftrees-info">
+                      <div class="nftree-release-name">Mango Tree NFT</div>
+                      <div class="nftree-release-location">
+                        <img src="/static/app/img/location-icon.svg" alt="" />Porto,
+                        Portugal
+                      </div>
+                    </div>
+                    <button class="btn myfarm-viewnft-btn">View NFTree</button>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="myfarm-nftrees-release-item col col-12 col-sm-6 col-md-6 col-lg-3"
+                >
+                  <div>
+                    <img src="/static/app/img/nft-1.png" alt="nft-img" />
+                    <div class="new-nftrees-info">
+                      <div class="nftree-release-name">Mango Tree NFT</div>
+                      <div class="nftree-release-location">
+                        <img src="/static/app/img/location-icon.svg" alt="" />Porto,
+                        Portugal
+                      </div>
+                    </div>
+                    <button class="btn myfarm-viewnft-btn">View NFTree</button>
+                  </div>
+                </div>
+                <div
+                  class="myfarm-nftrees-release-item col col-12 col-sm-6 col-md-6 col-lg-3"
+                >
+                  <div>
+                    <img src="/static/app/img/two-trees.png" alt="nft-img" />
+                    <div class="new-nftrees-info">
+                      <div class="nftree-release-name">Mango Tree NFT</div>
+                      <div class="nftree-release-location">
+                        <img src="/static/app/img/location-icon.svg" alt="" />Porto,
+                        Portugal
+                      </div>
+                    </div>
+                    <button class="btn myfarm-viewnft-btn">View NFTree</button>
+                  </div>
+                </div>
+                <div
+                  class="myfarm-nftrees-release-item col col-12 col-sm-6 col-md-6 col-lg-3"
+                >
+                  <div>
+                    <img src="/static/app/img/nft-1.png" alt="nft-img" />
+                    <div class="new-nftrees-info">
+                      <div class="nftree-release-name">Mango Tree NFT</div>
+                      <div class="nftree-release-location">
+                        <img src="/static/app/img/location-icon.svg" alt="" />Porto,
+                        Portugal
+                      </div>
+                    </div>
+                    <button class="btn myfarm-viewnft-btn">View NFTree</button>
+                  </div>
+                </div>
+                <div
+                  class="myfarm-nftrees-release-item col col-12 col-sm-6 col-md-6 col-lg-3"
+                >
+                  <div>
+                    <img src="/static/app/img/two-trees.png" alt="nft-img" />
+                    <div class="new-nftrees-info">
+                      <div class="nftree-release-name">Mango Tree NFT</div>
+                      <div class="nftree-release-location">
+                        <img src="/static/app/img/location-icon.svg" alt="" />Porto,
+                        Portugal
+                      </div>
+                    </div>
+                    <button class="btn myfarm-viewnft-btn">View NFTree</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="pills-at"
+              role="tabpanel"
+              aria-labelledby="pills-mt-tab"
+              tabindex="0"
+            >
+              <div class="row">
+                <div
+                  class="myfarm-nftrees-release-item col col-12 col-sm-6 col-md-6 col-lg-3"
+                >
+                  <div>
+                    <img src="/static/app/img/nft-1.png" alt="nft-img" />
+                    <div class="new-nftrees-info">
+                      <div class="nftree-release-name">Mango Tree NFT</div>
+                      <div class="nftree-release-location">
+                        <img src="/static/app/img/location-icon.svg" alt="" />Porto,
+                        Portugal
+                      </div>
+                    </div>
+                    <button class="btn myfarm-viewnft-btn">View NFTree</button>
+                  </div>
+                </div>
+                <div
+                  class="myfarm-nftrees-release-item col col-12 col-sm-6 col-md-6 col-lg-3"
+                >
+                  <div>
+                    <img src="/static/app/img/two-trees.png" alt="nft-img" />
+                    <div class="new-nftrees-info">
+                      <div class="nftree-release-name">Mango Tree NFT</div>
+                      <div class="nftree-release-location">
+                        <img src="/static/app/img/location-icon.svg" alt="" />Porto,
+                        Portugal
+                      </div>
+                    </div>
+                    <button class="btn myfarm-viewnft-btn">View NFTree</button>
+                  </div>
+                </div>
+                <div
+                  class="myfarm-nftrees-release-item col col-12 col-sm-6 col-md-6 col-lg-3"
+                >
+                  <div>
+                    <img src="/static/app/img/nft-1.png" alt="nft-img" />
+                    <div class="new-nftrees-info">
+                      <div class="nftree-release-name">Mango Tree NFT</div>
+                      <div class="nftree-release-location">
+                        <img src="/static/app/img/location-icon.svg" alt="" />Porto,
+                        Portugal
+                      </div>
+                    </div>
+                    <button class="btn myfarm-viewnft-btn">View NFTree</button>
+                  </div>
+                </div>
+                <div
+                  class="myfarm-nftrees-release-item col col-12 col-sm-6 col-md-6 col-lg-3"
+                >
+                  <div>
+                    <img src="/static/app/img/two-trees.png" alt="nft-img" />
+                    <div class="new-nftrees-info">
+                      <div class="nftree-release-name">Mango Tree NFT</div>
+                      <div class="nftree-release-location">
+                        <img src="/static/app/img/location-icon.svg" alt="" />Porto,
+                        Portugal
+                      </div>
+                    </div>
+                    <button class="btn myfarm-viewnft-btn">View NFTree</button>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="myfarm-nftrees-release-item col col-12 col-sm-6 col-md-6 col-lg-3"
+                >
+                  <div>
+                    <img src="/static/app/img/nft-1.png" alt="nft-img" />
+                    <div class="new-nftrees-info">
+                      <div class="nftree-release-name">Mango Tree NFT</div>
+                      <div class="nftree-release-location">
+                        <img src="/static/app/img/location-icon.svg" alt="" />Porto,
+                        Portugal
+                      </div>
+                    </div>
+                    <button class="btn myfarm-viewnft-btn">View NFTree</button>
+                  </div>
+                </div>
+                <div
+                  class="myfarm-nftrees-release-item col col-12 col-sm-6 col-md-6 col-lg-3"
+                >
+                  <div>
+                    <img src="/static/app/img/two-trees.png" alt="nft-img" />
+                    <div class="new-nftrees-info">
+                      <div class="nftree-release-name">Mango Tree NFT</div>
+                      <div class="nftree-release-location">
+                        <img src="/static/app/img/location-icon.svg" alt="" />Porto,
+                        Portugal
+                      </div>
+                    </div>
+                    <button class="btn myfarm-viewnft-btn">View NFTree</button>
+                  </div>
+                </div>
+                <div
+                  class="myfarm-nftrees-release-item col col-12 col-sm-6 col-md-6 col-lg-3"
+                >
+                  <div>
+                    <img src="/static/app/img/nft-1.png" alt="nft-img" />
+                    <div class="new-nftrees-info">
+                      <div class="nftree-release-name">Mango Tree NFT</div>
+                      <div class="nftree-release-location">
+                        <img src="/static/app/img/location-icon.svg" alt="" />Porto,
+                        Portugal
+                      </div>
+                    </div>
+                    <button class="btn myfarm-viewnft-btn">View NFTree</button>
+                  </div>
+                </div>
+                <div
+                  class="myfarm-nftrees-release-item col col-12 col-sm-6 col-md-6 col-lg-3"
+                >
+                  <div>
+                    <img src="/static/app/img/two-trees.png" alt="nft-img" />
+                    <div class="new-nftrees-info">
+                      <div class="nftree-release-name">Mango Tree NFT</div>
+                      <div class="nftree-release-location">
+                        <img src="/static/app/img/location-icon.svg" alt="" />Porto,
+                        Portugal
+                      </div>
+                    </div>
+                    <button class="btn myfarm-viewnft-btn">View NFTree</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="pills-ls"
+              role="tabpanel"
+              aria-labelledby="pills-mt-tab"
+              tabindex="0"
+            >
+              <div class="row">
+                <div
+                  class="myfarm-nftrees-release-item col col-12 col-sm-6 col-md-6 col-lg-3"
+                >
+                  <div>
+                    <img src="/static/app/img/nft-1.png" alt="nft-img" />
+                    <div class="new-nftrees-info">
+                      <div class="nftree-release-name">Mango Tree NFT</div>
+                      <div class="nftree-release-location">
+                        <img src="/static/app/img/location-icon.svg" alt="" />Porto,
+                        Portugal
+                      </div>
+                    </div>
+                    <button class="btn myfarm-viewnft-btn">View NFTree</button>
+                  </div>
+                </div>
+                <div
+                  class="myfarm-nftrees-release-item col col-12 col-sm-6 col-md-6 col-lg-3"
+                >
+                  <div>
+                    <img src="/static/app/img/two-trees.png" alt="nft-img" />
+                    <div class="new-nftrees-info">
+                      <div class="nftree-release-name">Mango Tree NFT</div>
+                      <div class="nftree-release-location">
+                        <img src="/static/app/img/location-icon.svg" alt="" />Porto,
+                        Portugal
+                      </div>
+                    </div>
+                    <button class="btn myfarm-viewnft-btn">View NFTree</button>
+                  </div>
+                </div>
+                <div
+                  class="myfarm-nftrees-release-item col col-12 col-sm-6 col-md-6 col-lg-3"
+                >
+                  <div>
+                    <img src="/static/app/img/nft-1.png" alt="nft-img" />
+                    <div class="new-nftrees-info">
+                      <div class="nftree-release-name">Mango Tree NFT</div>
+                      <div class="nftree-release-location">
+                        <img src="/static/app/img/location-icon.svg" alt="" />Porto,
+                        Portugal
+                      </div>
+                    </div>
+                    <button class="btn myfarm-viewnft-btn">View NFTree</button>
+                  </div>
+                </div>
+                <div
+                  class="myfarm-nftrees-release-item col col-12 col-sm-6 col-md-6 col-lg-3"
+                >
+                  <div>
+                    <img src="/static/app/img/two-trees.png" alt="nft-img" />
+                    <div class="new-nftrees-info">
+                      <div class="nftree-release-name">Mango Tree NFT</div>
+                      <div class="nftree-release-location">
+                        <img src="/static/app/img/location-icon.svg" alt="" />Porto,
+                        Portugal
+                      </div>
+                    </div>
+                    <button class="btn myfarm-viewnft-btn">View NFTree</button>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="myfarm-nftrees-release-item col col-12 col-sm-6 col-md-6 col-lg-3"
+                >
+                  <div>
+                    <img src="/static/app/img/nft-1.png" alt="nft-img" />
+                    <div class="new-nftrees-info">
+                      <div class="nftree-release-name">Mango Tree NFT</div>
+                      <div class="nftree-release-location">
+                        <img src="/static/app/img/location-icon.svg" alt="" />Porto,
+                        Portugal
+                      </div>
+                    </div>
+                    <button class="btn myfarm-viewnft-btn">View NFTree</button>
+                  </div>
+                </div>
+                <div
+                  class="myfarm-nftrees-release-item col col-12 col-sm-6 col-md-6 col-lg-3"
+                >
+                  <div>
+                    <img src="/static/app/img/two-trees.png" alt="nft-img" />
+                    <div class="new-nftrees-info">
+                      <div class="nftree-release-name">Mango Tree NFT</div>
+                      <div class="nftree-release-location">
+                        <img src="/static/app/img/location-icon.svg" alt="" />Porto,
+                        Portugal
+                      </div>
+                    </div>
+                    <button class="btn myfarm-viewnft-btn">View NFTree</button>
+                  </div>
+                </div>
+                <div
+                  class="myfarm-nftrees-release-item col col-12 col-sm-6 col-md-6 col-lg-3"
+                >
+                  <div>
+                    <img src="/static/app/img/nft-1.png" alt="nft-img" />
+                    <div class="new-nftrees-info">
+                      <div class="nftree-release-name">Mango Tree NFT</div>
+                      <div class="nftree-release-location">
+                        <img src="/static/app/img/location-icon.svg" alt="" />Porto,
+                        Portugal
+                      </div>
+                    </div>
+                    <button class="btn myfarm-viewnft-btn">View NFTree</button>
+                  </div>
+                </div>
+                <div
+                  class="myfarm-nftrees-release-item col col-12 col-sm-6 col-md-6 col-lg-3"
+                >
+                  <div>
+                    <img src="/static/app/img/two-trees.png" alt="nft-img" />
+                    <div class="new-nftrees-info">
+                      <div class="nftree-release-name">Mango Tree NFT</div>
+                      <div class="nftree-release-location">
+                        <img src="/static/app/img/location-icon.svg" alt="" />Porto,
+                        Portugal
+                      </div>
+                    </div>
+                    <button class="btn myfarm-viewnft-btn">View NFTree</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="pills-ft"
+              role="tabpanel"
+              aria-labelledby="pills-st-tab"
+              tabindex="0"
+            >
+              <div class="row">
+                <div
+                  class="myfarm-nftrees-release-item col col-12 col-sm-6 col-md-6 col-lg-3"
+                >
+                  <div>
+                    <img src="/static/app/img/nft-1.png" alt="nft-img" />
+                    <div class="new-nftrees-info">
+                      <div class="nftree-release-name">Mango Tree NFT</div>
+                      <div class="nftree-release-location">
+                        <img src="/static/app/img/location-icon.svg" alt="" />Porto,
+                        Portugal
+                      </div>
+                    </div>
+                    <button class="btn myfarm-viewnft-btn">View NFTree</button>
+                  </div>
+                </div>
+                <div
+                  class="myfarm-nftrees-release-item col col-12 col-sm-6 col-md-6 col-lg-3"
+                >
+                  <div>
+                    <img src="/static/app/img/two-trees.png" alt="nft-img" />
+                    <div class="new-nftrees-info">
+                      <div class="nftree-release-name">Mango Tree NFT</div>
+                      <div class="nftree-release-location">
+                        <img src="/static/app/img/location-icon.svg" alt="" />Porto,
+                        Portugal
+                      </div>
+                    </div>
+                    <button class="btn myfarm-viewnft-btn">View NFTree</button>
+                  </div>
+                </div>
+                <div
+                  class="myfarm-nftrees-release-item col col-12 col-sm-6 col-md-6 col-lg-3"
+                >
+                  <div>
+                    <img src="/static/app/img/nft-1.png" alt="nft-img" />
+                    <div class="new-nftrees-info">
+                      <div class="nftree-release-name">Mango Tree NFT</div>
+                      <div class="nftree-release-location">
+                        <img src="/static/app/img/location-icon.svg" alt="" />Porto,
+                        Portugal
+                      </div>
+                    </div>
+                    <button class="btn myfarm-viewnft-btn">View NFTree</button>
+                  </div>
+                </div>
+                <div
+                  class="myfarm-nftrees-release-item col col-12 col-sm-6 col-md-6 col-lg-3"
+                >
+                  <div>
+                    <img src="/static/app/img/two-trees.png" alt="nft-img" />
+                    <div class="new-nftrees-info">
+                      <div class="nftree-release-name">Mango Tree NFT</div>
+                      <div class="nftree-release-location">
+                        <img src="/static/app/img/location-icon.svg" alt="" />Porto,
+                        Portugal
+                      </div>
+                    </div>
+                    <button class="btn myfarm-viewnft-btn">View NFTree</button>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="myfarm-nftrees-release-item col col-12 col-sm-6 col-md-6 col-lg-3"
+                >
+                  <div>
+                    <img src="/static/app/img/nft-1.png" alt="nft-img" />
+                    <div class="new-nftrees-info">
+                      <div class="nftree-release-name">Mango Tree NFT</div>
+                      <div class="nftree-release-location">
+                        <img src="/static/app/img/location-icon.svg" alt="" />Porto,
+                        Portugal
+                      </div>
+                    </div>
+                    <button class="btn myfarm-viewnft-btn">View NFTree</button>
+                  </div>
+                </div>
+                <div
+                  class="myfarm-nftrees-release-item col col-12 col-sm-6 col-md-6 col-lg-3"
+                >
+                  <div>
+                    <img src="/static/app/img/two-trees.png" alt="nft-img" />
+                    <div class="new-nftrees-info">
+                      <div class="nftree-release-name">Mango Tree NFT</div>
+                      <div class="nftree-release-location">
+                        <img src="/static/app/img/location-icon.svg" alt="" />Porto,
+                        Portugal
+                      </div>
+                    </div>
+                    <button class="btn myfarm-viewnft-btn">View NFTree</button>
+                  </div>
+                </div>
+                <div
+                  class="myfarm-nftrees-release-item col col-12 col-sm-6 col-md-6 col-lg-3"
+                >
+                  <div>
+                    <img src="/static/app/img/nft-1.png" alt="nft-img" />
+                    <div class="new-nftrees-info">
+                      <div class="nftree-release-name">Mango Tree NFT</div>
+                      <div class="nftree-release-location">
+                        <img src="/static/app/img/location-icon.svg" alt="" />Porto,
+                        Portugal
+                      </div>
+                    </div>
+                    <button class="btn myfarm-viewnft-btn">View NFTree</button>
+                  </div>
+                </div>
+                <div
+                  class="myfarm-nftrees-release-item col col-12 col-sm-6 col-md-6 col-lg-3"
+                >
+                  <div>
+                    <img src="/static/app/img/two-trees.png" alt="nft-img" />
+                    <div class="new-nftrees-info">
+                      <div class="nftree-release-name">Mango Tree NFT</div>
+                      <div class="nftree-release-location">
+                        <img src="/static/app/img/location-icon.svg" alt="" />Porto,
+                        Portugal
+                      </div>
+                    </div>
+                    <button class="btn myfarm-viewnft-btn">View NFTree</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="pills-herbs"
+              role="tabpanel"
+              aria-labelledby="pills-ls-tab"
+              tabindex="0"
+            >
+              <div class="row">
+                <div
+                  class="myfarm-nftrees-release-item col col-12 col-sm-6 col-md-6 col-lg-3"
+                >
+                  <div>
+                    <img src="/static/app/img/nft-1.png" alt="nft-img" />
+                    <div class="new-nftrees-info">
+                      <div class="nftree-release-name">Mango Tree NFT</div>
+                      <div class="nftree-release-location">
+                        <img src="/static/app/img/location-icon.svg" alt="" />Porto,
+                        Portugal
+                      </div>
+                    </div>
+                    <button class="btn myfarm-viewnft-btn">View NFTree</button>
+                  </div>
+                </div>
+                <div
+                  class="myfarm-nftrees-release-item col col-12 col-sm-6 col-md-6 col-lg-3"
+                >
+                  <div>
+                    <img src="/static/app/img/two-trees.png" alt="nft-img" />
+                    <div class="new-nftrees-info">
+                      <div class="nftree-release-name">Mango Tree NFT</div>
+                      <div class="nftree-release-location">
+                        <img src="/static/app/img/location-icon.svg" alt="" />Porto,
+                        Portugal
+                      </div>
+                    </div>
+                    <button class="btn myfarm-viewnft-btn">View NFTree</button>
+                  </div>
+                </div>
+                <div
+                  class="myfarm-nftrees-release-item col col-12 col-sm-6 col-md-6 col-lg-3"
+                >
+                  <div>
+                    <img src="/static/app/img/nft-1.png" alt="nft-img" />
+                    <div class="new-nftrees-info">
+                      <div class="nftree-release-name">Mango Tree NFT</div>
+                      <div class="nftree-release-location">
+                        <img src="/static/app/img/location-icon.svg" alt="" />Porto,
+                        Portugal
+                      </div>
+                    </div>
+                    <button class="btn myfarm-viewnft-btn">View NFTree</button>
+                  </div>
+                </div>
+                <div
+                  class="myfarm-nftrees-release-item col col-12 col-sm-6 col-md-6 col-lg-3"
+                >
+                  <div>
+                    <img src="/static/app/img/two-trees.png" alt="nft-img" />
+                    <div class="new-nftrees-info">
+                      <div class="nftree-release-name">Mango Tree NFT</div>
+                      <div class="nftree-release-location">
+                        <img src="/static/app/img/location-icon.svg" alt="" />Porto,
+                        Portugal
+                      </div>
+                    </div>
+                    <button class="btn myfarm-viewnft-btn">View NFTree</button>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="myfarm-nftrees-release-item col col-12 col-sm-6 col-md-6 col-lg-3"
+                >
+                  <div>
+                    <img src="/static/app/img/nft-1.png" alt="nft-img" />
+                    <div class="new-nftrees-info">
+                      <div class="nftree-release-name">Mango Tree NFT</div>
+                      <div class="nftree-release-location">
+                        <img src="/static/app/img/location-icon.svg" alt="" />Porto,
+                        Portugal
+                      </div>
+                    </div>
+                    <button class="btn myfarm-viewnft-btn">View NFTree</button>
+                  </div>
+                </div>
+                <div
+                  class="myfarm-nftrees-release-item col col-12 col-sm-6 col-md-6 col-lg-3"
+                >
+                  <div>
+                    <img src="/static/app/img/two-trees.png" alt="nft-img" />
+                    <div class="new-nftrees-info">
+                      <div class="nftree-release-name">Mango Tree NFT</div>
+                      <div class="nftree-release-location">
+                        <img src="/static/app/img/location-icon.svg" alt="" />Porto,
+                        Portugal
+                      </div>
+                    </div>
+                    <button class="btn myfarm-viewnft-btn">View NFTree</button>
+                  </div>
+                </div>
+                <div
+                  class="myfarm-nftrees-release-item col col-12 col-sm-6 col-md-6 col-lg-3"
+                >
+                  <div>
+                    <img src="/static/app/img/nft-1.png" alt="nft-img" />
+                    <div class="new-nftrees-info">
+                      <div class="nftree-release-name">Mango Tree NFT</div>
+                      <div class="nftree-release-location">
+                        <img src="/static/app/img/location-icon.svg" alt="" />Porto,
+                        Portugal
+                      </div>
+                    </div>
+                    <button class="btn myfarm-viewnft-btn">View NFTree</button>
+                  </div>
+                </div>
+                <div
+                  class="myfarm-nftrees-release-item col col-12 col-sm-6 col-md-6 col-lg-3"
+                >
+                  <div>
+                    <img src="/static/app/img/two-trees.png" alt="nft-img" />
+                    <div class="new-nftrees-info">
+                      <div class="nftree-release-name">Mango Tree NFT</div>
+                      <div class="nftree-release-location">
+                        <img src="/static/app/img/location-icon.svg" alt="" />Porto,
+                        Portugal
+                      </div>
+                    </div>
+                    <button class="btn myfarm-viewnft-btn">View NFTree</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <p class="stats-head">Trending NFTs</p>
+          <div class="new-nftrees-release-div">
+            <div class="row">
+              <div
+                class="new-nftrees-release-item col col-12 col-md-12 col-lg-5"
+              >
+                <img src="/static/app/img/cow.png" alt="nft-img" />
+                <div class="new-nftrees-info">
+                  <div class="nftree-release-name">Cow</div>
+                  <div class="nftree-release-location">
+                    <img src="/static/app/img/location-icon.svg" alt="" />Nairobi, Kenya
+                  </div>
+                </div>
+              </div>
+              <div
+                class="new-nftrees-release-item col col-12 col-md-12 col-lg-5"
+              >
+                <img src="/static/app/img/two-trees.png" alt="nft-img" />
+                <div class="new-nftrees-info">
+                  <div class="nftree-release-name">Olive Tree NFT</div>
+                  <div class="nftree-release-location">
+                    <img src="/static/app/img/location-icon.svg" alt="" />Porto, Portugal
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div
+                class="new-nftrees-release-item col col-12 col-md-12 col-lg-5"
+              >
+                <img src="/static/app/img/two-trees.png" alt="nft-img" />
+                <div class="new-nftrees-info">
+                  <div class="nftree-release-name">Olive Tree NFT</div>
+                  <div class="nftree-release-location">
+                    <img src="/static/app/img/location-icon.svg" alt="" />Porto, Portugal
+                  </div>
+                </div>
+              </div>
+              <div
+                class="new-nftrees-release-item col col-12 col-md-12 col-lg-5"
+              >
+                <img src="/static/app/img/two-trees.png" alt="nft-img" />
+                <div class="new-nftrees-info">
+                  <div class="nftree-release-name">Olive Tree NFT</div>
+                  <div class="nftree-release-location">
+                    <img src="/static/app/img/location-icon.svg" alt="" />Porto, Portugal
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="stats-head bottom">Best Collections</p>
+          <div class="nft-holder-div">
+            <div class="nft-holder-item">
+              <img
+                src="/static/app/img/livestock-collection.png"
+                alt="profile-img"
+                class="nft-holder-img"
+              />
+              <div>
+                <div class="nft-holder-name">Fruit Trees Collection</div>
+                <div class="nft-holder-num">
+                  <img
+                    src="/static/app/img/livestock-collection-1.png"
+                    alt="profile-img"
+                    class=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="nft-holder-item">
+              <img
+                src="/static/app/img/fruit-tree-collection.png"
+                alt="profile-img"
+                class="nft-holder-img"
+              />
+              <div>
+                <div class="nft-holder-name">Shrubs Collection</div>
+                <div class="nft-holder-num">
+                  <img
+                    src="/static/app/img/shrubs-collection.png"
+                    alt="profile-img"
+                    class=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="nft-holder-item">
+              <img
+                src="/static/app/img/fruit-tree-collection.png"
+                alt="profile-img"
+                class="nft-holder-img"
+              />
+              <div>
+                <div class="nft-holder-name">Shrubs Collection</div>
+                <div class="nft-holder-num">
+                  <img
+                    src="/static/app/img/livestock-collection-1.png"
+                    alt="profile-img"
+                    class=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="nft-holder-item">
+              <img
+                src="/static/app/img/fruit-tree-collection.png"
+                alt="profile-img"
+                class="nft-holder-img"
+              />
+              <div>
+                <div class="nft-holder-name">Shrubs Collection</div>
+                <div class="nft-holder-num">
+                  <img
+                    src="/static/app/img/fruit-tree-collection-1.png"
+                    alt="profile-img"
+                    class=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+   
+
+
+{% endblock body %}
+
+
+    
+{% block js %}{% endblock js %}
