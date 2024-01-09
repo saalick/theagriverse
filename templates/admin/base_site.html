@@ -1,0 +1,36 @@
+
+
+
+{% extends 'admin/base_site.html' %}
+
+{% block extrahead %}
+  {% if request.user.apparence_set.first.color_theme == "Dark" %}
+    <link href="/static/admin/css/dark.css" type="text/css" rel="stylesheet">
+  {% elif request.user.apparence_set.first.color_theme == "System Color" %}
+    <link href="/static/admin/css/dark.css" type="text/css" media="(prefers-color-scheme:dark)" rel="stylesheet">
+  {% endif %}
+  <link href="/static/admin/css/vendor/select2/select2.css" type="text/css" rel="stylesheet">
+
+
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+
+  <script src="/static/admin/js/vendor/select2/select2.full.js"></script>
+  <script src="/static/app/js/common.js"></script>
+
+
+{% endblock %}
+{% block title %}{% if subtitle %}{{ subtitle }} | {% endif %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
+
+
+{% include "admin/color_theme_toggle.html" %}
+
+
+{% block userlinks %}
+{{ block.super }}
+
+<span> : Theme ({{request.user.apparence_set.first.color_theme}})</span>
+
+
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
