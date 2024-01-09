@@ -1,0 +1,715 @@
+
+:root {
+    --map-tiles-filter: brightness(0.6) invert(1) contrast(3) hue-rotate(200deg) saturate(0.3) brightness(0.7);
+}
+
+body{
+    background-color: #0e0e0e !important;
+}
+.search-inp{
+    background:#252525;
+}
+.top-navigation{
+    background-color: #0e0e0e;
+}
+.wallet-cnt-btn{
+    background: #333333;
+    filter: none;
+}
+.label-theme{
+    background: #333333;
+    filter: none;
+}
+.ball{
+    background: #393939;
+    box-shadow: none;
+}
+.nav-cta-btn{
+    background: #393939 !important;
+    
+}
+.profile-btn{
+    background: #393939 !important;
+
+}
+.middle{
+    background: #252525;
+}
+.user-cards{
+    background: #000000;
+    border: 2px solid #222222;
+}
+
+
+.user-cards-text {
+   
+    color: #a1a1a1;
+
+}
+
+
+.user-cards-num {
+    border-bottom: 2px solid #6a6a6a;
+}
+
+.user-greet>span {
+    color: #ffffff;
+}
+
+.coming-soon-crst>.coming-soon-div{
+    border: 2px solid #222222;
+    background: #1c1c1c;
+    
+}
+.coming-soon-txt{
+    color: #767676;
+}
+.left>a{
+    background: #393939;  
+}
+.nft-holder-item{
+    background: #393939;  
+    box-shadow: none;
+    
+}
+.nft-holder-name{
+    color: #697676;
+}
+.market-type-nav-pills{
+    background-color: #393939;  
+    
+}
+.nav-pills .nft-type-nav-link.active{
+    color: #697676;
+    background-color: #1c1c1c;
+}
+.myfarm-nftrees-release-item>div{
+    background: #393939;
+}
+.new-nftrees-release-item{
+    background: #393939;
+    
+}
+.myfarm-holder-item{
+    background: #393939;
+    
+}
+.myfarm-recent-purchased>div{
+    background: #393939;
+    
+}
+
+
+label.selcet_camera_label {
+    background: #393939 !important;
+    border-radius: 5px;
+}
+
+
+.select_camera:checked + .selcet_camera_label {
+    border: 2px solid #6bdd32;
+    border-radius: 6px;
+    background: #6ee5011a !important;
+}
+
+
+input#farm_search_id {
+    height: 38px;
+    border: 1px solid #101010;
+    border-radius: 3px;
+    background: #000000;
+    padding: 0px 6px;
+    color: #b7b7b7;
+}
+
+
+
+.calendar-main{
+    background: #393939;
+    
+}
+.datedreamer__calendar_day > button{
+
+    background: #393939 !important;
+    color: #697676 !important;
+    
+}
+.livefarm-right-p{
+    color: #697676;
+    
+}
+.datedreamer__calendar_prev{
+    background: #393939 !important;
+    
+}
+.livefarm-top>div{
+    background: #393939 !important;
+    
+}
+.livefarm-top>div .drone-type{
+    color: #697676;
+}
+.livefarm-top>div .white-box{
+    background: #2c2c2c !important;
+    color: #697676;
+    
+}
+.common-styles-module_view__GvZ9w{
+    background-color: #393939 !important;
+    /* background: #2c2c2c !important; */
+    
+}
+.swap-head{
+    color: #697676;
+    
+}
+.myfarm-nftrees-release-item:hover>div{
+    background: #393939 !important;
+    color: #697676;
+
+}
+.form-control {
+    background-color: #141414;
+    color: #d5d5d5 !important;
+    border-color: rgb(46 46 46) !important;
+    
+
+}
+
+
+.form-control:focus {
+    background-color: #141414;
+    color: #d5d5d5 !important;
+    border-color: rgb(46 46 46) !important;
+    
+
+}
+
+
+
+
+
+.select2-container--default .select2-selection--single {
+    background-color: #141414 !important;
+
+}
+
+.select2-container--default .select2-selection--single {
+    border: 1px solid #343434 !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #b3afaf !important;
+    line-height: 50px;
+}
+
+
+.login-wrapper .loginbox h1 {
+   
+    color: #d3d3d3 !important;
+}
+
+
+button#connect-button {
+
+    background: linear-gradient(1deg, #000000 49.76%, rgb(58 58 58 / 82%) 100%) !important; 
+    color: #b3afaf !important;
+}
+
+.username_txt > h3 {
+   
+    color: #cdcdcd !important;
+
+}
+
+
+.small, small {
+    font-size: .875em;
+    color: #ababab;
+}
+
+.nft-holder-name {
+    color: #d7d7d7;
+}
+
+.nft-holder-item {
+
+    color: whitesmoke;
+}
+
+select#Appearance_mode {
+
+    background: black;
+    color: #cfcfcf;
+    border: none !important;
+}
+
+.stats-head {
+
+    color: #adadad;
+}
+
+.select2-dropdown {
+    background-color: black !important;
+    border: 1px solid #aaa !important;
+    color: white !important;
+
+}
+
+
+.select2-container--default .select2-search--dropdown .select2-search__field {
+    border: 1px solid #383838;
+    background: #424242;
+}
+
+.login_drop {
+    background: #000000 !important;
+    color: white !important;
+}
+
+
+a.dropdown-item {
+    text-decoration: none;
+    margin: 0px 1px;
+    color: white !important;
+}
+
+.dropdown-menu {
+    background-color: #000000 !important;
+}
+
+
+.wallet-cnt-btn {
+    background: #242424 !important;
+    color: #a7a7a7 !important;
+    box-shadow: none !important;
+}
+
+
+.top-navigation-mobile {
+
+    background-color: black !important; 
+ 
+
+}
+
+
+svg.mob_humburger > rect {
+    fill: #525252;
+}
+
+svg.mob_humburger {
+    width: 25px;
+    height: 25px;
+}
+
+
+
+
+
+.offcanvas {
+   
+    background-color: #121212 !important;
+}
+
+
+
+.offcanvas-body-mobile>div a {
+
+    color: #9e9ea4 !important;
+
+
+}
+
+
+
+button.mob_nav_close_btn.text-reset > i {
+    color: white !important;
+}
+
+
+
+
+.nft-holder-item {
+    border: 1px solid #000000 !important;
+    
+}
+
+
+
+.NFTrees-planted {
+
+    background: #373836 !important;
+
+
+}
+
+
+.co2-absorbed {
+
+    background-color: #262626 !important; 
+
+
+}
+
+
+
+.modal-header {
+    background: #1e1e1e !important;
+    border-bottom: 2px solid black !important;
+}
+
+.modal-body {
+    background: #1e1e1e !important;
+}
+
+
+
+.modal-title {
+    color: white !important;
+}
+
+
+#pp_img_tag {
+    border: 2px solid #cfcfcf  !important;
+}
+
+
+.right_sub_div {
+    background: #000000 !important;
+
+}
+
+
+label {
+    
+    color: #707070 !important;
+}
+
+
+#calendar .datedreamer__calendar_day button {
+    border: 1px solid #444444 !important;
+
+    background: #161616 !important;
+    color: white !important;
+
+}
+
+#calendar .datedreamer__calendar_day.active button {
+    border: 2px solid #72c94d !important;
+    background: black !important;
+    color: #74ca4b !important;
+}
+
+
+#calendar .datedreamer__calendar_prev, .datedreamer__calendar_next {
+    background: #565656 !important;
+}
+
+
+
+#calendar .datedreamer__calendar_title {
+
+    color: #a3a3a3 !important;
+
+}
+
+
+.cameraselect-head {
+   
+    color: #a7a7a7;
+}
+
+
+
+.farm-mobile>div {
+    font-family: sans-serif !important;
+
+    color: #8d8d8d !important;
+}
+
+
+
+.recent-purchased-main>p {
+
+    color: #6a6a6a !important;
+}
+
+
+
+
+.popular_question_container {
+    background: #000000 !important;
+    color: #9d9d9d !important;
+}
+
+
+input#question_inp {
+
+    color: white !important;
+}
+
+
+.form_child_div {
+ 
+    background: #000000 !important;
+
+}
+
+input#question_inp {
+    background: #000000 !important;
+
+}
+
+
+.welcome_txt > h3 {
+    color: white !important;
+}
+
+.welcome_txt > p {
+    color: #9b9b9b !important;
+}
+
+
+
+.chat_answer_container {
+    background: #000000 !important;
+    color: #dddddd !important;
+    
+}
+
+
+.user_question_txt > p {
+
+    color: white !important;
+}
+
+
+.agrigpt_icon_container > img {
+
+    border: 1px solid #707070 !important;
+    background: #252525 !important;
+}
+
+.speech_txt{
+    color:rgb(214, 214, 214);
+}
+
+
+.tashIcon_div > svg {
+
+    fill: #6a6a6a !important;
+}
+
+
+
+.save_chat_empty_msg {
+
+    background: #252525 !important;
+  
+}
+
+
+li.page-num > a {
+ 
+    background: #3c3c3c !important;
+    color: #259944 !important;
+}
+
+
+
+button.wallet_list_btn:hover {
+    background: #000000 !important;
+}
+
+.wallet_provider_name {
+ 
+    color: #b9b9b9 !important;
+}
+
+button.wallet_list_btn {
+    border: 1px #3c3c3c solid !important;
+}
+
+
+
+.formbold-main-wrapper {
+
+    background: #393939 !important;
+}
+
+
+
+.formbold-form-input {
+    border: 1px solid #000000 !important;
+    background: black !important;
+    color: #b5b5b5 !important;
+
+}
+
+input {
+    color-scheme: dark !important;
+}
+
+
+.leaflet-layer,
+.leaflet-control-zoom-in,
+.leaflet-control-zoom-out,
+.leaflet-control-attribution {
+  filter:  grayscale(1) brightness(0.7);
+}
+
+
+.card {
+    background: #393939  !important;
+
+    border: none !important;
+    color: #b3b3b3  !important;
+}
+
+.basemapImg {
+    box-shadow: none;
+    background-color: #252525 !important;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 3px 3px;
+}
+
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+    background: #000000 !important;
+    color: #c7c7c7 !important;
+
+}
+
+
+
+.main_child{
+
+    border: 1px solid #000000 !important;
+    border-top: 10px solid #49cc85 !important;
+    background: #323232 !important;
+}
+
+.farm_details_title td {
+    border: 1px solid grey;
+}
+
+.farm_details_title > p {
+    color: darkgrey;
+}
+
+.farm_details td {
+    border: 1px solid grey !important;
+    color: #a5a5a5;
+}
+
+.user_details > p {
+    color: darkgrey !important;
+}
+
+.date_tabel_div {
+    border: 1px solid #4c4c4c !important;
+}
+
+.location_title > p {
+    color: #a5a5a5;
+}
+
+
+.mail_footer {
+    background: black !important;
+}
+
+
+
+.empty_appoint_list {
+    background: #181818 !important;
+
+  }
+  
+  .icon_div {
+    
+    color: #323232 !important;
+    
+  }
+  
+  
+  .appointmrny_msg_list > h4 {
+    
+    color: #787878 !important;
+  }
+  
+  .appointmrny_msg_list > p {
+   
+    color: #5a5a5a !important;
+   
+  }
+
+
+  .empty_title > p {
+    color: #6e6e6e;
+}
+  
+
+
+
+
+.bottom_submit_btn {
+    
+    background: black  !important;
+    
+    box-shadow: 5px -1px 14px 3px #242424 !important; 
+}
+
+
+
+
+@media screen and (max-width:770px){
+
+
+    .nft-type-nav-pills {
+        background-color: #000000 !important;
+        min-height: 39px !important;
+        padding: 10px !important;
+    }
+
+    .history_container{
+        background: #000000 !important;
+    }
+
+    .chat_history_open , .close_history {
+        color: rgb(255, 255, 255) !important;
+    }
+    
+
+    
+.row.mt-2.livefarm-main {
+
+    background: black !important;
+
+}
+
+
+  
+        
+ }
+    
+    
+
+
+@media screen and (max-width:550px){
+
+
+    
+    .fixed_submit {
+    
+        background-color: black !important;
+      
+        box-shadow: 2px -5px 13px 0px #1c1c1c !important;
+    
+    
+    }
+    
+}
+
+

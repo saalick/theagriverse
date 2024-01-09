@@ -1,0 +1,56 @@
+.market-type-nav-pills {
+
+    background-color: #FFFFFF;
+    min-height: 44px;
+    margin: 30px 0;
+    padding: 10px;
+
+
+}
+
+.marketplace .right .stats-head {
+    font-family: 'Lufga';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #010101;
+}
+
+.marketplace .right .bottom {
+    margin-top: 5vw;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .marketplace .nft-holder-num>img {
+        width: 5rem;
+        height: auto;
+
+    }
+
+    .marketplace .nft-holder-item {
+        border: 1px solid #F5F5F7;
+    }
+
+    .marketplace .right .stats-head {
+
+        font-size: 1.4rem;
+
+    }
+
+    .market-type-nav-pills {
+
+        /* background-color: #FFFFFF;
+        min-height: 60px;
+        margin: 15px 0; */
+
+        background-color: #FFFFFF;
+        min-height: 60px;
+        display: inline-flex;
+        overflow-x: scroll;
+        margin: 15px 0;
+        max-width: 100%;
+        flex-wrap: nowrap;
+    }
+
+}

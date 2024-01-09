@@ -1,0 +1,599 @@
+.nftrees-div-myfarm {
+    margin: 12px 0 40px 0;
+    max-width: 370px;
+}
+
+.myfarm-trans-btn {
+    padding-left: 15px;
+    padding-bottom: 20px;
+}
+
+.myfarm-main .nftrees-head {
+    background: linear-gradient(238.99deg, #A2D82C -6.05%, #11AB90 89.45%);
+    border-radius: 15px;
+    font-family: 'Lufga';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #FFFFFF;
+    padding: 8%;
+
+}
+
+.myfarm-main .buy-nftree-btn {
+    background: linear-gradient(272.37deg, #B6F9A6 8.46%, #E0FFD9 98.82%);
+    border-radius: 4px;
+    padding: 3% 10%;
+    font-family: 'Lufga';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.8rem;
+
+    text-align: center;
+    color: #05001B;
+    border: none;
+}
+
+.user-greet-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.user-greet-div>div:first-of-type {
+    display: flex;
+}
+
+.myfarm-top-stats {
+
+    display: flex;
+    border: 2px solid #F5F5F6;
+    border-radius: 6px;
+}
+
+.myfarm-top-stats>div {
+    padding: 12px 20px;
+
+}
+
+.myfarm-top-stats>div:first-of-type {
+    border-right: 2px solid #F5F5F6;
+}
+
+.myfarm-head-num {
+    font-family: 'Lufga';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 24px;
+    color: #05001B;
+}
+
+.myfarm-head-num>span {
+    font-family: 'Lufga';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 12px;
+    color: #9E9EA4;
+}
+
+.myfarm-head-type {
+    font-family: 'Lufga';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: #4EB562;
+}
+
+.myfarm-nftrees-release-item {
+    position: relative;
+
+}
+
+.myfarm-nftrees-release-item>div {
+    background: #F5F5F6;
+    border-radius: 6px;
+    display: flex;
+    padding: 10px;
+    /* min-height: 190px; */
+    width: 100%;
+    margin: 10px 0px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.myfarm-nftrees-release-item>div>img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 6px;
+}
+
+.myfarm-nftrees-release-item>div>.new-nftrees-info {
+    word-wrap: break-word;
+    margin-bottom: 1vw;
+
+}
+
+.myfarm-nftrees-release-item:hover>div {
+
+    transition: all 0.5s ease-in-out;
+    /* transform-origin: top center; */
+    background: #FFFFFF;
+    border: 2px solid #4EB562;
+    box-shadow: 0px 23px 43px rgba(0, 0, 0, 0.28);
+    background-image: url(/img/green-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    /* position: absolute; */
+    z-index: 999;
+}
+
+.myfarm-viewnft-btn {
+    display: none;
+}
+
+.myfarm-nftrees-release-item:hover>div>.myfarm-viewnft-btn {
+    display: block;
+    background: linear-gradient(268.09deg, #A2D82C -32.92%, #11AB90 100%);
+    border-radius: 4px;
+    font-family: 'Lufga';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    text-align: center;
+    color: #FFFFFF;
+    /* margin-top: 20px; */
+}
+
+.myfarm-nftrees-release-item:hover>div>img {
+    transform: scale(1.1);
+}
+
+.recent-purchased-main {
+    margin-top: 40px;
+}
+
+.recent-purchased-main>p {
+
+    font-weight: 600;
+    font-size: 1rem;
+    color: #010101;
+
+}
+
+.recently-purchased-row {
+    width: 100%;
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+}
+
+.recently-purchased-row::-webkit-scrollbar {
+    height: 5px;
+}
+
+.recently-purchased-row::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 15px;
+}
+
+.recently-purchased-row::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.myfarm-recent-purchased {
+    position: relative;
+
+}
+
+.myfarm-recent-purchased>div {
+    background: #F5F5F6;
+    border-radius: 6px;
+    display: flex;
+    padding: 10px;
+    /* min-height: 190px; */
+    width: 100%;
+    margin: 10px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* .myfarm-recent-purchased>div>img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 6px;
+    
+} */
+
+.myfarm-recent-purchased>div>img {
+    width: auto;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 6px;
+}
+
+.myfarm-recent-purchased>div>.new-nftrees-info {
+    word-wrap: break-word;
+    margin-bottom: 1vw;
+
+}
+
+.recent-purchase-name {
+
+    font-weight: 400;
+    font-size: 0.6rem;
+    color: #010101;
+    word-wrap: break-word;
+}
+
+.recent-purchase-location {
+
+    font-weight: 400;
+    font-size: 0.5rem;
+
+    color: #9E9EA4;
+    display: flex;
+    align-items: center;
+    margin-top: 4px;
+    word-wrap: break-word;
+}
+
+.recent-purchase-location>img {
+
+    margin-right: 5px;
+    width: 10px;
+    height: 10px;
+}
+
+.nft-type-nav-pills {
+    /* background-image: url(/img/grey-trees.png);
+    background-color: #FFFFFF;
+    background-blend-mode: luminosity;
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat; */
+    /* min-height: 60px; */
+    margin: 30px 0 0;
+
+}
+
+.nft-type-nav-link {
+    font-family: 'Lufga';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    width: max-content;
+
+    line-height: 17px;
+    color: #9E9EA4;
+
+}
+
+.nft-type-nav-link:hover {
+    color: #2F9D60;
+}
+
+.nav-pills .nft-type-nav-link.active {
+    border: 2px solid #2F9D60;
+    border-radius: 6px;
+    background-color: #FFFFFF;
+    color: #010101;
+}
+
+
+.myfarm-tab-content {
+    width: 35%;
+}
+
+.farm-mobile {
+    width: 60%;
+}
+
+.farm-mobile>div {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    /* identical to box height */
+    /* position: relative;
+top: -25%;
+left: 10%; */
+
+
+    color: #010101;
+}
+
+.farm-mobile>div>div {
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 58px;
+    /* identical to box height */
+
+
+    color: #52AE40;
+}
+
+.farm-mobile img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.myfarm-holder-div {
+    height: 50vh;
+    overflow-y: scroll;
+    padding-top: 30px;
+
+}
+
+.myfarm-holder-div::-webkit-scrollbar {
+    /* visibility: hidden; */
+    /* display: none; */
+    scrollbar-color: #3E3E3E;
+    width: 5px;
+}
+
+.myfarm-holder-div::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.myfarm-holder-div::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 15px;
+}
+
+.myfarm-holder-item {
+    background: #F5F5F6;
+    /* box-shadow: 2px 3px 12px #dcdcde; */
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    min-height: 60px;
+    padding: 10px;
+    position: relative;
+    margin: auto;
+    width: 95%;
+    /* max-width: 360px; */
+    margin-bottom: 25px;
+    position: relative;
+
+}
+
+.myfarm-holder-img {
+    width: 60px;
+    height: 90px;
+    position: absolute;
+    top: -35px;
+    object-fit: cover;
+}
+
+.myfarm-holder-item>div {
+    padding-left: 25%;
+}
+
+.myfarm-name {
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #010101;
+    word-wrap: break-word;
+}
+
+.myfarm-location {
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: #9E9EA4;
+    display: flex;
+    align-items: center;
+    word-wrap: break-word;
+}
+
+.myfarm-location>img {
+
+    margin-right: 5px;
+    width: 10px;
+    height: 10px;
+}
+
+.comingsoon-box {
+    max-width: 360px;
+    height: 250px;
+    background-image: url(/img/nftrees-bg.png);
+    background-color: #CDCDE0;
+    background-blend-mode: luminosity;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+    border-radius: 15px;
+    box-sizing: border-box;
+    margin-bottom: 40px;
+
+}
+
+.comingsoon-box p {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 98.02%;
+    color: #9D9DA9;
+    padding: 50px 30px;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .myfarm-main .nft-type-nav-pills {
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .myfarm-nftrees-release-item>div {
+        margin: 0;
+        margin-bottom: 5vw;
+    }
+
+    .myfarm-main .myfarm-nftrees-release-item:hover>div {
+        transform: none;
+        position: relative;
+    }
+
+    .myfarm-main .myfarm-nftrees-release-item:hover>div>img {
+        transform: none;
+    }
+
+    .myfarm-main .new-nftrees-release-div {
+        height: unset;
+        max-width: unset;
+        overflow-y: unset;
+    }
+
+    .myfarm-main .new-nftrees-release-div .row {
+        margin: 0;
+    }
+
+    .myfarm-main .new-nftrees-release-item {
+        margin: 0;
+        margin-bottom: 5vw;
+        background-color: #EBEBEB;
+    }
+
+    .myfarm-main .new-nftrees-release-item:hover {
+        transform: none;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .nftrees-div-myfarm {
+        margin: 12px 0 40px 0;
+        max-width: unset;
+    }
+
+    .myfarm-main .buy-nftree-btn {
+        width: 95%;
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {}
+
+@media only screen and (max-width: 768px) {
+    .comingsoon-box {
+        max-width: 100%;
+        height: 300px;
+    }
+
+    .nft-type-nav-pills {
+        /* background-image: url(/img/grey-trees.png);
+        background-color: #FFFFFF;
+        background-blend-mode: luminosity;
+        background-position: right;
+        background-size: contain;
+        background-repeat: no-repeat;
+        min-height: 60px;
+        margin: 30px 0; */
+        background-color: #FFFFFF;
+        min-height: 60px;
+        display: inline-flex;
+        overflow: scroll;
+        margin: 15px 0;
+        max-width: 100%;
+        flex-wrap: nowrap;
+
+    }
+
+    .myfarm-main .user-greet-div {
+
+        display: flex;
+        justify-content: unset;
+        align-items: unset;
+        flex-direction: column;
+    }
+
+    .myfarm-main .myfarm-top-stats {
+        display: flex;
+        border: 4px solid #DADAE8;
+        border-radius: 6px;
+        flex-direction: column;
+    }
+
+    .myfarm-top-stats>div {
+        padding: 2rem;
+    }
+
+    .myfarm-head-num {
+        font-size: 2rem;
+        line-height: unset;
+    }
+
+    .myfarm-head-type {
+        font-size: 1rem;
+    }
+
+    .myfarm-head-num>span {
+        font-size: 1rem;
+    }
+
+    .myfarm-top-stats>div:first-of-type {
+        border-right: none;
+        border-bottom: 4px solid #DADAE8;
+    }
+
+    .nft-type-nav-pills {
+        background-image: unset;
+    }
+
+    .myfarm-main .nftrees-div {
+        width: 100%;
+    }
+
+    .myfarm-main .nftrees-div-myfarm {
+        max-width: unset;
+    }
+
+    .myfarm-nftrees-release-item:hover>div>.myfarm-viewnft-btn {
+
+        font-size: 1rem;
+        line-height: unset;
+    }
+
+    .myfarm-main .nftrees-head {
+        border-radius: 7px;
+        font-size: 1.4rem;
+    }
+}
+
+@media only screen and (min-width:769px) and (max-width: 992px) {}
+
+@media only screen and (max-width: 1000px) {
+    .myfarm-main-row {
+        flex-direction: column;
+    }
+
+    .myfarm-tab-content {
+        width: 100%;
+    }
+
+    .farm-mobile {
+        margin-top: 30px;
+        width: 100%;
+    }
+
+    .myfarm-recent-purchased>div>img {
+        height: 160px;
+
+    }
+
+    .recent-purchase-name {
+        font-size: 1rem;
+
+    }
+
+    .recent-purchase-location {
+        font-size: 0.8rem;
+    }
+}

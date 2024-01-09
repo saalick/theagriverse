@@ -1,0 +1,185 @@
+.main-buy-img {
+    width: 20px;
+    height: 26px;
+    object-fit: contain;
+    margin-right: 10px;
+}
+
+.buy-middle {
+    width: 86%;
+    margin-right: 4%;
+    background: none;
+    background: #FFFFFF;
+}
+
+.buy-middle {
+    display: flex;
+}
+
+.buy-one {
+    width: 100%;
+}
+
+.buy-two {
+    width: 40%;
+    margin: 7% 5% 0 5%;
+
+}
+
+.exchange-main>.buy-left {
+    background-image: url(/img/buy-bg.png), linear-gradient(18.06deg, #3375BB 4.17%, #00CDFA 90.31%);
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-blend-mode: luminosity;
+}
+
+.buy-info {
+    padding: 3rem 1.5rem;
+}
+
+
+.buy-head {
+    font-family: 'Lufga';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 39px;
+    color: #FFFFFF;
+
+}
+
+.buy-desc {
+    font-family: 'Lufga';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 15px;
+    color: #FFFFFF;
+    margin-top: 10px;
+}
+
+.exchange-right>.buy-right-bottom {
+    background: #FFFFFF;
+    border-radius: 0 0 30px 30px;
+}
+
+.buy-right-top {
+    padding-bottom: 0;
+}
+
+.buy-right-top>div {
+    margin: 2rem 0;
+}
+
+.payment-method-main>p {
+
+    font-weight: 600;
+    font-size: 1rem;
+    color: #010101;
+}
+
+.payment-method-main {
+    padding: 0 25px;
+}
+
+.payment-select {
+
+    width: 100%;
+    background: #F5F5F6;
+    border-radius: 6px;
+    border: none;
+
+    font-weight: 400;
+    font-size: 1rem;
+    padding: 12px;
+}
+
+.buying-div {
+    background: #F5F5F6;
+    border-radius: 15px;
+    padding: 20px 15px;
+}
+
+.buying-div p {
+
+    font-weight: 600;
+    font-size: 1rem;
+    color: #010101;
+}
+
+.buying-payment {
+    background: #FFFFFF;
+    padding: 15px 30px;
+    border-radius: 15px;
+    margin: 15px auto 25px;
+}
+
+.buying-payment>.amount {
+    font-weight: 300;
+    font-size: 3rem;
+    color: #2196D3;
+    display: flex;
+    align-items: baseline;
+    word-wrap: break-word;
+
+}
+
+.buying-payment>.amount>span {
+    font-weight: 400;
+    font-size: 13px;
+    color: #05001B;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.buying-payment>.amount>span>img {
+
+    object-fit: contain;
+    margin-right: 5px;
+}
+
+.buying-payment>.inr {
+    font-weight: 400;
+    font-size: 1rem;
+
+    color: #010101;
+}
+
+.payment-method-div>div {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: #05001B;
+}
+
+.payment-method-div>div>img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    margin-right: 5px;
+
+}
+
+@media only screen and (max-width: 992px) {
+    .buy-middle {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .buy-one {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .buy-two {
+        width: 90%;
+        margin: 7% auto 0;
+    }
+
+    .swap-main .buy-right {
+        margin: unset;
+    }
+}

@@ -1,0 +1,1217 @@
+@import url('https://fonts.cdnfonts.com/css/lufga');
+
+@font-face {
+    font-family: Lufga;
+    src: url(../fonts/LufgaRegular.ttf);
+}
+
+* {
+    font-family: 'Lufga', sans-serif;
+}
+
+
+body {
+    overflow-x: hidden;
+    overflow-wrap: break-word;
+    background-color: #f5f5f6;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+.top-navigation {
+    display: flex;
+    background-color: #f5f5f6;
+    margin: 25px 0;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.top-navigation-mobile {
+    display: none;
+}
+
+.top-navigation>div {
+    display: flex;
+    align-items: center;
+
+}
+
+.top-navigation>div:nth-of-type(1) {
+    width: 45%;
+}
+
+.top-navigation>div:nth-of-type(2)>*:hover {
+    transform: scale(1.1);
+    position: relative;
+    z-index: 1;
+}
+
+.top-logo {
+    margin: 0 0 0 3vw;
+}
+
+.search-div {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    margin: 0 20px;
+    margin-left: 5vw;
+    width: 100%;
+}
+
+.search-icon {
+    position: absolute;
+    /* top: 50%; */
+    /* bottom: 50%; */
+    left: 28px;
+    /* transform: translate(0, -50%); */
+}
+
+.search-inp {
+    padding-left: 50px;
+    width: 100%;
+    /* width: 484px; */
+    height: 41px;
+    border: none;
+    background: #FFFFFF;
+    border-radius: 6px;
+
+    font-family: 'Lufga';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 17px;
+    color: #484848;
+}
+
+.wallet-cnt-btn {
+    background: #FFFFFF;
+    /* background: linear-gradient(180deg, #FFFFFF 49.76%, rgba(255, 255, 255, 0) 100%); */
+    filter: drop-shadow(0px 17px 22px #DCDCDE);
+    border-radius: 6px;
+    font-family: 'Lufga';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 17px;
+    color: #010101;
+    border: none;
+    height: 40px;
+    padding: 12px 12px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+
+}
+
+.wallet-cnt-btn>img {
+    margin-left: 10px;
+}
+
+.theme-toggle-btn {
+    margin: 0 10px;
+}
+
+.label-theme:hover {
+    cursor: pointer;
+}
+
+.checkbox-theme {
+    opacity: 0;
+    position: absolute;
+
+}
+
+.label-theme {
+    width: 50px;
+    height: 26px;
+    background: #E6E6EB;
+    display: flex;
+    border-radius: 6px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    transform: scale(1.5);
+
+}
+
+.ball {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 3px;
+    left: 2px;
+
+    transition: transform 0.2s linear;
+    background: #FFFFFF;
+    box-shadow: 0px 17px 22px #DCDCDE;
+    border-radius: 3px;
+    z-index: -1;
+}
+
+/*  target the elemenent after the label*/
+.checkbox-theme:checked+.label-theme .ball {
+    transform: translateX(25px);
+}
+
+.fas {
+    z-index: 1;
+}
+
+.nav-cta-btn {
+    margin-left: 10px;
+
+    background: #E6E6EB;
+    border-radius: 6px;
+    border: none;
+    /* padding: 10px; */
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.profile-btn {
+    background: #E6E6EB;
+    border-radius: 6px;
+
+    font-family: 'Lufga';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 17px;
+    text-align: right;
+    color: #010101;
+    border: none;
+    padding: 8px 10px;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.profile-img {
+    border-radius: 50%;
+    margin-right: 7px;
+    width: 25px;
+    height: 25px;
+}
+
+.drop-arrow-icon {
+    margin-left: 10px;
+    float: right;
+}
+
+.main {
+    display: flex;
+    background: url(/img/dashboard-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-position:50% -30%; */
+
+}
+
+.left {
+    /* background-color: red; */
+    width: 10%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 99;
+}
+
+.main>.left>.active {
+    background: linear-gradient(274.31deg, #05001B 2.76%, #2D2746 98.6%);
+
+}
+
+.left>a {
+    margin: 24px 0;
+    width: 40px;
+    display: flex;
+    height: 40px;
+    padding: 4%;
+    border-radius: 4px;
+    background: #FFFFFF;
+    align-items: center;
+    justify-content: center;
+}
+
+/* left menu tooltip */
+.tooltip-a {
+    position: relative;
+    /* display: inline-block;
+    border-bottom: 1px dotted black; */
+}
+
+.tooltip-a .tooltiptext {
+    visibility: hidden;
+    width: max-content;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 0.5rem;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size: 1vw;
+    z-index: 999;
+}
+
+.tooltip-a:hover .tooltiptext {
+    visibility: visible;
+}
+
+/* left menu tooltip ends */
+.left>a:hover {
+    transform: scale(1.1);
+}
+
+.logout-btn {
+    background: rgba(229, 36, 32, 0.12) !important;
+}
+
+.middle {
+    /* background-color: blue; */
+    width: 60%;
+    min-height: 100vh;
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 30px;
+    position: relative;
+}
+
+.mid-top-island {
+    position: absolute;
+    width: 50%;
+    /* min-height: 15%;
+    top: -3%; */
+
+    top: 0;
+    right: 0;
+}
+
+.mid-bottom-island {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+}
+
+.user-greet-div {
+    display: flex;
+    align-items: center;
+}
+
+.main-profile-img {
+    width: 52px;
+    height: 52px;
+    border-radius: 6px;
+    margin-right: 15px;
+}
+
+.user-greet {
+    font-family: 'Lufga';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 31px;
+    color: #9E9EA4;
+}
+
+.user-greet>span {
+    color: #010101;
+}
+
+.user-greet-msg {
+    font-family: 'Lufga';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #9E9EA4;
+}
+
+.user-cards-main {
+    margin: 40px 0;
+    /* display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; */
+}
+
+.user-cards {
+    max-width: 197px;
+    min-height: 117px;
+    background: #F5F5F6;
+    border: 2px solid #F5F5F6;
+    border-radius: 6px;
+    padding: 0 18px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.brown-bg {
+    background: #FCE2C9;
+}
+
+.purple-bg {
+    background: #E7E7FF;
+}
+
+.brown-text-lg {
+    color: #BC620F !important;
+}
+
+.brown-text-lg>span {
+    color: #D89F6B !important;
+}
+
+.purple-text-lg {
+    color: #6060C9 !important;
+}
+
+.purple-text-lg>span {
+    color: #A4A4E7 !important;
+}
+
+.user-cards-num {
+    font-family: 'Lufga';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 36px;
+    line-height: 47px;
+    color: #4EB562;
+    word-wrap: break-word;
+    border-bottom: 2px solid #FFFFFF;
+    /* border-radius: 27px; */
+    padding: 12px 0;
+
+}
+
+.user-cards-text {
+    padding: 12px 0;
+    font-family: 'Lufga';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #010101;
+
+}
+
+.user-cards-num>span {
+    font-family: 'Lufga';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 21px;
+    color: #9E9EA4;
+    margin-left: 2px;
+}
+
+.user-balance {
+    display: flex;
+    position: relative;
+}
+
+.user-balance-left {
+    /* flex: 1; */
+    display: flex;
+    height: 275px;
+    height: 285px;
+
+    /* width: 50%; */
+}
+
+.nftrees-div {
+
+    border-radius: 15px;
+    margin-right: 10px;
+    background-image: url(/img/nftrees-bg.png),
+        linear-gradient(189.03deg, #A2D82C -22.28%, #11AB90 93.79%);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* padding: 0 5px; */
+}
+
+.nftrees-head {
+    background: linear-gradient(238.99deg, #A2D82C -6.05%, #11AB90 89.45%);
+    border-radius: 15px;
+    font-family: 'Lufga';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 18px;
+    /* text-align: center; */
+
+    color: #FFFFFF;
+    /* padding: 15px 20px; */
+    padding: 10%;
+
+}
+
+.nftrees-num {
+    font-family: 'Lufga';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 31px;
+    color: #FFFFFF;
+
+    padding: 20px 0px 6px 15px;
+    word-wrap: break-word;
+    position: relative;
+}
+
+.nftrees-num:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    /* left: 5%; */
+    border-bottom: 1px solid #7BDC8D;
+    width: 50%;
+}
+
+.nftrees-div>.nftrees-num>span,
+.token-balance-div>.nftrees-num>span {
+    font-family: 'Lufga';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 15px;
+    margin-left: 2px;
+}
+
+.nftrees-div>.nftrees-num>span {
+    color: #9EFF9F;
+}
+
+.token-balance-div>.nftrees-num>span {
+    color: #ADE7FF;
+}
+
+
+.nftrees-text {
+    font-family: 'Lufga';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #05001B;
+    padding: 5px 20px 15px;
+    word-wrap: break-word;
+
+}
+
+.user-trans-btn {
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
+    /* flex-wrap: wrap; */
+}
+
+.transfer-btn {
+    background: linear-gradient(274.31deg, #05001B 2.76%, #2D2746 98.6%);
+    border-radius: 4px;
+    padding: 8px 24px;
+    font-family: 'Lufga';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 14px;
+    color: #FFFFFF;
+    border: none;
+    margin-right: 10px;
+
+}
+
+.buy-nftree-btn {
+    background: linear-gradient(272.37deg, #B6F9A6 8.46%, #E0FFD9 98.82%);
+    border-radius: 4px;
+    /* padding: 8px 24px; */
+    padding: 8px;
+    font-family: 'Lufga';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 14px;
+    text-align: center;
+
+    color: #05001B;
+    border: none;
+}
+
+.token-balance-div {
+    background: linear-gradient(189.03deg, #2CCDD8 -22.28%, #0F7BB8 93.79%);
+    border-radius: 15px;
+    background-image: url(/img/token-balance-bg.png),
+        linear-gradient(189.03deg, #2CCDD8 -22.28%, #0F7BB8 93.79%);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.token-balance-head {
+    /* padding: 15px 20px; */
+    background: linear-gradient(189.03deg, #2CCDD8 -22.28%, #0F7BB8 93.79%);
+    border-radius: 15px;
+    font-family: 'Lufga';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    /* padding: 15px 20px; */
+    padding: 8%;
+
+    color: #FFFFFF;
+}
+
+.token-balance-div>.nftrees-num:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    border-bottom: 1px solid #A8F3FF;
+    width: 50%;
+}
+
+.user-balance-right {
+    /* flex: 1; */
+    /* width: 45%; */
+    margin-left: 5%;
+    margin-bottom: 30%;
+}
+
+.staked-crst-txt {
+    font-family: 'Lufga';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+
+    color: #010101;
+    margin-bottom: 13px;
+}
+
+.coming-soon-crst {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.coming-soon-crst>.coming-soon-div {
+    width: 180px;
+    /* height: 117px; */
+    border: 2px solid #F5F5F6;
+    border-radius: 6px;
+    margin-right: 10px;
+    padding: 30px 19px 0;
+}
+
+.coming-soon-txt {
+    padding-bottom: 13px;
+    border-bottom: 2px solid #F5F5F6;
+
+    font-family: 'Lufga';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 20px;
+    line-height: 26px;
+    color: #05001B;
+}
+
+.coming-soon-type {
+    padding: 13px 4px;
+    font-family: 'Lufga';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #9E9EA4;
+}
+
+.right {
+    width: 30%;
+    min-height: 100vh;
+    padding: 10px 2rem 0;
+}
+
+.stats-head {
+    font-family: 'Lufga';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #010101;
+}
+
+.total-stats-div {
+    /* width: 100%;
+    display: flex;
+    border-radius: 6px;
+    background: url(/img/stats-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 230px;
+    font-family: 'Lufga';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #010101;
+    margin: 10px 0 40px; */
+
+    /* width: 100%; */
+    max-width: 360px;
+    display: flex;
+    border-radius: 6px;
+    background: url(/img/stats-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 230px;
+    font-family: 'Lufga';
+    font-style: normal;
+    background-color: #b6f9a6;
+    background-blend-mode: color-burn;
+    font-size: 14px;
+    line-height: 18px;
+    color: #010101;
+    margin: 10px 0 40px;
+}
+
+.NFTrees-planted {
+    flex: 1;
+    /* background: #D4F8B3; */
+    padding: 20px;
+    position: relative;
+    border-radius: 6px 0 0 6px;
+
+}
+
+.co2-absorbed {
+    flex: 1;
+    background: url(/img/stats-bg-right.png);
+
+    background-color: #CDCDE0;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-blend-mode: soft-light;
+    padding: 20px;
+    position: relative;
+    border-radius: 0px 6px 6px 0px;
+
+}
+
+.stats-info {
+    position: absolute;
+    bottom: 20px;
+    left: 20%;
+}
+
+.stats-num-left {
+    font-family: 'Lufga';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 47px;
+    color: #316216;
+    word-break: break-word;
+
+
+}
+
+.stats-num-right {
+    font-family: 'Lufga';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 47px;
+    color: #6B6B7F;
+    word-break: break-word;
+
+}
+
+
+.stats-txt {
+    font-family: 'Lufga';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: #010101;
+    word-break: break-word;
+    width: 12ch;
+
+}
+
+.nft-holder-div {
+    height: 33vh;
+    overflow-y: scroll;
+
+}
+
+.nft-holder-div::-webkit-scrollbar {
+    /* visibility: hidden; */
+    display: none;
+}
+
+.nft-holder-item {
+    background: #FFFFFF;
+    /* box-shadow: 0px 17px 22px #dcdcde; */
+    box-shadow: 3px 17px 22px #dcdcde;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 60px;
+    padding: 15px;
+    position: relative;
+    margin: auto;
+    width: 95%;
+    /* max-width: 360px; */
+    margin-bottom: 15px;
+    cursor:pointer;
+
+}
+
+.nft-holder-item>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.nft-holder-img {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.nft-holder-name {
+    font-family: 'Lufga';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 17px;
+    color: #010101;
+    word-break: break-word;
+}
+
+.nft-holder-num {
+    font-family: 'Lufga';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: right;
+    color: #1FA8C9;
+    /* position: absolute;
+    right: 15px; */
+    word-break: break-word;
+}
+
+.nft-holder-num>img {
+    width: 5rem;
+    height: auto;
+}
+
+
+.dashboard-main .user-balance .mobile-island-img {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .main {
+        flex-direction: column;
+    }
+
+    .middle {
+        width: 100%;
+        border-radius: unset;
+        padding: 5vw;
+    }
+
+    .right {
+        width: 100%;
+        /* margin: 5vw 0 0 0; */
+        padding: 5vw;
+        background: #FFFFFF;
+    }
+
+    .user-greet-div {
+        /* padding-left: 10px; */
+        margin: 15px 0;
+    }
+
+    .user-cards-num {
+        border-bottom: 4px solid #FFFFFF;
+    }
+
+    .user-cards {
+        max-width: 100%;
+        min-height: unset;
+        flex: auto !important;
+    }
+
+    .dashboard-main .user-balance {
+        flex-wrap: wrap;
+        margin-top: 40%;
+    }
+
+    .dashboard-main .user-balance .mobile-island-img {
+        display: block;
+        width: 100%;
+        position: absolute;
+        /* top: -8%; */
+        top: -33vw;
+    }
+
+    .user-balance-left {
+        width: 100%;
+        height: unset;
+        flex-direction: column;
+    }
+
+    .nftrees-div {
+        border-radius: 7px;
+        margin-right: 0;
+    }
+
+    .nftrees-head,
+    .token-balance-head {
+        border-radius: 7px;
+        font-size: 1.4rem;
+    }
+
+    .user-trans-btn {
+        padding: 5vw;
+        flex-direction: column;
+    }
+
+    .transfer-btn,
+    .buy-nftree-btn {
+        margin: 1vw;
+        width: 100%;
+        line-height: unset;
+        font-size: 1rem;
+    }
+
+    .token-balance-div {
+        margin-top: 5vw;
+        border-radius: 7px;
+        background-image: url(/img/token-balance-bg-1.png), linear-gradient(189.03deg, #2CCDD8 -22.28%, #0F7BB8 93.79%);
+        background-size: cover;
+        padding-bottom: 15vw;
+
+    }
+
+    .nftrees-num {
+        font-size: 2rem;
+        padding: 8% 0 2% 8%;
+
+    }
+
+    .nftrees-num:before {
+        border-bottom: 2px solid #7BDC8D;
+    }
+
+    .token-balance-div>.nftrees-num:before {
+        border-bottom: 2px solid #A8F3FF;
+    }
+
+
+
+    .nftrees-text {
+        padding-left: 8%;
+        font-size: 1rem;
+    }
+
+    .nftrees-div>.nftrees-num>span,
+    .token-balance-div>.nftrees-num>span {
+        font-size: 1rem;
+    }
+
+    .user-balance-right {
+
+        /* margin-left: unset ; */
+        margin: 11vw 0 0 0;
+        width: 100%;
+    }
+
+    /* .coming-soon-crst>.coming-soon-div {
+        width: 100%;
+        margin: 2vw 0;
+    } */
+
+
+    .coming-soon-type {
+        color: #010101;
+    }
+
+    .nft-holder-div {
+        height: unset;
+    }
+
+    .total-stats-div {
+        max-width: 100%;
+    }
+
+    .nft-holder-item {
+        max-width: 100%;
+    }
+
+    .nft-holder-img {
+        width: 10vw;
+        height: 10vw;
+        object-fit: cover;
+        margin-right: 5%;
+    }
+
+    .nft-holder-name {
+        font-size: 1.2rem;
+    }
+
+    .nft-holder-num {
+        font-size: 1.4rem;
+    }
+
+    .nft-holder-item {
+        border: 1px solid #F5F5F7;
+        box-shadow: 18px 4px 12px #dcdcde;
+
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+
+
+
+    .middle {
+        width: 60%;
+        border-radius: unset;
+        padding: 5vw;
+        padding-top: 0;
+    }
+
+    .right {
+        width: 40%;
+        padding: 5vw 5vw;
+    }
+
+    .user-cards {
+        max-width: 100%;
+    }
+
+    .nftrees-div {
+        width: 60%;
+    }
+
+    .token-balance-div {
+        width: 40%;
+    }
+
+    .user-balance {
+        flex-wrap: wrap;
+    }
+
+    .user-balance-left {
+        width: 100%;
+    }
+
+    .user-balance-right {
+        margin-left: unset;
+        margin: 11vw 0 0 0;
+        width: 100%;
+    }
+
+    .NFTrees-planted,
+    .co2-absorbed {
+        padding: 12px;
+    }
+
+    .stats-num-right,
+    .stats-num-left {
+        font-size: 2rem;
+    }
+
+    .stats-txt {
+        font-size: 1.9vw;
+    }
+
+    .nft-holder-item {
+        padding: 1vw;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .main-profile-img {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .top-navigation-mobile {
+        display: block;
+        background: url(/img/dashboard-bg.png);
+        background-position: top;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: white;
+        background-blend-mode: luminosity;
+    }
+
+    .top-navigation-mobile>.mobile-nav-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5vw 1vw;
+    }
+
+    .top-navigation-mobile>.mobile-nav-top>div {
+        display: flex;
+        align-items: center;
+    }
+
+    .offcanvas-body-mobile>div {
+        display: flex;
+        flex-direction: column;
+        padding: 0 10vw;
+
+    }
+
+    .top-navigation-mobile .offcanvas {
+        overflow: scroll;
+    }
+
+    .offcanvas-body-mobile>div a {
+        text-decoration: none;
+        font-family: 'Lufga';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        color: #010101;
+        padding: 1rem;
+        margin: 2vw 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .offcanvas-body-mobile>div .active {
+        background: linear-gradient(0deg, #2D2746, #2D2746);
+        border-radius: 1vw;
+        color: #FFFFFF;
+    }
+
+    .offcanvas-body-mobile .logout-btn {
+        color: #E52420;
+        background: #FFFFFF;
+        border: 6px solid rgba(229, 36, 32, 0.18);
+        border-radius: 1vw;
+    }
+
+    .offcanvas-body-mobile>div a img {
+        margin: 0 5%;
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .hamburger-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .user-greet-div>div:first-of-type {
+        margin: 4vw 0px;
+    }
+
+    .mid-top-island {
+        display: none;
+    }
+
+    .left {
+        display: none;
+    }
+
+    .top-navigation {
+        display: none;
+    }
+
+    .coming-soon-crst {
+        margin: 0;
+    }
+
+    .staked-crst-txt {
+        font-size: 1.2rem;
+    }
+
+    .coming-soon-txt {
+        font-size: 1.5rem;
+    }
+
+    .coming-soon-crst>.coming-soon-div {
+        width: 100%;
+        margin: 2vw 0;
+    }
+
+    .mid-bottom-island {
+        display: none;
+    }
+
+    .stats-head {
+        font-size: 1.4rem;
+        margin-bottom: 2rem;
+    }
+
+}
+
+
+@media only screen and (min-width:769px) and (max-width: 992px) {
+    .top-logo {
+        margin: 0 2vw;
+    }
+
+    .search-div {
+        margin: 0;
+    }
+
+    .search-icon {
+        left: 2vw;
+        width: 3vw;
+        height: 3vw;
+
+    }
+
+    .middle {
+        padding: 4vw 2vw;
+        margin-top: 3%;
+
+    }
+
+    .right {
+        padding: 4vw 2vw 0;
+    }
+
+    .stats-num-left,
+    .stats-num-right {
+        font-size: 2rem;
+    }
+
+    .top-navigation {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1200px) {}

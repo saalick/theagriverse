@@ -1,0 +1,3154 @@
+  @import url('https://fonts.cdnfonts.com/css/lufga');
+
+
+  @font-face {
+      font-family: Lufga;
+      src: url(../fonts/LufgaRegular.ttf);
+  }
+
+  @font-face {
+      font-family: Inter;
+      src: url(../fonts/Inter/static/Inter-Regular.ttf);
+  }
+
+  * {
+      font-family: 'Lufga', sans-serif;
+  }
+
+  body {
+      overflow-x: hidden;
+      overflow-wrap: break-word;
+  }
+
+  .main {
+      overflow-x: hidden;
+  }
+
+  .hamburger-icon {
+      width: 23px;
+  }
+
+  .top-header {
+      background: url(/img/bg.png) no-repeat center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      position: relative;
+      z-index: 2;
+      /* min-height: 100vh; */
+      /* width: 100vw; */
+  }
+
+  .games-collapse {
+      background: transparent;
+  }
+
+  .game-card-body {
+      background: transparent;
+      border: none;
+      position: absolute;
+      top: 10%;
+      display: flex;
+      flex-direction: column;
+
+  }
+
+  .game-card-body a {
+      background: #FFFFFF;
+      font-family: 'Lufga';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 26px;
+      text-align: center;
+      color: #010101;
+      text-decoration: none;
+      padding: 10px 25px;
+      margin-top: 1vw;
+      border-radius: 25px;
+
+  }
+
+  .img-responsive {
+      width: 100%;
+  }
+
+  .button-green {
+      border: none;
+      background: linear-gradient(266.87deg, #A2D82C -9.86%, #11AB90 97.03%, #11AB90 97.03%);
+      color: #FFFFFF !important;
+  }
+
+  .top-pngwings {
+      display: flex;
+      position: relative;
+      z-index: -1;
+      margin-top: -35%;
+  }
+
+  .pngwing-left {
+      width: 50%;
+      transform: matrix(-1, 0, 0, 1, 0, 0);
+      z-index: -1;
+  }
+
+  .pngwing-right {
+      width: 50%;
+  }
+
+  .about-agriverse {
+      width: 80%;
+      margin: 150px auto 20px;
+      position: relative;
+  }
+
+  .about-agriverse-img-d {
+      display: block;
+  }
+
+  .about-agriverse-img-m {
+      display: none;
+  }
+
+  .about-agriverse-img-d {
+      /* position: absolute;
+      top: -130px;
+      right: -136px;
+      width: 80%; */
+
+      position: absolute;
+      top: -10vw !important;
+      right: -10vw !important;
+      z-index: 2;
+      width: 80%;
+  }
+
+  .about-agriverse-img-d>img {
+      width: 100%;
+  }
+
+  .blu {
+      font-size: 36px;
+      line-height: 33.33px;
+      color: #0055AE;
+  }
+
+  .grow-farm-desc {
+      font-family: 'Lufga';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 26px;
+      text-align: center;
+      /* color: #5D616D; */
+      color: #010101;
+      width: 90%;
+      /* min-height: 335px; */
+      margin: auto;
+
+  }
+
+  .top-navbar {
+      /* position: absolute; */
+      top: 18px;
+      text-align: center;
+      width: 100%;
+      font-family: 'Lufga';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 17px;
+      color: #010101;
+      padding: 9px 0px;
+      display: flex;
+      justify-content: space-between;
+
+  }
+
+  .top-logo {
+      /* float: left; */
+      margin-left: 3%;
+  }
+
+  .menu-links-mobile {
+      display: none;
+  }
+
+  .menu-links-desktop {
+      /* float: right; */
+      margin: auto;
+      margin-right: 10vw;
+
+  }
+
+  .menu-links-desktop>li {
+      list-style-type: none;
+      display: inline-block;
+
+      border-radius: 25px;
+  }
+
+  .menu-links-desktop>li>a {
+      padding: 12px 25px;
+      display: block;
+      text-transform: capitalize;
+      color: #010101;
+      text-decoration: none;
+
+      font-family: 'Lufga';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 17px;
+      /* identical to box height */
+
+      text-align: center;
+  }
+
+  .game-btn {
+      padding: 12px 25px;
+  }
+
+  .menu-links-desktop>li:hover {
+      /* outline: 5px dotted white; */
+      /* transform: scale(1.1); */
+      border: .5px solid white;
+  }
+
+  .dapp-btn {
+      margin: 0 20px 0 40px;
+  }
+
+
+  .banner-text-content {
+      top: 50%;
+      /* transform: translate(-50%, -50%); */
+      left: 50%;
+      /* position: absolute; */
+      text-align: center;
+      background: url(/img/ellipse9.png);
+      background-repeat: no-repeat;
+      /* filter: blur(163.5px); */
+      background-size: cover;
+      margin: 70px auto;
+      width: 50%;
+      margin-bottom: 20px;
+      min-height: 575px;
+      width: 70%;
+      /* background: #FFFFFF;
+      background-blend-mode: soft-light;
+      filter: blur(163.5px); */
+  }
+
+
+
+
+
+  .button-white {
+      background: #fff;
+  }
+
+  .button-green>a {
+      color: #fff !important;
+  }
+
+  .growing-h1 {
+      /* font-size: 4.5rem; */
+      padding-bottom: 1rem;
+      font-family: 'Lufga';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 72px;
+      line-height: 92.5%;
+      color: #010101;
+  }
+
+  .about-h1 {
+      padding-left: 1rem;
+  }
+
+  .h1-text {
+      /* font-size: 4.5rem; */
+      padding-bottom: 1rem;
+      font-family: 'Lufga';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 72px;
+      line-height: 112.5%;
+
+      color: #010101;
+  }
+
+  .p-text {
+
+
+      font-family: 'Lufga';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 100%;
+      /* font-size: 15px; */
+      line-height: 25px;
+      color: #5D616D;
+  }
+
+  .success-text-green {
+      color: #5AB140;
+  }
+
+  .cta {
+
+      margin: 50px auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .cta>a:nth-child(1) {
+      margin-right: 1rem;
+  }
+
+  .learn-more {
+      background: #F5F5F6;
+      margin-left: 20px;
+
+  }
+
+  .cta-desktop {
+      display: block;
+  }
+
+  .cta-mobile {
+      display: none;
+  }
+
+  .cust-btn {
+      padding: 16px 25px;
+      border-radius: 2rem;
+      text-decoration: none;
+      font-family: 'Lufga';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 23px;
+      text-align: center;
+      /* width: 181px; */
+
+  }
+
+  .subscribe-btn {
+      width: 190px;
+      margin-left: 1%;
+  }
+
+  .cust-btn:hover {
+      /* outline: 5px dotted yellow; */
+      border: .5px solid white;
+
+  }
+
+  /* 
+  article>p {
+      width: calc(50% - 1rem);
+      float: left;
+      font-size: medium;
+      line-height: 19px;
+      padding-right: 1rem;
+  } */
+
+  .agriverse_intro {
+      max-width: 1024px;
+      margin: 0 auto;
+  }
+
+  .h2-text {
+      padding-left: 3rem;
+      /* font-size: 2rem; */
+      /* margin-top: 60px; */
+      margin-bottom: -15px;
+      font-family: 'Lufga';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 36px;
+      line-height: 92.5%;
+      color: #5D616D;
+  }
+
+  .half {
+      width: 35%;
+  }
+
+  /* .inline-block {
+      display: inline-block;
+  } */
+
+  .plr-0 {
+      padding-left: 0;
+      padding-right: 0;
+  }
+
+  .bgk {
+
+      background-image: url(/img/bg-2.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      padding-bottom: 30%;
+  }
+
+  .bgk-inner {
+
+      top: 0;
+      bottom: 0;
+      margin: 0 0 0 10%;
+      right: 0;
+      left: 0;
+
+  }
+
+  .bgk-background-m {
+      display: none;
+  }
+
+  .bgk-background-d {
+      display: block;
+      height: 100%;
+      width: 100%;
+  }
+
+  .bgk-carousel-control-prev,
+  .bgk-carousel-control-next {
+      position: relative;
+      top: 0;
+      bottom: 0;
+      z-index: 1;
+      display: unset;
+      display: flex;
+      background: #FFFFFF;
+      border: 3px solid #EEEEF2;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      padding: 0;
+      color: #000;
+      text-align: center;
+      opacity: 1;
+      transition: opacity .15s ease;
+  }
+
+  .nft-types-owl-theme .owl-nav {
+      display: flex;
+      position: absolute;
+      top: 10vw;
+      left: -8vw;
+      height: 110px;
+      justify-content: space-between;
+      flex-direction: column;
+  }
+
+  .nft-types-owl-theme .owl-nav [class*=owl-]:hover {
+      background: none !important;
+      color: unset !important;
+      text-decoration: none;
+  }
+
+  .owl-carousel .owl-stage {
+      margin: 100px 0;
+  }
+
+
+
+  .nftrees-head {
+      margin: auto;
+      /* margin-top: 18%; */
+
+  }
+
+  .nftrees-head>div:nth-of-type(1) {
+      font-family: 'Lufga';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 36px;
+      line-height: 92.5%;
+      color: #FFFFFF;
+      padding-left: 20px;
+
+  }
+
+  .nftrees-head>div:nth-of-type(2) {
+      font-family: 'Lufga';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 72px;
+      line-height: 92.5%;
+      color: #FFFFFF;
+  }
+
+  .nft-card-type {
+      /* background: transparent;
+      border: none; */
+      /* width: 300px; */
+      min-height: 400px;
+      height: 20vw;
+
+      background: #FFFFFF;
+      border: 5px solid #4EB562;
+      border-radius: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  }
+
+  .nft-card-type-link {
+      text-decoration: none;
+  }
+
+  .nft-card-type>.card-img-nft {
+      /* position: absolute;
+      right: 0;
+      left: 0;
+      top: -20%;
+      z-index: 1; */
+      height: 80%;
+      background: linear-gradient(180deg, rgb(237 238 242 / 91%) 0%, #EDEEF2 100%);
+      border-radius: 22px;
+      /* position: relative; */
+      display: flex;
+      justify-content: center;
+
+  }
+
+  .nft-card-type>.card-img-nft>img {
+      /* position: absolute;
+      left: 50%;
+      top: -40%; */
+      width: 100%;
+      min-height: 100%;
+      /* transform: translate(-50%, 0); */
+      object-fit: contain;
+  }
+
+  .livestock-img {
+      top: -0% !important;
+
+  }
+
+  .nft-name {
+      border-radius: 0 0 22px 22px;
+      background: #FFFFFF;
+      height: 20%;
+      text-align: left;
+      padding: 30px;
+      padding: 1rem;
+      font-family: 'Lufga';
+      font-style: normal;
+      font-weight: 500;
+      /* font-size: 24px; */
+      font-size: 1.5rem;
+      line-height: 31px;
+
+      color: #010101;
+
+
+  }
+
+
+  .bgk-carousel-item>img {
+      width: 100%;
+  }
+
+  .discover-agriverse {
+      box-sizing: border-box;
+      border: 6px solid #EDEEF3;
+      border-radius: 17px;
+      padding: 40px 100px;
+      margin: 0 50px 150px;
+      margin-top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  }
+
+  .discover-agriverse>div>.discover-btns {
+      padding: 25px;
+      width: 300px;
+      display: inline-block;
+      border: none;
+      background: #F5F5F6;
+      border-radius: 17px;
+      font-family: 'Lufga';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 92.5%;
+      text-align: center;
+      color: #010101;
+      text-decoration: none;
+  }
+
+  .discover-agriverse>div>.discover-btns:hover {
+      transform: scale(1.1);
+
+  }
+
+  /* .discover-agriverse>div>a:first-of-type {
+      margin: 0 35px 0 0;
+  } */
+  .discover-agriverse>div>a {
+      margin: 1rem;
+  }
+
+  .discover-agriverse-btns {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .view-now {
+      font-family: 'Lufga';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 23px;
+      text-align: center;
+      margin-top: 5px;
+      background: linear-gradient(266.87deg, #A2D82C -9.86%, #11AB90 97.03%, #11AB90 97.03%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+  }
+
+  .marketplace-carousel {
+      margin: 60px auto;
+      width: 85%;
+  }
+
+  .marketplace-carousel-item {
+      background: linear-gradient(180deg, rgba(217, 217, 217, 0) 74.03%, #FFFFFF 100%);
+      border-radius: 19px 19px 22px 22px;
+      border: 5px solid #D9D9D9;
+      border-bottom: 0;
+  }
+
+  .marketplace-carousel-item>img {
+      border-radius: 15px 15px 18px 18px;
+      position: relative;
+      z-index: -1;
+      width: 100%;
+  }
+
+  .marketplace-main {
+      position: relative;
+  }
+
+  .marketplace-branch-left {
+      position: absolute;
+      width: 40%;
+      top: -18%;
+      z-index: -2;
+  }
+
+  .marketplace-branch-right {
+      position: absolute;
+      right: -11%;
+      bottom: -15%;
+      width: 40%;
+      z-index: -2;
+  }
+
+  .marketplace-carousel-btn {
+      display: flex;
+      position: absolute;
+      top: 5%;
+      right: 10%;
+      width: 125px;
+      height: 50px;
+      justify-content: space-between;
+  }
+
+  .marketplace-carousel-control-prev,
+  .marketplace-carousel-control-next {
+      position: relative;
+      top: 0;
+      bottom: 0;
+      z-index: 1;
+      display: unset;
+      display: flex;
+      background: #FFFFFF;
+      border: 3px solid #EEEEF2;
+      border-radius: 50%;
+      width: 55px;
+      height: 55px;
+      padding: 0;
+      color: #000;
+      text-align: center;
+      opacity: 1;
+      transition: opacity .15s ease;
+  }
+
+  .marketplace-carousel-control-prev-icon,
+  .marketplace-carousel-control-next-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .marketplace-main>div:first-of-type {
+      /* display: flex;
+    flex-direction: column; */
+      margin: auto;
+      width: fit-content;
+  }
+
+  .nft-marketplace-bottom {
+      display: flex;
+      margin: 120px 194px 0;
+
+  }
+
+  .nft-marketplace-desc {
+      flex: 1;
+  }
+
+  .nft-marketplace-imgs {
+      flex: 1;
+      display: flex;
+  }
+
+  .nft-marketplace-imgs>.left {
+      position: relative;
+      top: -20%;
+  }
+
+  .nft-img {
+      width: 218px;
+      height: 340px;
+      display: flex;
+      background: #F5F5F6;
+      border: 5px solid #CFD2DE;
+      border-radius: 17px;
+      margin: 20px;
+      align-items: center;
+      justify-content: center;
+  }
+
+
+  /* /////////////////////////// */
+  .tokenomics-main {
+      margin: -15% 0 10% 0;
+      background: linear-gradient(180deg, #F5F5F6 17.02%, rgba(245, 245, 246, 0) 90.6%);
+      padding: 25% 0 0 0;
+      position: relative;
+      z-index: -1;
+  }
+
+  .tokenomics {
+      margin: auto;
+      width: 80%;
+      background: #FFFFFF;
+      border: 5px solid #ECECEC;
+      position: relative;
+
+  }
+
+  .tokenomics-branch {
+      position: absolute;
+      top: -1%;
+      right: -10%;
+      width: 35%;
+      z-index: 1;
+  }
+
+  .tokenomics-branch-left {
+      position: absolute;
+      top: 33%;
+      left: -10%;
+      width: 30%;
+      z-index: -1;
+
+  }
+
+  .tokenomics>.h1-text {
+      padding: 0;
+      margin: 60px auto 50px;
+  }
+
+  .tokenomics-line-chart {
+      width: 92%;
+      position: relative;
+      left: 50%;
+      transform: translate(-50%, 0);
+  }
+
+  .tokenomics-row {
+      margin: 80px auto 20px;
+      display: flex;
+      width: 90%;
+  }
+
+  .tokenomics-left,
+  .tokenomics-right {
+
+      width: 40%;
+      margin: 0 auto;
+  }
+
+  .token-type {
+      font-family: 'Lufga';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 23px;
+
+      color: #010101;
+  }
+
+  .token-percent {
+      font-family: 'Lufga';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 26px;
+      text-align: right;
+
+      background: linear-gradient(266.87deg, #A2D82C -9.86%, #11AB90 97.03%, #11AB90 97.03%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+      margin-left: 5px;
+  }
+
+  .tokenomics-left>div,
+  .tokenomics-right>div {
+      display: flex;
+      margin-bottom: 40px;
+  }
+
+  .token-color-circle {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      margin-right: 30px;
+  }
+
+  .tokenomics-left>div>div:nth-of-type(2),
+  .tokenomics-right>div>div:nth-of-type(2) {
+      display: flex;
+      align-items: center;
+      width: 90%;
+      justify-content: space-between;
+  }
+
+  .tokenomics-left>div>.circle-one {
+      background-color: #02B7FF;
+  }
+
+  .tokenomics-left>div>.circle-two {
+      background-color: #02DEFE;
+  }
+
+  .tokenomics-left>div>.circle-three {
+      background-color: #00CFBE;
+  }
+
+  .tokenomics-left>div>.circle-four {
+      background-color: #02F18E;
+  }
+
+  .tokenomics-left>div>.circle-five {
+      background-color: #FFC700;
+  }
+
+  .tokenomics-right>div>.circle-one {
+      background-color: #FF5C00;
+  }
+
+  .tokenomics-right>div>.circle-two {
+      background-color: #FF000F;
+  }
+
+  .tokenomics-right>div>.circle-three {
+      background-color: #BA0000;
+  }
+
+  .tokenomics-right>div>.circle-four {
+      background-color: #B600D1;
+  }
+
+  .tokenomics-right>div>.circle-five {
+      background-color: #8011D7;
+  }
+
+  .agriverse-slippage {
+      /* display: flex;  */
+      /* justify-content: center; */
+      margin: auto;
+      /* background: #FFFFFF; */
+      /* border: 8px solid #1FB1E6; */
+      /* border-radius: 48px; */
+      position: relative;
+      z-index: 1;
+
+  }
+
+  .agriverse-slippage>.blue-div {
+      display: flex;
+      /* justify-content: center; */
+      margin: 0 auto;
+      background: #FFFFFF;
+      /* border: 8px solid #1FB1E6; */
+      border: 8px solid #4EB562;
+      border-radius: 48px;
+      position: relative;
+      z-index: 1;
+      width: 800px;
+
+  }
+
+  .buy-head,
+  .sell-head {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px 0 50px 0 !important;
+      font-family: 'Lufga';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 48px;
+      line-height: 92.5%;
+      /* text-align: center; */
+      justify-content: center !important;
+  }
+
+  .buy-head {
+      color: #20B087;
+
+  }
+
+  .sell-head {
+      color: #FF3945;
+  }
+
+  .token-rewards {
+      font-family: 'Lufga';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 18px;
+      color: #5D616D;
+      margin-top: -30px;
+  }
+
+  .buy-percent,
+  .sell-percent {
+      font-family: 'Lufga';
+      font-style: normal;
+      font-weight: 400;
+      /* font-size: 18px; */
+      font-size: 100%;
+      line-height: 23px;
+      text-align: right;
+      margin-left: 50px;
+
+
+  }
+
+  .buy-percent {
+      color: #20B087;
+
+  }
+
+  .sell-percent {
+      color: #FF3945;
+  }
+
+
+  .agriverse-slippage-left-branch {
+      position: absolute;
+      left: 3%;
+      top: 0;
+      z-index: 1;
+      width: 35%;
+  }
+
+  .agriverse-slippage-right-branch {
+      position: absolute;
+      right: 4%;
+      z-index: 1;
+      top: -30%;
+      width: 35%;
+  }
+
+  .blue-border-line {
+      width: 8px;
+      height: 480px;
+      background: linear-gradient(180deg, #1FB1E6 0%, #1998CF 100%);
+      padding: 0 !important;
+  }
+
+  .agriverse-slippage>.blue-div>div {
+      padding: 40px 75px;
+      font-family: 'Lufga';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      flex: 1;
+      line-height: 23px;
+      color: #010101;
+
+  }
+
+  .agriverse-slippage>.blue-div>div:first-of-type {
+      /* border-right: 8px solid #1FB1E6; */
+      border-right: 8px solid #4EB562;
+
+
+  }
+
+  .agriverse-slippage>.blue-div>div>div {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 34px;
+
+  }
+
+  .agriverse-slippage>.blue-div>div>div>span:first-of-type {
+      font-family: 'Lufga';
+      font-style: normal;
+      font-weight: 400;
+      /* font-size: 18px; */
+      font-size: 100%;
+      line-height: 23px;
+
+      color: #010101;
+  }
+
+  .roadmap {
+      /* position: relative;
+      background: #F5F5F6;
+      min-height: 100vh;
+      margin-top: -15%;
+      padding-top: 20%;
+      background: url(/img/cripper-bg.png) no-repeat center center; */
+
+
+
+      position: relative;
+      background: #F5F5F6;
+      min-height: 100vh;
+      margin-top: -15%;
+      /* z-index: 2; */
+      padding: 20% 0;
+      /* background: url(/img/cripper-bg.png) no-repeat center center; */
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+  }
+
+  .roadmap-tab-content {
+      /* margin-top: 16%;  */
+      margin: 15% auto 0;
+  }
+
+  .roadmap-cripper {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0%;
+      z-index: 0;
+  }
+
+  .roadmap-head {
+
+      font-family: 'Lufga';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 72px;
+      line-height: 92.5%;
+      text-align: center;
+      color: #010101;
+      margin-bottom: 30px;
+      position: relative;
+      z-index: 1;
+
+  }
+
+  .roadmap-desc {
+
+      font-family: 'Lufga';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 36px;
+      line-height: 109.5%;
+      text-align: center;
+      color: #5D616D;
+      position: relative;
+      z-index: 1;
+  }
+
+  .roadmap-tabs-main {
+      margin: 40px 0;
+  }
+
+  .roadmap-nav-pills {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      /* z-index: 2; */
+
+  }
+
+  .roadmap-nav-pills li {
+      margin: 0 10px;
+  }
+
+  .roadmap-nav-pills li .roadmap-nav-link {
+      font-family: 'Lufga';
+      font-style: normal;
+      font-weight: 400;
+      /* font-size: 13px; */
+      font-size: 100%;
+      line-height: 17px;
+      text-align: center;
+      background-color: #FFFFFF;
+      border-radius: 22px;
+      color: #05001B;
+
+  }
+
+  .roadmap-nav-pills li .roadmap-nav-link.active {
+      color: #05001B;
+
+      background-color: #FFFFFF;
+      border: 1px solid #4EB562;
+      border-radius: 22px;
+
+  }
+
+  .roadmap-content {
+      display: flex;
+      justify-content: center;
+      position: relative;
+  }
+
+  .roadmap-content-div {
+      background: #FFFFFF;
+      border: 3px solid #4EB562;
+      border-radius: 22px 22px 22px 11px;
+
+      padding: 53px 31px 36px 19px;
+      width: 230px;
+      min-width: 230px;
+
+      height: fit-content;
+      margin: 0 25px;
+      position: relative;
+  }
+
+  .right-content-div {
+      border-radius: 22px 22px 11px 22px;
+  }
+
+  .roadmap-Q1 {
+      top: 0
+  }
+
+  .roadmap-Q1-soon {
+      top: -30px;
+  }
+
+  .roadmap-Q2 {
+      top: 3vw;
+
+  }
+
+  .roadmap-Q2-soon {
+      top: 12px;
+  }
+
+  .roadmap-Q3 {
+      top: 1vw;
+
+  }
+
+  .roadmap-Q3-soon {
+      top: -28px;
+  }
+
+  .roadmap-Q4 {
+      top: -8vw;
+
+  }
+
+  .roadmap-Q4-soon {
+      top: -170px;
+  }
+
+  .roadmap-Q1.second {
+      top: 9vw;
+  }
+
+  .roadmap-Q2.second {
+      top: 13vw;
+  }
+
+  .roadmap-Q3.second {
+      top: 9vw;
+  }
+
+  .roadmap-Q4.second {
+      top: -3vw;
+  }
+
+  .roadmap-Q1.third {
+      top: 5vw;
+  }
+
+  .roadmap-Q2.third {
+      top: 8vw;
+  }
+
+  .roadmap-Q3-soon.third {
+      top: 5vw;
+  }
+
+  .roadmap-Q4-soon.third {
+      top: -7vw;
+  }
+
+  .coming-soon-quater {
+      font-family: 'Lufga';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 100%;
+      text-align: center;
+      color: #CFD2DE;
+      padding: 30px 0;
+  }
+
+  .circle-line {
+      border-right: 1px solid #010101;
+      position: absolute;
+      top: -112px;
+      left: 90px;
+      height: 100px;
+      transform: rotate(34deg);
+  }
+
+  .circle-line-right {
+      transform: rotate(322deg);
+      top: -100px;
+      right: 90px;
+  }
+
+  .green-circle-sm-right {
+      top: -12px;
+      left: unset !important;
+      right: -7px;
+
+  }
+
+  .green-circle-sm {
+      width: 15px;
+      height: 15px;
+      background: linear-gradient(266.87deg, #A2D82C -9.86%, #11AB90 97.03%, #11AB90 97.03%);
+      border-radius: 53px;
+      position: absolute;
+      left: -6px;
+      top: -5px;
+  }
+
+  .roadmap-quater {
+      position: absolute;
+      background: linear-gradient(266.87deg, #A2D82C -9.86%, #11AB90 97.03%, #11AB90 97.03%);
+      border-radius: 53px;
+      padding: 18px;
+      top: -32px;
+      font-family: 'Lufga';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 21px;
+      text-align: center;
+      color: #FFFFFF;
+  }
+
+  .right-quater {
+      right: 20px;
+  }
+
+  .roadmap-content-div>ul>li {
+      font-family: 'Lufga';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 138%;
+      color: #05001B;
+      /* word-break: break-word; */
+      overflow-wrap: break-word;
+  }
+
+  .roadmap-pngwing {
+      width: 100%;
+  }
+
+  .faq {
+      display: flex;
+      margin: 0 auto;
+      width: 90%;
+      /* min-height: 150vh; */
+
+  }
+
+  .faq-accordion {
+      flex: 1;
+      position: relative;
+      /* z-index: 99; */
+  }
+
+  .faq-accordion>.h1-text {
+      margin-bottom: 30px;
+  }
+
+  .faq-accordion-header {
+      font-family: 'Lufga';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 31px;
+      color: #010101;
+      background: #F5F5F6;
+      border-radius: 9px;
+
+  }
+
+  .faq-accordion-button:not(.collapsed) {
+      background: linear-gradient(266.87deg, #A2D82C -9.86%, #11AB90 97.03%, #11AB90 97.03%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+      box-shadow: none;
+
+  }
+
+  .faq-accordion-button {
+      background: #F5F5F6;
+      border-radius: 9px;
+      margin: 18px 0;
+      font-family: 'Lufga';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.2rem;
+  }
+
+  .faq-accordion-button::after {
+      display: none;
+  }
+
+  .faq-accordion-button:focus {
+      box-shadow: none;
+  }
+
+  .faq-accordion-item {
+      border: none;
+  }
+
+  .faq-right-img {
+      flex: 1;
+      position: relative;
+  }
+
+  .faq-right-img>img {
+      /* width: 100%;
+    height: 100%; */
+      position: relative;
+      top: -20%;
+      right: 0;
+      width: 100%;
+  }
+
+  .newsletter {
+      position: relative;
+  }
+
+  .newsletter-island-top {
+      position: absolute;
+      top: -6vw;
+      right: 0;
+      width: 30vw;
+
+  }
+
+  .newsletter-island-bottom {
+      position: absolute;
+      /* bottom: -21%; */
+      bottom: -4vw;
+      left: 0;
+      width: 30vw;
+
+
+  }
+
+  .newsletter .newsletter-title {
+      font-family: 'Lufga';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 40px;
+      line-height: 99%;
+      color: #010101;
+  }
+
+  .newsletter-email {
+      width: 510px;
+      /* height: 64px; */
+      padding: 16px 50px;
+      background: #F5F5F6;
+      border: none;
+      border-radius: 72px;
+      font-family: 'Lufga';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 92.5%;
+      color: #5D616D;
+  }
+
+  .newsletter {
+      border: 6px solid #EDEEF3;
+      border-radius: 17px;
+      margin: 56px;
+      margin-top: 0;
+      padding: 40px 80px;
+      display: flex;
+  }
+
+  .newsletter-inp-div {
+      margin: 65px auto;
+      margin-left: 10%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 80%;
+
+  }
+
+  .footer {
+      /* background: url(/img/footer-img.png) no-repeat center center; */
+      background: url(/img/footer-img-1.png) no-repeat center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      background-color: #010101;
+      /* clip-path: polygon(60% 16%, 80% 13%, 100% 4%, 100% 78%, 100% 100%, 0 100%, 0 78%, 0 10%, 24% 14%); */
+      background-blend-mode: luminosity;
+      width: 100%;
+      min-height: 272px;
+      position: relative;
+      margin-top: 130px;
+      padding-top: 50px;
+  }
+
+  .footer-logo {
+      border-top: 2px solid #1F222C;
+      width: 100%;
+      display: block;
+      position: relative;
+      margin: 40px 0;
+  }
+
+  .footer-logo>img {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 70px;
+      height: 70px;
+      display: block;
+      margin: 0 auto;
+  }
+
+  .contact-us {
+      font-family: 'Lufga';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 36px;
+      line-height: 92.5%;
+      color: #FFFFFF;
+      margin-top: 60px;
+      margin-left: 70px;
+      margin-bottom: 50px;
+  }
+
+  .contact-us-div {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      width: 100%;
+      padding-bottom: 100px;
+  }
+
+  .contact-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      text-decoration: none;
+      flex-wrap: wrap;
+      width: 200px;
+  }
+
+  .contact-icons {
+      width: 40px;
+      height: 40px;
+  }
+
+  .contact-type {
+      font-family: 'Lufga';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 92.5%;
+      letter-spacing: 0.25em;
+      color: #ebebeb;
+      word-wrap: break-word;
+      margin-top: 20px;
+      margin-bottom: 13px;
+  }
+
+  .contact-link {
+      font-family: 'Lufga';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 92.5%;
+      color: #FFFFFF;
+      word-wrap: break-word;
+      text-decoration: none;
+  }
+
+  .queries-div {
+      display: flex;
+      margin: 0 70px;
+  }
+
+  .queries-form {
+      flex: 1;
+  }
+
+  .queries-form .queries-row {
+      display: flex;
+  }
+
+  .join-our-community {
+      flex: 1;
+
+  }
+
+  .queries-div input,
+  .queries-div textarea {
+
+      border: 2px solid #5D616D;
+      background-color: transparent;
+      margin-bottom: 30px;
+
+
+      font-family: 'Lufga';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 92.5%;
+      color: #5D616D;
+      width: 90%;
+  }
+
+  .queries-inp-name {
+      width: 43% !important;
+      display: inline !important;
+      margin-right: 25px;
+
+  }
+
+  .queries-div input {
+      border-radius: 72px;
+      padding: 10px 20px 10px 30px;
+  }
+
+  .queries-div textarea {
+      border-radius: 15px;
+      padding: 20px 20px 10px 30px;
+  }
+
+  .queries-send-btn {
+      background: linear-gradient(266.87deg, #A2D82C -9.86%, #11AB90 97.03%, #11AB90 97.03%);
+      border-radius: 38px;
+      font-family: 'Lufga';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 92.5%;
+      text-align: center;
+      color: #FFFFFF;
+      padding: 22px 80px;
+      float: right;
+      margin-right: 5vw;
+  }
+
+  .join-com-head {
+      font-family: 'Lufga';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 36px;
+      line-height: 92.5%;
+      color: #FFFFFF;
+      margin-bottom: 20px;
+  }
+
+  .community-div {
+      display: flex;
+      flex-direction: column;
+      /* flex-wrap: wrap; */
+      margin-top: 30px;
+      margin-bottom: 57px;
+      margin: 30px 50px 57px 0;
+  }
+
+  .community-div>div {
+      display: flex;
+  }
+
+  .community-circle {
+      background: #5D616D;
+      border-radius: 50%;
+      width: 64px;
+      height: 64px;
+      margin: 20px 30px 0 0;
+  }
+
+  .community-circle>img {
+      width: 100%;
+      height: 100%;
+  }
+
+  .community-info-link {
+      font-family: 'Lufga';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 92.5%;
+      text-decoration-line: underline;
+      color: #5D616D;
+  }
+
+  .rights-reserved {
+      border-top: 3px solid #1F222C;
+      padding: 40px 0;
+      margin-top: 80px;
+      /* min-height: 206px; */
+      min-height: 30vh;
+      position: relative;
+  }
+
+  .rights-reserved .bottom-img-1 {
+      position: absolute;
+      width: 35%;
+      right: 0;
+      top: -25%;
+  }
+
+  .rights-reserved .bottom-img-2 {
+      position: absolute;
+      width: 35%;
+      left: 0;
+      top: -25%;
+  }
+
+  .rights-reserved-txt {
+      font-family: 'Lufga';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      text-align: center;
+      color: #FFFFFF;
+  }
+
+  /* nft types carousel starts */
+  @media (max-width: 767px) {
+      .carousel-inner .bgk-carousel-item>div {
+          display: none;
+      }
+
+      .carousel-inner .bgk-carousel-item>div:first-child {
+          display: block;
+      }
+  }
+
+  .carousel-inner .bgk-carousel-item.active,
+  .carousel-inner .carousel-item-next,
+  .carousel-inner .carousel-item-prev {
+      display: flex;
+
+  }
+
+
+  .carousel-inner>.item {
+      position: relative;
+      display: none;
+      -webkit-transition: 0.6s ease-in-out left;
+      -moz-transition: 0.6s ease-in-out left;
+      -o-transition: 0.6s ease-in-out left;
+      transition: 1s ease-in-out left;
+  }
+
+
+  /* @media (min-width: 768px) {
+
+      .carousel-inner .carousel-item-end.active,
+      .carousel-inner .carousel-item-next {
+          transform: translateX(25%);
+      }
+
+      .carousel-inner .carousel-item-start.active,
+      .carousel-inner .carousel-item-prev {
+          transform: translateX(-25%);
+      }
+  }
+
+  .carousel-inner .carousel-item-end,
+  .carousel-inner .carousel-item-start {
+      transform: translateX(0);
+  } */
+
+  /* nft types carousel ends */
+
+
+
+  @media only screen and (max-width: 599px) {
+      .marketplace-carousel-item {
+          background: linear-gradient(180deg, rgba(217, 217, 217, 0) 86.03%, #FFFFFF 120%);
+      }
+
+      .marketplace-main>div>.h2-text {
+          margin-bottom: 5px;
+      }
+
+      .menu-links-desktop {
+          display: none;
+      }
+
+      .menu-links-mobile {
+          display: flex;
+          /* margin: auto; */
+          align-items: center;
+          list-style: none;
+      }
+
+      .top-logo {
+
+          width: 54px;
+      }
+
+      .offcanvas-body>.menu-links-mobile {
+          flex-direction: column;
+          height: 100%;
+      }
+
+      .offcanvas-body .menu-links-mobile>li {
+          list-style-type: none;
+          display: inline-block;
+          border-radius: 25px;
+          /* margin: 25px; */
+      }
+
+      .menu-links-mobile>li>a {
+          text-transform: capitalize;
+          color: #010101;
+          text-decoration: none;
+
+          font-family: 'Lufga';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          /* font-size: 130%; */
+          line-height: 17px;
+          /* identical to box height */
+
+          text-align: center;
+      }
+
+      .menu-links-mobile>li:hover {
+          /* outline: 5px dotted white; */
+          /* transform: scale(1.1); */
+          border: .5px solid white;
+      }
+
+      .h1-text {
+          font-size: 2rem;
+          padding-bottom: 0;
+      }
+
+      .h2-text {
+          font-size: 1.5rem;
+          margin-top: 0;
+          line-height: 100%;
+      }
+
+      .banner-text-content {
+          width: 90%;
+          margin: 70px auto;
+          background-size: cover;
+          background-position: center;
+          margin-bottom: 20px;
+      }
+
+      .blu {
+          font-size: 1.8rem;
+      }
+
+      .growing-h1 {
+          font-size: 2.5rem;
+      }
+
+      .grow-farm-desc {
+          width: 100%;
+          font-size: 100%;
+      }
+
+
+      .cta {
+
+          /* flex-direction: column; */
+          align-items: unset;
+          width: 100%;
+          margin: 9px auto;
+
+      }
+
+      .cta>* {
+
+          width: 100%;
+          margin: 10px 0;
+      }
+
+      .cta-desktop {
+          display: none;
+      }
+
+      .cta-mobile {
+          display: block;
+      }
+
+      .bgk-background-d {
+          display: none;
+      }
+
+      .bgk-background-m {
+          /* display: block; */
+          height: 100%;
+          width: 100%;
+      }
+
+      .bgk {
+          position: relative;
+          margin-top: 10%;
+          min-height: unset;
+          background-position: center;
+      }
+
+      .custom-bgk {
+          /* position: absolute; */
+          top: 0;
+          bottom: 0;
+          margin: 0 0 0 10px;
+          right: 0;
+          left: 0;
+      }
+
+
+      .bgk-inner {
+          margin: 0;
+      }
+
+      .nftrees-head {
+          width: fit-content;
+          text-align: center;
+      }
+
+      .nftrees-head>div:nth-of-type(1) {
+          font-size: 1.5rem;
+          color: #5D616D;
+          padding-left: unset;
+          line-height: 100%;
+      }
+
+      .nftrees-head>div:nth-of-type(2) {
+          font-size: 2.5rem;
+          color: #010101;
+      }
+
+
+      .marketplace-branch-right {
+          position: absolute;
+          right: -14%;
+          bottom: -10%;
+          width: 45%;
+          z-index: -2;
+      }
+
+      .marketplace-branch-left {
+          width: 50%;
+          top: 10%;
+          left: -8%;
+          z-index: -2;
+      }
+
+
+      .nft-img {
+          /* width: 50%; */
+          height: 80%;
+          margin: 10px;
+          position: relative;
+      }
+
+      .nft-img>img {
+          position: relative;
+          bottom: 30px;
+      }
+
+      .nft-name {
+          text-align: left;
+          padding: 10px;
+          font-size: 18px;
+      }
+
+      .nft-card-type {
+
+          height: 300px;
+          border: 2px solid #4EB562;
+          border-radius: 12px;
+      }
+
+      .nft-card-type>.card-img-nft {
+          border-radius: 12px;
+      }
+
+      .nft-types-owl-theme .owl-nav {
+          top: -18%;
+          left: 0;
+          right: 0;
+          width: 90%;
+          height: 50px;
+          justify-content: space-between;
+          margin: auto;
+          margin-top: 0;
+          flex-direction: row;
+      }
+
+      .tokenomics-row {
+          margin: 80px auto 20px;
+          flex-direction: column;
+      }
+
+      .tokenomics-left,
+      .tokenomics-right {
+          width: 100%;
+          margin: auto;
+      }
+
+      .token-color-circle {
+          margin-right: 10px;
+      }
+
+      .agriverse-slippage {
+
+          margin: 50px auto 0;
+
+      }
+
+      .agriverse-slippage-left-branch {
+          left: -22%;
+          top: -10%;
+          width: 80%;
+      }
+
+      .agriverse-slippage-right-branch {
+          right: -25%;
+          top: -16%;
+          width: 80%;
+      }
+
+      .agriverse-slippage>.blue-div {
+
+          width: 96%;
+      }
+
+      .agriverse-slippage>.blue-div>div {
+          padding: 15px;
+          width: 50%;
+          flex: unset;
+
+      }
+
+      .agriverse-slippage>.blue-div>div>div>span:first-of-type {
+          font-size: 77%;
+          white-space: nowrap;
+      }
+
+      .buy-head,
+      .sell-head {
+          font-size: 2rem;
+      }
+
+      .buy-percent,
+      .sell-percent {
+          margin-left: 10px;
+          font-size: 90%;
+      }
+
+      .marketplace-carousel {
+          margin: 40px auto;
+          width: 90%;
+      }
+
+      .marketplace-carousel-btn {
+          display: flex;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          width: 90%;
+          height: 50px;
+          justify-content: space-between;
+          margin: auto;
+      }
+
+      .nft-marketplace-bottom {
+          display: flex;
+          margin: 70px auto;
+          width: 90%;
+          flex-direction: column;
+          text-align: center;
+      }
+
+      .nft-marketplace-imgs {
+          flex: 1;
+          display: flex;
+          flex-direction: row;
+          width: 94vw;
+          overflow: scroll;
+      }
+
+      .nft-marketplace-imgs>.left,
+      .nft-marketplace-imgs>.right {
+
+          display: flex;
+      }
+
+      .about-agriverse {
+          width: 96%;
+          margin: 50px auto;
+      }
+
+      .about-agriverse-col {
+          text-align: center;
+      }
+
+      .about-agriverse-col>* {
+          padding: 0;
+          margin: 0 !important;
+      }
+
+
+      .about-agriverse-col p {
+          margin: 10px !important;
+      }
+
+      .about-agriverse-img-d {
+          display: none;
+      }
+
+      .about-agriverse-img-m {
+          display: block;
+      }
+
+      .about-agriverse-img-m {
+          /* position: absolute;
+          top: unset;
+          bottom: -28%;
+          right: 0;
+          left: 0; */
+          width: 100%;
+      }
+
+      .about-agriverse-img-m>img {
+          width: 100%;
+      }
+
+      .about-agriverse-col {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 8%;
+
+      }
+
+      .discover-agriverse>span>* {
+          margin: 0;
+          padding: 0;
+          text-align: center;
+      }
+
+      .discover-agriverse>span {
+          margin: 40px 0;
+      }
+
+      .discover-agriverse {
+          flex-direction: column;
+          padding: 15px;
+          padding-bottom: 50px;
+
+          width: 90%;
+          margin: auto;
+          margin-bottom: 60px;
+
+      }
+
+      .discover-agriverse>div {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 90%;
+      }
+
+      .discover-agriverse>div>a {
+          margin: 0;
+          margin-bottom: 30px;
+      }
+
+      .discover-agriverse>div>.discover-btns {
+          width: 100%;
+      }
+
+      .roadmap-tabs-main {
+          margin: 40px 0;
+      }
+
+      .roadmap-content {
+          display: flex;
+          justify-content: unset;
+          position: relative;
+          overflow-x: scroll;
+      }
+
+      .roadmap-content-div>ul>li {
+          font-size: 100%;
+      }
+
+
+      .roadmap {
+          padding: 30% 0 0 0;
+      }
+
+      .roadmap-cripper {
+          display: none;
+      }
+
+      .roadmap-content-div {
+          min-width: 260px;
+          height: unset;
+          margin: 34px 20px;
+
+
+      }
+
+      .roadmap-tab-content {
+          margin: 50px auto 0;
+      }
+
+      .roadmap-head {
+          font-size: 2.5rem;
+      }
+
+      .roadmap-desc {
+          font-size: 1.5rem;
+      }
+
+      .roadmap-Q1,
+      .roadmap-Q2,
+      .roadmap-Q3,
+      .roadmap-Q4,
+      .roadmap-Q1-soon,
+      .roadmap-Q2-soon,
+      .roadmap-Q3-soon,
+      .roadmap-Q4-soon,
+      .roadmap-Q1.second,
+      .roadmap-Q2.second,
+      .roadmap-Q3.second,
+      .roadmap-Q4.second,
+      .roadmap-Q1.third,
+      .roadmap-Q2.third,
+      .roadmap-Q3-soon.third,
+      .roadmap-Q4-soon.third {
+          top: unset;
+      }
+
+      .circle-line {
+          display: none;
+      }
+
+      .faq {
+          width: 90%;
+          margin: 40px auto;
+          min-height: unset;
+      }
+
+      .faq-h1-text {
+          text-align: center;
+      }
+
+      .faq-right-img {
+          display: none;
+      }
+
+      .faq-accordion {
+          width: 100%;
+      }
+
+      .newsletter {
+
+          flex-direction: column;
+          margin: auto;
+          width: 90%;
+          margin-top: 100px;
+          padding: 30px;
+          position: relative;
+
+      }
+
+      .newsletter-inp-div {
+          margin: 10px auto 30px;
+          margin-left: 0;
+          width: 100%;
+          flex-direction: column;
+      }
+
+      .newsletter-inp-div>* {
+          width: 100%;
+          margin: 10px 0;
+      }
+
+      .newsletter .newsletter-title {
+          text-align: center;
+          margin: 20px 0;
+          font-size: 2.2rem;
+      }
+
+      .newsletter .newsletter-title:nth-of-type(2) {
+          display: none;
+      }
+
+      .newsletter-island-top {
+          position: absolute;
+          top: -20%;
+          right: 0;
+          width: 100%;
+      }
+
+      .newsletter-island-bottom {
+          display: none;
+      }
+
+      .newsletter-email {
+          width: 100%;
+          font-size: 100%;
+      }
+
+      /* .footer {
+          height: 200px;
+          margin-top: 100px;
+          clip-path: polygon(54% 2%, 81% 2%, 100% 0, 100% 100%, 0 100%, 0 0, 29% 2%);
+      } */
+
+      /* .footer-logo {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -ms-transform: translateY(-50%);
+          transform: translate(-50%, -50%);
+          margin: 0;
+          width: 70px;
+      } */
+
+
+
+  }
+
+  @media only screen and (min-width: 600px) and (max-width:768px) {
+
+      .h1-text {
+          font-size: 3rem;
+          padding-bottom: 0;
+      }
+
+      .h2-text {
+          font-size: 2rem;
+          margin-top: 0;
+          line-height: 100%;
+      }
+
+      .menu-links-desktop {
+          display: none;
+      }
+
+      .menu-links-mobile {
+          display: flex;
+          /* margin: auto; */
+          margin-right: 30px;
+          align-items: center;
+          list-style: none;
+      }
+
+      .top-logo {
+
+          width: 54px;
+      }
+
+      .offcanvas-body>.menu-links-mobile {
+          flex-direction: column;
+          height: 100%;
+      }
+
+      .offcanvas-body .menu-links-mobile>li {
+          list-style-type: none;
+          display: inline-block;
+          border-radius: 25px;
+
+      }
+
+      .menu-links-mobile>li>a {
+          text-transform: capitalize;
+          color: #010101;
+          text-decoration: none;
+
+          font-family: 'Lufga';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          /* font-size: 130%; */
+          line-height: 17px;
+          /* identical to box height */
+
+          text-align: center;
+      }
+
+      .menu-links-mobile>li:hover {
+          /* outline: 5px dotted white; */
+          /* transform: scale(1.1); */
+          border: .5px solid white;
+      }
+
+      .banner-text-content {
+          width: 90%;
+          margin: 70px auto;
+          background-size: cover;
+          background-position: center;
+          margin-bottom: 20px;
+          min-height: 600px;
+      }
+
+      .blu {
+          font-size: 1.8rem;
+      }
+
+      .growing-h1 {
+          font-size: 2.5rem;
+      }
+
+      .grow-farm-desc {
+          width: 90%;
+          font-size: 100%;
+      }
+
+      .about-agriverse-col>* {
+          padding: 0;
+          margin: 0 !important;
+      }
+
+      .about-agriverse-col p {
+          margin: 10px !important;
+      }
+
+      .nft-types-owl-theme .owl-nav {
+          top: -18%;
+          left: 0;
+          right: 0;
+          width: 90%;
+          height: 50px;
+          justify-content: space-between;
+          margin: auto;
+          margin-top: 0;
+          flex-direction: row;
+      }
+
+      .nftrees-head {
+          width: fit-content;
+          text-align: center;
+          width: 100%;
+      }
+
+      .bgk-inner>div>.row>.col-md-8 {
+          width: 100%;
+      }
+
+      .nft-name {
+          text-align: left;
+          padding: 10px;
+          font-size: 18px;
+      }
+
+      .nftrees-head>div:nth-of-type(1) {
+          font-size: 2rem;
+          color: #5D616D;
+          padding-left: unset;
+          line-height: 100%;
+      }
+
+      .nftrees-head>div:nth-of-type(2) {
+          font-size: 3rem;
+          color: #010101;
+      }
+
+      .nft-card-type {
+          height: 350px;
+      }
+
+      .bgk-background-d {
+          display: none;
+      }
+
+
+      .bgk {
+          margin-top: 10%;
+          min-height: unset;
+      }
+
+      .bgk-inner {
+          margin: 0;
+      }
+
+      .discover-agriverse>span>* {
+          margin: 0;
+          padding: 0;
+          text-align: center;
+      }
+
+
+      .discover-agriverse>span {
+          margin: 40px 0;
+      }
+
+      .discover-agriverse {
+          flex-direction: column;
+          padding: 15px;
+          padding-bottom: 50px;
+          width: 90%;
+          margin: auto;
+          margin-bottom: 60px;
+      }
+
+
+      .discover-agriverse>div>a:first-of-type {
+          margin: 0;
+          margin-bottom: 30px;
+      }
+
+      .discover-agriverse>div>.discover-btns {
+          width: 90%;
+      }
+
+      .marketplace-carousel {
+          width: 90%;
+      }
+
+      .marketplace-carousel-btn {
+
+          top: unset;
+          margin-bottom: 30px;
+
+      }
+
+      .marketplace-branch-left {
+
+          top: 18%;
+          left: -10%;
+
+      }
+
+      .nft-marketplace-bottom {
+          display: flex;
+          margin: 70px auto;
+          width: 90%;
+          flex-direction: column;
+          text-align: center;
+      }
+
+      .nft-marketplace-imgs {
+          flex: 1;
+          display: flex;
+          flex-direction: row;
+          width: 94vw;
+          overflow: scroll;
+      }
+
+      .nft-marketplace-imgs>.left,
+      .nft-marketplace-imgs>.right {
+
+          display: flex;
+      }
+
+      .tokenomics-row {
+          margin: 80px auto 20px;
+          flex-direction: column;
+      }
+
+      .tokenomics-left,
+      .tokenomics-right {
+          width: 100%;
+          margin: auto;
+      }
+
+      .buy-head,
+      .sell-head {
+          font-size: 2rem;
+      }
+
+      .agriverse-slippage {
+          margin: 50px auto 0;
+      }
+
+      .agriverse-slippage-left-branch {
+          left: -17%;
+          top: -15%;
+          width: 60%;
+      }
+
+      .agriverse-slippage-right-branch {
+          right: -18%;
+          top: -25%;
+          width: 60%;
+      }
+
+      .agriverse-slippage>.blue-div {
+
+          width: 90%;
+      }
+
+      .agriverse-slippage>.blue-div>div {
+          padding: 15px;
+          width: 50%;
+          flex: unset;
+
+      }
+
+      .agriverse-slippage>.blue-div>div>div>span:first-of-type {
+          font-size: 90%;
+          
+      }
+
+      .roadmap-tabs-main {
+          margin: 40px 0;
+      }
+
+      .roadmap-content {
+          display: flex;
+          justify-content: unset;
+          position: relative;
+          overflow-x: scroll;
+      }
+
+      .roadmap-content-div>ul>li {
+          font-size: 100%;
+      }
+
+
+      .roadmap {
+          padding: 30% 0 0 0;
+      }
+
+      .roadmap-cripper {
+          display: none;
+      }
+
+      .roadmap-content-div {
+          min-width: 260px;
+          height: unset;
+          margin: 34px 20px;
+
+
+      }
+
+      .roadmap-tab-content {
+          margin: 50px auto 0;
+      }
+
+      .roadmap-head {
+          font-size: 2.5rem;
+      }
+
+      .roadmap-desc {
+          font-size: 1.5rem;
+      }
+
+      .roadmap-Q1,
+      .roadmap-Q2,
+      .roadmap-Q3,
+      .roadmap-Q4,
+      .roadmap-Q1-soon,
+      .roadmap-Q2-soon,
+      .roadmap-Q3-soon,
+      .roadmap-Q4-soon {
+          top: unset;
+      }
+
+      .circle-line {
+          display: none;
+      }
+
+      .faq {
+          min-height: unset;
+      }
+
+      .faq-right-img>img {
+          top: 0;
+      }
+
+      .newsletter-island-top {
+          top: -16%;
+          width: 40%;
+      }
+
+      .newsletter-island-bottom {
+          bottom: -11%;
+          width: 40%;
+      }
+
+      .newsletter {
+
+          margin: 56px auto;
+          width: 90%;
+          padding: 40px;
+          display: flex;
+          flex-direction: column;
+      }
+
+      .newsletter-email {
+          width: 70%;
+          font-size: 130%;
+      }
+
+      .subscribe-btn {
+          width: 30%;
+          margin-left: 18px;
+      }
+
+      .newsletter-inp-div {
+          margin: 56px auto;
+          margin-left: 0;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+      }
+  }
+
+  @media only screen and (max-width: 768px) {
+      .offcanvas-body .menu-links-mobile>li {
+          width: 100%;
+
+      }
+
+      .menu-links-mobile {
+          padding: 0;
+      }
+
+      .menu-links-mobile>li>a {
+          width: 100%;
+          padding: 25px;
+          display: block;
+      }
+
+      .menu-links-mobile>li:hover {
+          /* border-radius: unset; */
+          border: 2px solid green;
+      }
+
+      .menu-links-mobile>li>a.btn-cta {
+          padding: unset;
+      }
+
+      .about-agriverse-img-d {
+
+          z-index: 1;
+      }
+  }
+
+  @media only screen and (min-width: 769px) and (max-width:1079px) {
+
+
+      .roadmap-Q1,
+      .roadmap-Q2,
+      .roadmap-Q3,
+      .roadmap-Q4,
+      .roadmap-Q1-soon,
+      .roadmap-Q2-soon,
+      .roadmap-Q3-soon,
+      .roadmap-Q4-soon,
+      .roadmap-Q1.second,
+      .roadmap-Q2.second,
+      .roadmap-Q3.second,
+      .roadmap-Q4.second,
+      .roadmap-Q1.third,
+      .roadmap-Q2.third,
+      .roadmap-Q3-soon.third,
+      .roadmap-Q4-soon.third {
+          top: unset;
+      }
+
+      .roadmap-tabs-main {
+          margin: 40px 0;
+      }
+
+      .roadmap-content-div {
+          min-width: 260px;
+          height: unset;
+          margin: 34px 20px;
+      }
+
+      .circle-line {
+          display: none;
+      }
+
+      .roadmap-tab-content {
+          margin: 50px auto 0 !important;
+      }
+
+      .roadmap-content {
+          display: flex;
+          justify-content: unset;
+          position: relative;
+          overflow-x: scroll;
+      }
+
+      .roadmap-cripper {
+          display: none;
+      }
+  }
+
+
+  @media only screen and (max-width:992px) {
+      .contact-us {
+          margin-left: 0;
+          text-align: center;
+      }
+
+      .contact-item {
+          flex-direction: column;
+          align-items: center;
+          margin: 50px 0;
+          word-break: break-word;
+          width: unset;
+      }
+
+      .contact-us-div {
+          border-bottom: 5px solid #1F222C;
+          flex-direction: column;
+          align-items: center;
+      }
+
+      .queries-div {
+          flex-direction: column;
+          align-items: center;
+          width: 90%;
+          margin: auto;
+      }
+
+      .queries-form .queries-row {
+
+          flex-direction: column;
+      }
+
+      .queries-inp-name {
+          width: 100% !important;
+          display: block !important;
+          margin-right: 0;
+      }
+
+      .queries-div input,
+      .queries-div textarea {
+          width: 100%;
+      }
+
+      .queries-send-btn {
+          width: 100%;
+          float: unset;
+          margin-right: 0;
+      }
+
+      .queries-form {
+          border-bottom: 5px solid #1F222C;
+          padding-bottom: 120px;
+      }
+
+      .join-com-head {
+          text-align: center;
+          margin: 40px 0px;
+
+      }
+
+      .community-div {
+
+          margin: 0;
+          align-items: center;
+      }
+
+      .community-circle {
+          margin: 10px;
+      }
+
+      .community-info-link {
+
+          display: flex;
+          justify-content: center;
+      }
+
+      .rights-reserved .bottom-img-1 {
+          display: none;
+      }
+
+      .rights-reserved .bottom-img-2 {
+          position: absolute;
+          width: unset;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          top: 20%;
+
+      }
+
+      .rights-reserved-txt {
+          margin-bottom: 40%;
+      }
+  }
+
+  @media only screen and (min-width: 769px) and (max-width:1200px) {
+      .menu-links-desktop {
+          display: flex;
+          margin: auto;
+          /* margin: 0 3%; */
+          align-items: center;
+      }
+
+      .blu {
+          margin-bottom: 10px;
+          font-size: 30px;
+      }
+
+      .marketplace-main>div>.h2-text {
+          margin-bottom: 5px;
+          font-size: 1.8rem;
+      }
+
+      .token-color-circle {
+
+          margin-right: 20px;
+      }
+
+      .tokenomics-left>div>div:nth-of-type(2),
+      .tokenomics-right>div>div:nth-of-type(2) {
+
+          width: 80%;
+      }
+
+      .menu-links-desktop>li {
+          padding: 12px;
+          margin-right: 5px;
+
+      }
+
+      .dapp-btn {
+          margin: 0 2px 0 0;
+      }
+
+      .top-logo {
+          margin-left: 4%;
+      }
+
+      .banner-text-content {
+          width: 90%;
+          margin: 135px auto 0;
+          background-size: cover;
+          background-position: center;
+          margin-bottom: 20px;
+          min-height: 700px;
+      }
+
+      .growing-h1 {
+          font-size: 3rem;
+      }
+
+      .about-agriverse-col {
+          margin-bottom: 30px;
+      }
+
+      .about-agriverse-col>h2 {
+          margin-bottom: 2px;
+      }
+
+      .nftrees-head {
+          margin: auto;
+          margin-top: 22%;
+      }
+
+      .nftrees-head>div:nth-of-type(1) {
+          font-size: 2rem;
+      }
+
+      .nftrees-head>div:nth-of-type(2) {
+          font-size: 3rem;
+      }
+
+      .bgk {
+          margin: 10% 0;
+          min-height: unset;
+      }
+
+
+
+      .discover-agriverse {
+          flex-direction: column;
+      }
+
+      .discover-agriverse>div {
+          display: flex;
+          margin: 30px 0 0 0;
+      }
+
+      .marketplace-carousel-btn {
+
+          top: 2%;
+
+      }
+
+      .nft-marketplace-bottom {
+          display: flex;
+          margin: 70px auto;
+          width: 90%;
+          flex-direction: column;
+          text-align: center;
+      }
+
+      .nft-marketplace-imgs {
+          flex: 1;
+          display: flex;
+          flex-direction: row;
+          width: 94vw;
+          overflow: scroll;
+      }
+
+      .nft-marketplace-imgs>.left,
+      .nft-marketplace-imgs>.right {
+
+          display: flex;
+      }
+
+      .tokenomics-branch-left {
+          left: -15%;
+          width: 40%;
+      }
+
+      .tokenomics-branch {
+          width: 40%;
+      }
+
+      .tokenomics-row {
+          width: 95%;
+      }
+
+      .h1-text {
+          font-size: 3rem;
+          padding-bottom: 0;
+      }
+
+      .h2-text {
+          font-size: 2rem;
+          margin-top: 0;
+          line-height: 100%;
+      }
+
+      .agriverse-slippage {
+          margin: 50px auto 0;
+      }
+
+      .agriverse-slippage-right-branch {
+          right: -14%;
+          top: -20%;
+          width: 55%;
+      }
+
+      .agriverse-slippage-left-branch {
+          left: -14%;
+          top: 0%;
+          width: 55%;
+      }
+
+      .agriverse-slippage>.blue-div {
+
+          width: 700px;
+      }
+
+      .roadmap {
+          min-height: 0;
+          padding: 25% 0 0 0;
+      }
+
+      .roadmap-cripper {
+          top: 11vw;
+      }
+
+      .roadmap-tab-content {
+          margin: 130px auto 0;
+      }
+
+      .faq-right-img>img {
+          top: -5%;
+      }
+
+      .faq {
+          min-height: unset;
+      }
+
+      .newsletter {
+          flex-direction: column;
+          width: 90%;
+          margin: 80px auto 30px;
+      }
+
+      .newsletter-inp-div {
+          margin: 6% auto;
+          margin-left: 0;
+          width: 100%;
+      }
+
+      .newsletter-email {
+          width: 70%;
+      }
+
+      .subscribe-btn {
+          width: 30%;
+      }
+
+      .newsletter-island-top {
+          top: -20%;
+          width: 40%;
+      }
+
+      .newsletter-island-bottom {
+          bottom: -15%;
+          width: 40%;
+      }
+  }
+
+  @media only screen and (min-width: 992px) {}
+
+  @media only screen and (min-width: 1500px) {
+      .about-agriverse-img-d {
+          width: 65%;
+      }
+
+      .nft-card-type>.card-img-nft>img {
+          top: -4vw;
+      }
+
+      .agriverse-slippage-left-branch {
+          top: -25%;
+      }
+
+      .agriverse-slippage-left-branch {
+          position: absolute;
+          left: 13vw;
+          top: -15vw;
+          z-index: 1;
+          width: 35%;
+      }
+
+      .agriverse-slippage-right-branch {
+          position: absolute;
+          right: 10vw;
+          z-index: 1;
+          top: -8vw;
+          width: 35%;
+      }
+
+      .newsletter-email {
+          width: 50vw;
+      }
+
+      .discover-agriverse {
+          margin-top: 5%;
+      }
+
+
+  }
+
+  @media only screen and (min-width: 2000px) {
+
+      .roadmap-Q1 {
+          top: -1.5vw;
+
+      }
+
+      .roadmap-Q2 {
+          top: -1.5vw;
+      }
+
+      .roadmap-Q3 {
+          top: -3.5vw;
+      }
+
+      .roadmap-Q1.second {
+          top: 6vw;
+
+      }
+
+      .roadmap-Q2.second {
+          top: 5vw;
+
+      }
+
+      .roadmap-Q3.second {
+          top: 3vw;
+
+      }
+
+      .roadmap-Q4.second {}
+
+      .roadmap-Q1.third {
+          top: 2vw;
+
+      }
+
+      .roadmap-Q2.third {
+          top: 2vw;
+      }
+
+      .roadmap-Q3-soon.third {
+          top: 0;
+
+      }
+
+      .roadmap-Q4-soon.third {
+          top: -3vw;
+      }
+  }
