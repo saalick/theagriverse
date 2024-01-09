@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery Dropdown Timepicker Plugin Examples</title>
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.1.0/minty/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <script src="jquery-time-picker.js"></script>
+    <style>
+        body { background: #fafafa; }
+        .container { margin: 150px auto; }
+    </style>
+</head>
+
+<body><div id="jquery-script-menu">
+<div class="jquery-script-center">
+<ul>
+<li><a href="https://www.jqueryscript.net/time-clock/dropdown-time-picker.html">Download This Plugin</a></li>
+<li><a href="https://www.jqueryscript.net/">Back To jQueryScript.Net</a></li>
+</ul><div id="carbon-block"></div>
+<div class="jquery-script-ads"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-2783044520727903";
+/* jQuery_demo */
+google_ad_slot = "2780937993";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+<div class="jquery-script-clear"></div>
+</div>
+</div>
+    <div class="container">
+        <h1 class="mb-3 text-center mt-1">jQuery Dropdown Timepicker Plugin Examples</h1>
+        <p class="lead">A fast, accessible, user-friendly, Bootstrap-compatible time picker plugin that generates hours/minutes select boxes and AM/PM buttons for easier time selection.</p>
+        <div id="timePicker" style="width: 20rem;"></div>
+        <br>
+        <p class="lead">Selected Value: <label id="timePickerValue"></label></p>
+        <br>
+        <button class="btn btn-primary" id="btnGetValue">Get Value</button>
+        <button class="btn btn-primary" id="btnSetValue">Set Value to 10:25 PM</button>
+        <button class="btn btn-primary" id="btnSetDisabled">Set Disabled</button>
+        <button class="btn btn-primary" id="btnSetEnabled">Set Enabled</button>
+        <br>
+        <br>
+        <div class="h4">With Options</div>
+        <pre class="bg-light">
+            <code id="basicTimepickerJS5"></code>
+        </pre>
+        <div id="timePicker2"></div>
+        <br>
+        <div class="h4">onChange callback</div>
+        <pre class="bg-light">
+            <code id="basicTimepickerJS6"></code>
+        </pre>
+        <div id="timePicker3"></div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("#timePicker").timepicker({});
+            $("#btnGetValue").click(function () {
+                $("#timePickerValue").html($("#timePicker").timepicker().getValue());
+            });
+            $("#btnSetValue").click(function () {
+                $("#timePicker").timepicker().setValue("10:25 PM");
+            });
+            $("#btnSetDisabled").click(function () {
+                $("#timePicker").timepicker().setDisabled();
+            });
+            $("#btnSetEnabled").click(function () {
+                $("#timePicker").timepicker().setEnabled();
+            });
+            $("#timePicker2").timepicker({
+                value: "05:15 PM",
+                disabled: true
+            });
+            $("#timePicker3").timepicker({
+                onChange: function (value) {
+                    alert(value);
+                }
+            });
+
+            $("#basicTimepickerHTML").text('<div id="timePicker" style="width: 20rem;"></div>');
+            $("#basicTimepickerJS").text('$("#timePicker").timepicker({});');
+            $("#basicTimepickerJS1").text('$("#timePicker").timepicker().getValue();');
+            $("#basicTimepickerJS2").text('$("#timePicker").timepicker().setValue("10:25 PM");');
+            $("#basicTimepickerJS3").text('$("#timePicker").timepicker().setDisabled();');
+            $("#basicTimepickerJS4").text('$("#timePicker").timepicker().setEnabled();');
+            $("#basicTimepickerJS5").html(`$("#timePicker2").timepicker({ value: "05:15 PM", disabled: true });`);
+            $("#basicTimepickerJS6").html(`$("#timePicker2").timepicker({ onChange: function(value){ alert(value); } });`);
+        });
+    </script>
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script>
+try {
+  fetch(new Request("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", { method: 'HEAD', mode: 'no-cors' })).then(function(response) {
+    return true;
+  }).catch(function(e) {
+    var carbonScript = document.createElement("script");
+    carbonScript.src = "//cdn.carbonads.com/carbon.js?serve=CK7DKKQU&placement=wwwjqueryscriptnet";
+    carbonScript.id = "_carbonads_js";
+    document.getElementById("carbon-block").appendChild(carbonScript);
+  });
+} catch (error) {
+  console.log(error);
+}
+</script>
+</body>
+
+</html>
