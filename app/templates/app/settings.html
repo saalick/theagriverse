@@ -1,0 +1,894 @@
+{% extends 'app/dashboard_base.html' %}
+{% block title %}Settings{% endblock title %}
+{% load static %}
+
+{% block head %}
+
+<link rel="stylesheet" href="/static/app/login_static/css/style.css">
+<link rel="stylesheet" href="/static/admin/css/vendor/select2/select2.css">
+
+{% endblock head %}
+
+{% block css %}
+body {
+  background: #f5f5f6;
+}
+
+
+.login-wrapper .loginbox {
+
+  padding: 6px 15px;
+}
+
+.middle {
+  width:50%;
+  height: min-content;
+  min-height: auto;
+}
+
+.login-wrapper {
+  max-width: 100%;
+  height:auto;
+
+}
+
+
+.profile-head{
+
+  display:flex;
+  border-radius: 11px;
+  padding: 11px;
+
+}
+.logo_cls{
+  width:114px;
+}
+.username_tag{
+  font-size: 18px;
+  font-family: sans-serif;
+}
+
+
+
+#pp_img_tag{
+  border: 2px dashed #4a8d00;
+  cursor: pointer;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 104px;
+  background: white;
+  width: 200px;
+}
+
+.total-stats-div {
+  max-width: initial;
+  margin:0px;
+}
+
+.pp_img_div {
+  text-align: center;
+}
+
+.username_txt > h3 {
+  text-align: center;
+  font-size: 24px;
+  text-transform: capitalize;
+  font-weight: bold;
+  color: #404040;
+  margin: 0px;
+}
+
+
+.username_txt {
+  text-align: center;
+  margin: 0px 0px 15px 0px;
+}
+
+.login_drop {
+  background: #d7d7d7;
+  color: black;
+}
+
+a.dropdown-item {
+  text-decoration: none;
+  margin: 0px 1px;
+}
+
+span.red_start {
+  color: red;
+}
+
+#form_loading{
+  display:none;
+}
+
+
+#user_pp_inp{
+  opacity: 0.0;
+  width: 110px;
+  position: absolute;
+  top: 0px;
+  left: 0;
+}
+
+
+.fixed_submit {
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Total_course_fee {
+  font-size: 14px;
+  color: #cb0000;
+  line-height: 13px;
+}
+
+.course_fee_rs {
+  font-size: 15px;
+  font-family: sans-serif;
+  font-weight: bold;
+  line-height: 17px;
+}
+
+
+span.total_rs {
+  color: #68bc10;
+  font-size: 22px;
+}
+
+
+
+.wallet_btn_inp {
+  display: flex;
+}
+button#connect-button {
+  white-space: nowrap;
+  /* background: #b7b9b5; */
+  background: linear-gradient(180deg, #e3e3e3 49.76%, rgb(157 150 150 / 82%) 100%);
+  border-radius: 0px 5px 5px 0px;
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 17px;
+  color: #404040;
+  border: none;
+  height: 50px;
+  padding: 12px 22px;
+  margin-right: 0px;
+  display: flex;
+  align-items: center;
+  /* border: 1px solid #a4e064; */
+}
+
+
+.registration_submit_btn {
+  margin: 19px 0px;
+  width:100%;
+}
+
+.select2-container--default .select2-selection--single {
+  background-color: #fff;
+  border: 1px solid #92d337;
+  border-radius: 4px;
+}
+
+.select2-container .select2-selection--single {
+  box-sizing: border-box;
+  cursor: pointer;
+  display: block;
+  height: 50px;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  color: #444;
+  line-height: 50px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  height: 50px;
+  position: absolute;
+  top: 1px;
+  right: 5px;
+  width: 20px;
+}
+
+.right_sub_div {
+  background: #5cb24240;
+  padding: 49px 18px;
+  border-radius: 20px;
+}
+
+
+.right {
+ 
+  padding: 0px 2rem 0;
+      width: 400px;
+}
+
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+
+  padding: 0px;
+  
+}
+
+.settings_card_main_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+select#Appearance_mode {
+  height: 30px !important;
+  width: 88px;
+  font-size: 16px;
+  border: 1px solid #cdcdcd;
+  border-radius: 4px;
+}
+
+
+.upload_camera_icon {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.upload_camera_icon > i {
+  background: #0000007a;
+  height: 58px;
+  width: 58px;
+  padding: 5px;
+  border-radius: 100px;
+  color: white;
+}
+
+.upload_camera_icon:hover{
+  opacity: 1;
+}
+
+
+
+#switch_loading_spinner {
+  color: green;
+  display: none;
+}
+
+
+@media screen and (max-width:990px){
+
+  .settings_card_main_container {
+    flex-flow: column-reverse;
+    align-items: center;
+}
+
+.middle {
+    width: 90%;
+}
+
+.right {
+    width: 100%;
+    margin: 28px 0px;
+    padding: 0px 15px;
+    background: none;
+}
+
+.nft-holder-item {
+
+  box-shadow: unset;
+  width: 100%;
+}
+
+
+     
+}
+
+@media screen and (max-width:500px){
+
+  .fixed_submit{
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: white;
+      padding: 5px 14px;
+      box-shadow: 2px -5px 13px 0px #acacac;
+      z-index: 3;
+  }
+
+  .login-wrapper .loginbox {
+    padding: 8px 0px 60px 0px;
+  }
+
+  .registration_submit_btn {
+      margin: 0px 0px;
+  }
+
+
+
+}
+
+
+{% endblock css%}
+
+
+
+
+{% block body %}
+
+<div class="settings_card_main_container">
+<div class="middle">
+
+
+<div class="login-wrapper">
+<div class="loginbox">
+<div class="img-logo d-flex justify-content-between">
+<img src="/static/app/img/main_logo.png" class="img-fluid" alt="Logo">
+<div class="back-home mt-0">
+    <div class="dropdown">
+        <button class="btn login_drop dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa fa-user" aria-hidden="true"></i> Login as {{request.user.username}}
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" href="/dashboard/"><i class="fa fa-home" aria-hidden="true"></i> Go Back</a></li>
+          <li><a class="dropdown-item text-danger" href="/logout/"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout </a></li>
+         
+        </ul>
+      </div>
+</div>
+</div>
+<h1>Agriverse Profile Update</h1>
+<div class="msg">
+    {%if messages %}
+    {%for message in messages %}
+    {% load static %}
+
+
+    <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+        <strong></strong>{{message}}.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+    {%endfor%}
+    {%endif%}
+</div>
+<hr>
+<form method="POST" enctype="multipart/form-data" id="registration_form">
+{% csrf_token %}
+<input type="file" accept="image/*" id="user_pp_inp" name="photo">
+<div class="form-group d-flex align-items-center">
+<div class="col-6">
+    <label class="form-control-label"><strong>First Name: <span class="red_start">*</span></strong></label>
+    <input type="text" name="Firstname" class="form-control" placeholder="Enter your First Name" required value="{{userprofile.First_Name}}">
+</div>    
+
+<div class="col-6 ps-2">
+    <label class="form-control-label"><strong>Last Name: </strong></label>
+    <input type="text" name="Lastname" class="form-control" placeholder="Enter your Last Name" value="{{userprofile.Last_Name}}">
+</div>
+</div>
+
+<div class="form-group">
+    <label class="form-control-label"><strong>Select Time Zone: <span class="red_start">*</span></strong> </label>
+    <select class="form-control search_select" name="time_zone" id="time_zone" required>
+        {% for tz in time_zone_list %}
+        {% if tz == userprofile.Time_Zone %}
+          <option value="{{tz}}" selected>{{tz}}</option>
+        {% else %}
+          <option value="{{tz}}">{{tz}}</option>
+        {% endif %}
+      
+        {% endfor %}
+    </select>
+</div>
+
+<div class="form-group d-flex align-items-center">
+<div class="col-6">
+    <label class="form-control-label"><strong>Email Address: <span class="red_start">*</span></strong></label>
+    <input type="email" class="form-control" placeholder="Enter your Email address" value="{{userprofile.Email}}" required name="email">
+</div>
+
+
+<div class="col-6 ps-2">
+  <label class="form-control-label"><strong>Contact No: <span class="red_start">*</span> </strong></label>
+  <input type="number" name="can_number" class="form-control" placeholder="Enter your Phone Number" required value="{{userprofile.Phone_Number}}">
+</div>
+
+</div>
+
+
+<div class="form-group">
+    <label class="form-control-label"><strong>Select Language: <span class="red_start">*</span> </strong> </label>
+    <select class="form-control search_select" name="Language" id="Language_list" required>
+        {% for lg in lanf_lis  %}
+        {% if lg.0 == userprofile.Language %}
+          <option value="{{lg.0}}" selected>{{lg.1}}</option>
+        {% else %}
+          <option value="{{lg.0}}">{{lg.1}}</option>
+        {% endif %}
+
+        {% endfor %}
+        
+    </select>
+</div>
+
+
+<div class="form-group">
+
+    <label class="form-control-label">Wallet Address : <span class="red_start">*</span> </label>
+    <div class="wallet_btn_inp">
+    <input type="text" class="form-control" placeholder="Connect Wallet" id="Wallet" name="Wallet" required value="{{userprofile.Wallet_Address}}">
+    <button type="button" class="wallet-cnt-btn" id="connect-button">CONNECT WALLET<img src="/static/app/img/connect-wallet.png" alt="Wallet-icon" /></button>
+    </div>
+
+</div>
+
+
+
+<div class="d-grid fixed_submit">
+
+<div class="course_fee">
+    {% comment %} <div class="course_fee_rs">Total Fee <span class="total_rs">Rs.<span id="fee_num"></span></span> </div>
+    <div class="Total_course_fee">Duration <span class="month_num"></span></div> {% endcomment %}
+</div>
+
+<button class="btn btn-primary btn-start submit registration_submit_btn" type="submit">
+    <div class="spinner-border spinner-border-sm " id="form_loading" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>Update Profile</button>
+
+</div>
+
+</form>
+</div>
+</div>
+  
+
+
+
+</div>
+
+<div class="right">
+  <!-- <p class="stats-head">Live Statistics</p> -->
+
+  <div class="right_sub_div">
+    <div class="user-profile-update_right">
+
+
+          <!-- <img src="/media/{{userprofile.Profile_DP}}" alt="User DP"> -->
+          <div class="pp_img_div">
+            <label class="form-control-label" id="upload_profile_label" for="user_pp_inp">
+                <div class="upload_image_placeholder" >
+                    <div class="upload_camera_icon">
+                      <i class="bi bi-camera"></i>
+                    </div>
+                    <img  src="/media/{{userprofile.Profile_DP}}" id="pp_img_tag">
+                  
+                </div>
+            </label>
+           
+          </div>
+        
+    
+    </div>
+
+    <div class="userNAme_box">
+      <div class="username_txt">
+        <h3>{{userprofile.First_Name}} {{userprofile.Last_Name}}</h3>
+        <small>{{userprofile.Email}}</small>
+      </div>
+    </div>
+
+
+
+    <div class="total-stats-div">
+      <div class="NFTrees-planted">
+          <div class="stats-info">
+              <div class="stats-num-left">574</div>
+              <div class="stats-txt">Total NFTrees Planted</div>
+          </div>
+      </div>
+      <div class="co2-absorbed">
+          <div class="stats-info">
+              <div class="stats-num-right">53.7k</div>
+              <div class="stats-txt">Total Co2 Absorbed (kg)</div>
+          </div>
+      </div>
+   </div>
+
+
+</div>
+
+
+
+<p class="stats-head my-4">Actions</p>
+
+<div class="nft-holder-div">
+  <div class="nft-holder-item"><i class="bi bi-shield-lock  me-1"></i>
+      <div data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <div class="nft-holder-name">Change Password</div>
+          <div class="nft-holder-num"><i class="bi bi-box-arrow-up-right"></i></div>
+      </div>
+  </div>
+  <div class="nft-holder-item"><i class="bi bi-toggles me-1 " ></i>
+      <div>
+          <div class="nft-holder-name switch_title_with_msg">Disable/Enable Account</div>
+          <div class="nft-holder-num">
+
+            <div class="spinner-border spinner-border-sm " id="switch_loading_spinner" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+
+              <label class="switch">
+                <input type="checkbox" id="account_switch_btn" {% if request.user.userprofile_set.first.Account_switch == "Enable" %} checked {% endif %}>
+                <span class="slider round"></span>
+              </label>
+
+
+
+
+          </div>
+      </div>
+  </div>
+
+  <div class="nft-holder-item"><i class="bi bi-brightness-high me-1"></i>
+    <div>
+        <div class="nft-holder-name appearance_title_with_msg">Appearance</div>
+        <div class="nft-holder-num">
+          <div class="spinner-border spinner-border-sm theme_loading_spinner" id="theme_loading_spinner" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <select name="Appearance_mode" id="Appearance_mode" class="Appearance_mode">
+            
+            <option value="Light" {% if request.user.userprofile_set.first.color_theme == "Light" %}selected{% endif %} > Light </option>
+            <option value="Dark" {% if request.user.userprofile_set.first.color_theme == "Dark" %}selected{% endif %} > Dark </option>
+            <option value="System Color" {% if request.user.userprofile_set.first.color_theme == "System Color" %}selected{% endif %} > System Color </option>
+          </select>
+
+         
+
+
+        </div>
+    </div>
+  </div>
+
+
+ 
+</div>
+ 
+</div>
+
+
+
+
+ 
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Change Password</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="change_password_parent_div">
+          <div class="password_msg_div">
+           
+          </div>
+          <form action="/change-password/" method="POST">
+              {%csrf_token%}
+              {% if form.non_field_errors %}
+              {% for error in  form.non_field_errors%}
+              <small>{{error}}</small>
+              {% endfor %}
+              {% endif %}
+              <div class="col-md-8 m-auto px-0">
+              {% for fm in form %}
+              
+                  {{fm.label_tag}} 
+                  {{fm}} 
+                  
+              {% endfor %}
+              </div>
+              <div class="col-12 text-center">
+                  <button type="submit" class="btn btn-success my-3 ">Change Password</button>
+              </div>
+             
+          </form>
+      </div>
+      </div>
+      {% comment %} <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div> {% endcomment %}
+    </div>
+  </div>
+</div>
+
+
+
+
+        {% comment %} <div class="col-md-8 bg-white">
+            <div class="accordion" id="accordionExample">
+                <div id="change_password" class="collapse " aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-header">
+                        <h4>Change Password</h4>
+                    </div>
+                    <div class="card-body">
+                        <form action="/change-password/" method="POST">
+                            {%csrf_token%}
+                            {% if form.non_field_errors %}
+                            {% for error in  form.non_field_errors%}
+                            <small>{{error}}</small>
+                            {% endfor %}
+                            {% endif %}
+                            <div class="col-md-8 m-auto px-0">
+                            {% for fm in form %}
+                            
+                                {{fm.label_tag}} 
+                                {{fm}} 
+                                
+                            {% endfor %}
+                            </div>
+                            <div class="col-12 text-center">
+                                <button type="submit" class="btn btn-primary my-3 ">Change Password</button>
+                            </div>
+                           
+                        </form>
+                    </div>
+                </div>
+
+                <div id="c_pass_w_o_p" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                  <div class="card-header">
+                    <h4>Set Password</h4>
+                    </div>
+                    <div class="card-body">
+                      <form action="/change-without-password/" method="POST">
+                        {%csrf_token%}
+                        {% if form_without.non_field_errors %}
+                        {% for error in  form_without.non_field_errors%}
+                        <small>{{error}}</small>
+                        {% endfor %}
+                        {% endif %}
+                        <div class="col-md-8 m-auto px-0">
+                        {% for fm_w in form_without %}
+                        
+                            {{fm_w.label_tag}} 
+                            {{fm_w}} 
+                            
+                        {% endfor %}
+                        </div>
+                        <div class="col-12 text-center">
+                            <button type="submit" class="btn btn-primary my-3 ">Change Password</button>
+                        </div>
+                       
+                    </form>
+                    </div>
+                </div>
+
+
+                <div id="delete_account" class="collapse" aria-labelledby="delete_account" data-parent="#accordionExample">
+                  <div class="card-header">
+                    <h4>Delete Account ?</h4>
+                    </div>
+                    <div class="card-body">
+                      <div class="alert alert-danger">
+                        <h5 class="border-bottom-danger py-2"><i class="fas fa-exclamation-triangle"></i> Warning</h5>
+                        <p><b>{{request.user}}!</b> if you want to delete your account you can delete but after deleting your account your all records will de deleted including your <b>Shop</b> , <b>Products</b> etc. we will not be responsible to recover your account.</p>
+                        <p class="text-right">اگر آپ اپنا اکاؤنٹ حذف کرنا چاہتے ہیں تو آپ حذف کر سکتے ہیں لیکن آپ کے اکاؤنٹ کو حذف کرنے کے بعد آپ کے تمام ریکارڈ حذف ہو جائیں گے بشمول آپ کی دکان ، مصنوعات ہم آپ کے اکاؤنٹ کی بازیابی کے ذمہ دار نہیں ہوں گے۔</p>
+                        <p>so are you sure. you want to delete account.</p>
+                      </div>
+
+                      <div class="text-center">
+                        <a class="btn-lg btn-danger text-center" href="#" data-toggle="modal" data-target="#delete_account_modal"><i class="fas fa-trash-alt"></i> Delete Account ?</a>
+                      </div>
+
+                    </div>
+                </div>
+
+
+
+                <div id="collapseThree" class="collapse show" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-header">
+                    <h4>My Profile</h4>
+                    </div>
+                    <div class="card-body">
+                      <div class="col-md-12">
+                        <div class="row">
+
+                          <div class="col-md-12">
+                            <label for="" class="border-bottom">User name:</label>
+                            <p>{{request.user.username}}</p> 
+                          </div>
+
+                          <div class="col-md-6">
+                            <label for="" class="border-bottom">First Name:</label>
+                            <p>{{request.user.first_name}}</p> 
+                          </div>
+
+                          <div class="col-md-6">
+                            <label for="" class="border-bottom">Last Name:</label>
+                            <p>{{request.user.last_name}}</p>
+                          </div>
+
+                          <div class="col-md-6">
+                            <label for="" class="border-bottom">Email Address:</label>
+                            <p>{{request.user.email}}</p>
+                          </div>
+
+                          <div class="col-md-6">
+                            <label for="" class="border-bottom">Phone Number:</label>
+                            <p>{{my_store.phone}}</p>
+                          </div>
+
+                          <div class="col-md-6">
+                            <label for="" class="border-bottom">Status:</label>
+                            {% if request.user.is_staff == True %}
+                            <p>
+                              Is Active <i class="fas fa-check-circle text-success"></i>
+                            </p>
+                            
+                            {% else %}
+                            <p>
+                              Is Unactive <i class="fas fa-times-circle text-danger"></i>
+                            </p>
+                            {% endif %}
+                            
+                          </div>
+                        
+                        
+                        
+                        
+                        </div>
+                        
+                      </div>
+                      
+                    </div>
+                </div>
+            </div>
+            
+
+
+        </div>
+
+    </div>
+</div> {% endcomment %}
+
+
+  {% comment %} <!-- Logout Modal-->
+  <div class="modal fade " id="delete_account_modal" tabindex="-1" role="dialog" aria-labelledby="delete_account_modal"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Ready to delete?</h5>
+              <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+              </button>
+          </div>
+          
+          <form action="/delete-my-account/{{request.user.id}}" method="POST">
+            {%csrf_token%}
+            <div class="modal-body">
+              <p class="text-danger m-0"><b><i class="fas fa-trash-alt"></i> {{request.user}}!</b> So are you sure. you want to delete account.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                <button type="submit" class="btn btn-danger my-3 "><i class="fas fa-trash-alt"></i> Delete Account?</button>
+            </div>
+          </form>
+
+      </div>
+  </div>
+</div> {% endcomment %}
+
+{% endblock body %}
+
+{% block js %}
+
+<script src="/static/admin/js/vendor/select2/select2.full.js"></script>
+
+
+<script>
+
+  {% comment %} cnic back {% endcomment %}
+window.addEventListener('load', function() {
+document.getElementById('user_pp_inp').addEventListener('change', function() {
+  if (this.files && this.files[0]) {
+    var img = document.getElementById('pp_img_tag');
+    img.onload = () => {
+      URL.revokeObjectURL(img.src);  // no longer needed, free memory
+    }
+
+    img.src = URL.createObjectURL(this.files[0]); // set src to blob url
+          $("#pp_img_tag").css({'border':'2px dashed #a4df64'})
+  }
+      else{
+          var img = document.getElementById('pp_img_tag');
+          img.src = '/static/app/login_static/img/user_placeholder.jpg'
+          $("#pp_img_tag").css({'border':'2px dashed #ff0000'})
+      }
+});
+});
+
+
+
+
+
+$(".submit").click(function(){
+
+     if($("#user_pp_inp").val() == '') {
+          $("#pp_img_tag").css({'border':'2px dashed #ff0000'})
+     }
+     else{
+      $("#pp_img_tag").css({'border':'2px dashed #a4df64'})
+     }
+
+    
+
+})
+
+
+
+document.getElementById('connect-button').addEventListener('click', event => {
+  let account;
+
+  ethereum.request({method: 'eth_requestAccounts'}).then(accounts => {
+    account = accounts[0];
+    console.log(account);
+    $("#Wallet").val(account)
+
+  });
+
+  // ethereum.request({method: 'eth_getBalance' , params: [account, 'latest']}).then(result => {
+      //let wei = parseInt(result,16); 
+      //let balance = wei / (10**18);
+      //console.log(balance + " ETH");
+      //console.log(result);
+
+    
+    //}); 
+
+
+});
+
+
+
+
+
+$('#registration_form').submit(function(){
+
+  $('#form_loading').css('display' , 'inline-block')
+  $(".registration_submit_btn").attr('disabled' , 'disabled')
+})
+
+
+
+$('.change_password_parent_div input').attr('class' , 'form-control')
+
+
+$('.search_select').select2()
+
+</script>
+
+
+{% comment %} <script>
+
+    $("input").addClass("form-control")
+    
+    
+</script> {% endcomment %}
+{% endblock js %}

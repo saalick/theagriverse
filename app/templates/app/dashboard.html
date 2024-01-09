@@ -1,0 +1,164 @@
+{% extends 'app/dashboard_base.html' %}
+{% block title %} DApp Dasboard {% endblock title %}
+{% block head %}{% endblock head %}
+{% block css %}{% endblock css %}
+
+
+{% block body %}
+
+
+
+
+<div class="middle">
+
+   
+
+    <img src="/static/app/img/island2.png" alt="island-img" class="mid-top-island" />
+    <div style="justify-content:flex-start !important" class="user-greet-div">
+        {% if request.user.is_authenticated %}
+
+            <img src="/media/{{request.user.userprofile_set.first.Profile_DP}}" alt="profile-img" class="main-profile-img" />
+            <div style="display:block !important">
+                <div class="user-greet">Hey,<span> {{request.user.userprofile_set.first.First_Name}} </span> </div>
+                <div class="user-greet-msg">Welcome to the Dashboard</div>
+            </div>
+
+        {% else %}
+            <img src="/static/app/img/user_placeholder.png" alt="profile-img" class="main-profile-img" />
+            <div style="display:block !important">
+                <div class="user-greet">Hey,<span> User </span> </div>
+                <div class="user-greet-msg">Welcome to the Dashboard</div>
+            </div>
+
+        {% endif %}
+
+    </div>
+    <div class="user-cards-main row">
+        <div class="user-cards col">
+            <div class="user-cards-num" id="total_av">0<span>AV</span></div>
+            <div class="user-cards-text">Your Holdings</div>
+        </div>
+        <div class="user-cards col">
+            <div class="user-cards-num" id="total_BUSD">0<span>BUSD</span></div>
+            <div class="user-cards-text">Total Rewards</div>
+
+        </div>
+        <div class="user-cards col brown-bg ">
+            <div class="user-cards-num brown-text-lg" id="total_Pending_BUSD">0<span>BUSD</span></div>
+            <div class="user-cards-text">Pending Rewards</div>
+        </div>
+        <div class="user-cards col ">
+            <div class="user-cards-num purple-text-lg" id="lastClaimTime">Never<span></span></div>
+            <div class="user-cards-text ">Last Payout Time</div>
+        </div>
+    </div>
+    <div class="user-balance"><img src="/static/app/img/island3-mobile.png" alt="" class="mobile-island-img" />
+        <div class="user-balance-left">
+            <div class="nftrees-div">
+                <div class="nftrees-head">NFTrees</div>
+                <div class="nftrees-num">574</div>
+                <div class="nftrees-text">Total NFTress</div>
+                <div class="nftrees-num">23,000<span>Kg</span></div>
+                <div class="nftrees-text">Co2 per year</div>
+                <div class="user-trans-btn"><button class="transfer-btn col">Transfer</button><button
+                        class="buy-nftree-btn ">Buy NFTree</button></div>
+            </div>
+            <div class="token-balance-div">
+                <div class="token-balance-head">Token Balance</div>
+                <div class="nftrees-num" id="total_av_2" >0<span>AV</span></div>
+                <div class="nftrees-text">AV Tokens</div>
+                <div class="nftrees-num" id="total_BNB">0<span>BNB</span></div>
+                <div class="nftrees-text">BNB Balance</div>
+            </div>
+        </div>
+        <div class="user-balance-right">
+            <div class="staked-crst-txt">Staked AV</div>
+            <div class="coming-soon-crst row ">
+                <div class="coming-soon-div col col-12">
+                    <div class="coming-soon-txt">Coming Soon</div>
+                    <div class="coming-soon-type">Earned</div>
+                </div>
+                <div class="coming-soon-div col col-12">
+                    <div class="coming-soon-txt">Coming Soon</div>
+                    <div class="coming-soon-type">Your Stake</div>
+                </div>
+            </div>
+            <div class="coming-soon-crst row">
+                <div class="coming-soon-div col col-12">
+                    <div class="coming-soon-txt">Coming Soon</div>
+                    <div class="coming-soon-type">APY</div>
+                </div>
+                <div class="coming-soon-div col col-12">
+                    <div class="coming-soon-txt">Coming Soon</div>
+                    <div class="coming-soon-type">Vault TVL</div>
+                </div>
+            </div>
+        </div>
+    </div><img src="/static/app/img/island2.png" alt="island-img" class="mid-bottom-island" />
+</div>
+<div class="right">
+    <p class="stats-head">Live Statistics</p>
+    <div class="total-stats-div">
+        <div class="NFTrees-planted">
+            <div class="stats-info">
+                <div class="stats-num-left">574</div>
+                <div class="stats-txt">Total NFTrees Planted</div>
+            </div>
+        </div>
+        <div class="co2-absorbed">
+            <div class="stats-info">
+                <div class="stats-num-right">53.7k</div>
+                <div class="stats-txt">Total Co2 Absorbed (kg)</div>
+            </div>
+        </div>
+    </div>
+    <p class="stats-head">Top NFTree Holders</p>
+    <div class="nft-holder-div">
+        <div class="nft-holder-item"><img src="/static/app/img/profile-1.png" alt="profile-img"
+                class="nft-holder-img" />
+            <div>
+                <div class="nft-holder-name">Jerome Graves</div>
+                <div class="nft-holder-num">956</div>
+            </div>
+        </div>
+        <div class="nft-holder-item"><img src="/static/app/img/profile-1.png" alt="profile-img"
+                class="nft-holder-img" />
+            <div>
+                <div class="nft-holder-name">Cliff Rodriquez</div>
+                <div class="nft-holder-num">903</div>
+            </div>
+        </div>
+        <div class="nft-holder-item"><img src="/static/app/img/profile-1.png" alt="profile-img"
+                class="nft-holder-img" />
+            <div>
+                <div class="nft-holder-name">Wilmot Bennett</div>
+                <div class="nft-holder-num">846</div>
+            </div>
+        </div>
+        <div class="nft-holder-item"><img src="/static/app/img/profile-1.png" alt="profile-img"
+                class="nft-holder-img" />
+            <div>
+                <div class="nft-holder-name">Melissa Bradley</div>
+                <div class="nft-holder-num">778</div>
+            </div>
+        </div>
+        <div class="nft-holder-item"><img src="/static/app/img/profile-1.png" alt="profile-img"
+                class="nft-holder-img" />
+            <div>
+                <div class="nft-holder-name">Myrtle Craig</div>
+                <div class="nft-holder-num">683</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock body %}
+
+
+
+{% block js %}
+
+
+
+{% endblock js %}

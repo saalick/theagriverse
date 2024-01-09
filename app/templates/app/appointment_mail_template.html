@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Appointment</title>
+  </head>
+
+  <body>
+    <div class="email_template_container" style="font-family: system-ui;background: #ededed;
+    padding: 20px 0px;">
+      <div
+        class="main_child"
+        style="
+          width: 400px;
+          margin: auto;
+          border-radius: 10px;
+          padding: 15px;
+          border: 1px solid #dfdfdf;
+          border-top: 10px solid #30a144;
+          background: white;
+        "
+      >
+        <div
+          class="email_header"
+          style="border-bottom: 1px solid #d7d7d7; padding-bottom: 6px"
+        >
+          <div class="brand_logo" style="display: inline-block">
+            <img src="https://{{domain}}/static/app/img/logo.png" alt="" />
+          </div>
+          <div
+            class="brand_name"
+            style="display: inline-block; vertical-align: top; margin-top: 10px"
+          >
+            <p
+              style="
+                display: inline-block;
+                margin: 0px;
+                font-size: 22px;
+                font-weight: bold;
+                color: #767676;
+              "
+            >
+              The Argriverse
+            </p>
+          </div>
+        </div>
+
+        <div class="user_hi">
+          <p
+            style="
+              font-size: 34px;
+              font-weight: bold;
+              text-align: center;
+              margin: 15px 0px 5px 0px;
+              color: #767676;text-transform: capitalize;
+            "
+          >
+            Hi, {{form.Full_Name}}
+          </p>
+        </div>
+        <div class="page_subject">
+          <h2
+            style="
+              text-align: center;
+              color: #40a942;
+              font-family: inherit;
+              margin: 0px 0px;
+              font-size: 18px;
+              {% if form.Status == "Reject" %} color:red; {%endif%}
+            "
+          >
+            {% if form.Status == "Pending" %}
+                Appointment Submitted Successfully
+            {% elif form.Status == "Booked" %}
+                Appointment Booked
+            {% elif form.Status == "Reject" %}
+                Appointment Rejectted
+            {% elif form.Status == "Completed" %}
+                Appointment Completed Successfully
+            {% endif %}
+          </h2>
+        </div>
+
+        <div class="appointment_id">
+
+          <p style="    color: #e03d39;
+          text-align: center;
+          margin: 6px 0px;"> Appointment ID:#000{{form.id}} </p>
+
+    </div>
+
+
+        <div class="page_desc">
+          <p>
+            We are thrilled to invite you to experience the wonders of our farm
+            through a live appointment. Immerse yourself in the beauty of
+            nature, witness sustainable farming practices in action, and
+            discover the incredible stories behind our farm's success.
+          </p>
+        </div>
+
+        <div class="appointment_status">
+          <div class="form_status_div">
+            <div
+              class="status_btn"
+              style="
+                {% if form.Status == "Pending" %}
+                background: #c1b527;
+                color: #ffffff;
+                {% elif form.Status == "Reject" %}
+                background: #b70000;
+                color: #ffffff;
+                {% else %}
+                background: #30a144;
+                color: #ffffff;
+                {% endif %}
+
+                width: fit-content;
+                padding: 9px 35px;
+                border-radius: 5px;
+                margin: 16px auto;
+                font-size: 18px;
+                font-family: sans-serif;
+                font-weight: bold;
+                text-transform: uppercase;
+              "
+            >
+              {{form.Status}}
+            </div>
+          </div>
+        </div>
+
+        {% if form.Status == "Booked" %}
+        <div
+            class="date_tabel_div"
+            style="border: 1px solid #d7d7d7; border-radius: 6px"
+            >
+            <div
+                class="confirm_time_div"
+                style="text-align: center; background: #30a144; padding: 15px 0px"
+            >
+                <p style="margin: 0px 0px; font-weight: bold; color: white">
+                Confirmed Time:
+                </p>
+                <p style="margin: 0px 0px; font-weight: bold; color: white">
+                  {{date_formet}} at {{time_12housr}}
+                </p>
+            </div>
+            <div class="user_details" style="padding: 10px 0px 0px 0px">
+                <p style="margin: 0px 0px; padding: 0px 8px; color: green">Arbab</p>
+                <p style="margin: 0px 0px; padding: 0px 8px; color: #515151">
+                baba walayat ali shah colony, karachi
+                </p>
+                <p style="margin: 0px 0px; padding: 0px 8px; color: #515151">
+                +92 343 343 343
+                </p>
+            </div>
+            <hr style="border: 1px solid #e7e7e7; margin: 9px 10px" />
+            <div class="user_details" style="padding: 0px 0px 10px 0px">
+                <p style="margin: 0px 0px; padding: 0px 8px; color: #515151">
+                Farm : Agriverse Farm 1
+                </p>
+                <p style="margin: 0px 0px; padding: 0px 8px; color: #515151">
+                Service: Live Farm Visit
+                </p>
+                <p style="margin: 0px 0px; padding: 0px 8px; color: #515151">
+                Duration: 30 Minutes
+                </p>
+                <p style="margin: 0px 0px; padding: 0px 8px; color: #515151">
+                Streaming Via : Drone 1
+                </p>
+          </div>
+        </div>
+        
+                <div class="save_date_in_google_calander" style="
+                margin: 22px 0px;
+            ">
+                        <div class="add_reminder_title">
+                            <p style="
+                font-weight: bold;    margin-bottom: 0px;
+            ">Add a reminder to your calendar:</p>
+                        </div>
+                        <hr style="
+                        border: 1px solid #e1e1e1;
+                        margin: 10px 0px;
+                    ">
+                        <div class="google_calander_btn" style="
+                background: #a50000;
+                width: fit-content;
+                margin: auto;
+                padding: 7px 23px;
+                border-radius: 4px;
+                cursor: pointer;
+            ">
+            <a href="https://calendar.google.com/calendar/u/0/r/eventedit?text=TheAgriverse Live Farm Appointment&amp;details=Farm Name:{{form.farm.Farm_Name}} , Number of Trees:{{form.farm.Number_of_trees}} , Duration:30 Minutes , District:{{form.farm.district}}&amp;location={{form.farm.location}}&amp;dates={{form.Appointment_Date|date:"Ymd"}}T{{form.Start_Appointment_Time|time:"his"}}Z/{{form.Appointment_Date|date:"Ymd"}}T{{form.End_Appointment_Time|time:"his"}}Z&amp;pli=1" style="text-decoration: none;color: white;"><p style="
+              display: inline-block;
+              margin: 2px 0px;
+              vertical-align: super;
+          ">Google Calendar</p> </a>
+                        </div>
+                    </div>
+         
+        {% endif %}
+
+        
+
+        <div class="page_map_container">
+          <div class="location_title">
+            <p style="font-size: 18px; margin: 5px 0px; font-weight: bold">
+              Farm Location
+            </p>
+          </div>
+          <div class="google_map_iframe">
+           
+            <a href="https://maps.google.com/maps?q={{form.farm.Map}}&hl=es;z=14">
+                <img src = "https://maps.googleapis.com/maps/api/staticmap?&zoom=13&size=400x250&maptype=roadmap
+    &markers=color:blue%7Clabel:S%7C{{form.farm.Map}}
+    &key=AIzaSyAbiWesdtKxt-XXHaZRr56a5N_kCndduK0"/>
+                </a>
+
+          </div>
+        </div>
+
+        <div class="farm_details">
+          <div class="farm_details_title">
+            <p style="font-size: 18px; margin: 5px 0px; font-weight: bold">
+              Farm Details
+            </p>
+          </div>
+          <table style="width: 100%; border-spacing: 0">
+            <tbody>
+              <tr>
+                <td
+                  style="
+                    border: 1px solid #dfdfdf;
+                    font-size: 14px;
+                    padding: 5px;
+                  "
+                >
+                  Farm Name:{{form.farm.Farm_Name}}
+                </td>
+                <td
+                  style="
+                    border: 1px solid #dfdfdf;
+                    font-size: 14px;
+                    padding: 5px;
+                  "
+                >
+                  Total Area : {{form.farm.total_area}}
+                </td>
+              </tr>
+              <tr>
+                <td
+                  style="
+                    border: 1px solid #dfdfdf;
+                    font-size: 14px;
+                    padding: 5px;
+                  "
+                >
+                  Contact Email: {{form.farm.Farm_contact_Email}}
+                </td>
+                <td
+                  style="
+                    border: 1px solid #dfdfdf;
+                    font-size: 14px;
+                    padding: 5px;
+                  "
+                >
+                  Number of Trees : {{form.farm.Number_of_trees}}
+                </td>
+              </tr>
+              <tr>
+                <td
+                  style="
+                    border: 1px solid #dfdfdf;
+                    font-size: 14px;
+                    padding: 5px;
+                  "
+                >
+                  Contact Phone : {{form.farm.Farm_contact_phone}}
+                </td>
+                <td
+                  style="
+                    border: 1px solid #dfdfdf;
+                    font-size: 14px;
+                    padding: 5px;
+                  "
+                >
+                  District : {{form.farm.district}}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="mail_footer" style="background: #e7e7e7;margin: 14px 0px;padding: 12px 0px;">
+            <div class="community-div" style="">
+              <div style="padding: 10px; text-align: center">
+                <a href="https://www.facebook.com/theagriverse/" target="_blank" class="community-circle"><img src="https://{{domain}}/static/app/img/facebook.png" alt="icon" style="width: 30px; height: 30px"></a>
+                <a href="https://instagram.com/theagriverse" target="_blank" class="community-circle"><img src="https://{{domain}}/static/app/img/instagram.png" alt="icon" style="width: 30px; height: 30px"></a>
+                <a href="https://www.linkedin.com/in/agriverse/" target="_blank" class="community-circle"><img src="https://{{domain}}/static/app/img/linkedin.png" alt="icon" style="width: 30px; height: 30px"></a>
+                <a href="https://twitter.com/TheAgriverse" target="_blank" class="community-circle"><img src="https://{{domain}}/static/app/img/twitter.png" alt="icon" style="width: 30px; height: 30px"></a>
+                <a href="https://youtube.com/channel/UCcstqRwtxzEJSz2ItuRdsSA" target="_blank" class="community-circle"><img src="https://{{domain}}/static/app/img/youtube.png" alt="icon" style="width: 30px; height: 30px"></a>
+              </div>
+            </div>
+  
+            <div class="footer_contect_details">
+              <p style="
+      text-align: center;
+      margin: 0px 0px;
+      color: #6e6e6e;
+  ">For More Information : info@agriverse.com</p>
+            </div>
+  
+            <div class="mail_footer_copyright">
+              <p style="
+      text-align: center;
+      margin: 3px 0px;
+      color: #6e6e6e;
+      font-size: 13px;
+  "> {% now "Y" as current_year %}
+  © AGRIVERSE {{current_year}}. All rights reserved</p>
+            </div>
+  
+          </div>
+      </div>
+    </div>
+  </body>
+</html>

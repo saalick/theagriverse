@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+
+<!-- Mirrored from IEPS.dreamguystech.com/html/register.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jan 2023 10:43:38 GMT -->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+<title>AGRIVERSE | Profile Setup</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="{% static 'app/img/main_logo.png' %} ">
+
+<link rel="stylesheet" href="/static/app/login_static/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="/static/app/login_static/plugins/fontawesome/css/fontawesome.min.css">
+<link rel="stylesheet" href="/static/app/login_static/plugins/fontawesome/css/all.min.css">
+
+<link rel="stylesheet" href="/static/app/login_static/css/owl.carousel.min.css">
+<link rel="stylesheet" href="/static/app/login_static/css/owl.theme.default.min.css">
+{% comment %}  {% endcomment %}
+<link rel="stylesheet" href="/static/app/login_static/plugins/feather/feather.css">
+
+<link rel="stylesheet" href="/static/app/login_static/css/style.css">
+<link rel="stylesheet" href="/static/admin/css/vendor/select2/select2.css">
+
+<style>
+
+    .pp_img_div {
+        width: 200px;
+        position: relative;
+        height: 113px;
+    }
+
+    #pp_img_tag{
+        border: 2px dashed #a4df64;
+        cursor: pointer;
+        height: 150px;
+        object-fit: cover;
+    }
+
+    .login_drop {
+        background: #d7d7d7;
+        color: black;
+    }
+
+    a.dropdown-item {
+        text-decoration: none;
+        margin: 0px 1px;
+    }
+ 
+    span.red_start {
+        color: red;
+    }
+
+    #form_loading{
+        display:none;
+    }
+
+
+    #user_pp_inp{
+        opacity: 0.0;
+        width: 110px;
+        position: absolute;
+        top: 0px;
+        left: 0;
+    }
+
+
+    .fixed_submit {
+        display: flex !important;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .Total_course_fee {
+        font-size: 14px;
+        color: #cb0000;
+        line-height: 13px;
+    }
+    
+    .course_fee_rs {
+        font-size: 15px;
+        font-family: sans-serif;
+        font-weight: bold;
+        line-height: 17px;
+    }
+
+
+    span.total_rs {
+        color: #68bc10;
+        font-size: 22px;
+    }
+    
+
+
+    .wallet_btn_inp {
+        display: flex;
+    }
+    button#connect-button{
+        white-space: nowrap;
+        /* background: #b7b9b5; */
+        background: linear-gradient(180deg, #e3e3e3 49.76%, rgb(157 150 150 / 82%) 100%);
+        border-radius: 0px 5px 5px 0px;
+        font-family: sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 17px;
+        color: #404040;
+        border: none;
+        /* height: 40px; */
+        padding: 12px 22px;
+        /* margin-right: 10px; */
+        display: flex;
+        align-items: center;
+        /* border: 1px solid #a4e064; */
+    }
+
+
+    .registration_submit_btn {
+        margin: 19px 0px;
+        width:100%;
+    }
+
+    .select2-container--default .select2-selection--single {
+        background-color: #fff;
+        border: 1px solid #92d337;
+        border-radius: 4px;
+    }
+
+    .select2-container .select2-selection--single {
+        box-sizing: border-box;
+        cursor: pointer;
+        display: block;
+        height: 50px;
+        user-select: none;
+        -webkit-user-select: none;
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__rendered {
+        color: #444;
+        line-height: 50px;
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__arrow {
+        height: 50px;
+        position: absolute;
+        top: 1px;
+        right: 5px;
+        width: 20px;
+    }
+
+
+    .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+      
+        padding: 0px;
+        
+    }
+
+
+    @media screen and (max-width:500px){
+        #pp_img_tag {
+            height: 125px;
+           
+        }
+
+
+        .fixed_submit{
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: white;
+            padding: 5px 14px;
+            box-shadow: 2px -5px 13px 0px #acacac;
+        }
+
+        .login-wrapper .loginbox {
+            padding: 15px 15px 60px 15px;
+        }
+
+        .registration_submit_btn {
+            margin: 0px 0px;
+        }
+
+
+
+    }
+
+
+</style>
+
+
+</head>
+<body>
+
+<div class="main-wrapper log-wrap">
+<div class="row">
+
+    <div class="col-md-6 login-bg">
+
+        <div class="welcome-login">
+        <div class="login-banner">
+        <img src="/static/app/login_static/img/REGISTRATION.png" class="img-fluid" alt="Logo">
+        </div>
+        <div class="mentor-course text-center">
+        <h2>Welcome to <br>Agriverse</h2>
+        {% comment %} <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p> {% endcomment %}
+        </div>
+        </div>
+        
+        
+        </div>
+
+<div class="col-md-6 login-wrap-bg">
+
+<div class="login-wrapper">
+<div class="loginbox">
+<div class="img-logo d-flex justify-content-between">
+<img src="/static/app/img/main_logo.png" class="img-fluid" alt="Logo">
+<div class="back-home mt-0">
+    <div class="dropdown">
+        <button class="btn login_drop dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa fa-user" aria-hidden="true"></i> Login as {{request.user.username}}
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" href="/"><i class="fa fa-home" aria-hidden="true"></i> Go Back</a></li>
+          <li><a class="dropdown-item text-danger" href="/logout/"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout </a></li>
+         
+        </ul>
+      </div>
+</div>
+</div>
+<h1>Agriverse Profile Setup</h1>
+<div class="msg">
+    {%if messages %}
+    {%for message in messages %}
+    {% load static %}
+
+
+    <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+        <strong></strong>{{message}}.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+    {%endfor%}
+    {%endif%}
+</div>
+<hr>
+<form method="POST" enctype="multipart/form-data" id="registration_form">
+{% csrf_token %}
+<div class="form-group d-flex align-items-center">
+<div class="name w-100 me-2">
+    <label class="form-control-label"><strong>First Name: <span class="red_start">*</span></strong></label>
+    <input type="text" name="Firstname" class="form-control" placeholder="Enter your First Name" required>
+</div>    
+
+<div class="pp_img_div">
+        <label class="form-control-label" for="user_pp_inp">
+            <div class="upload_image_placeholder" >
+                <img class='w-100' src="{% static 'app/login_static/img/user_placeholder.jpg' %}" id="pp_img_tag">
+               
+            </div>
+        </label>
+        <input type="file" accept="image/*" id="user_pp_inp" name="photo" required>
+</div>
+</div>
+
+<div class="form-group">
+    <label class="form-control-label"><strong>Last Name: </strong></label>
+    <input type="text" name="Lastname" class="form-control" placeholder="Enter your Last Name">
+</div>
+
+
+<div class="form-group">
+    <label class="form-control-label"><strong>Email Address: <span class="red_start">*</span></strong></label>
+    <input type="email" class="form-control" placeholder="Enter your Email address" value="{{request.user.email}}" required name="email">
+</div>
+
+<div class="form-group">
+    <label class="form-control-label"><strong>Select Time Zone: <span class="red_start">*</span></strong> </label>
+    <select class="form-control" name="time_zone" id="time_zone" required>
+        {% for tz in time_zone_list %}
+        
+        <option value="{{tz}}" >{{tz}}</option>
+      
+        {% endfor %}
+    </select>
+</div>
+
+<div class="form-group">
+<label class="form-control-label"><strong>Contact No: <span class="red_start">*</span> </strong></label>
+<input type="number" name="can_number" class="form-control" placeholder="Enter your Phone Number" required>
+</div>
+
+
+<div class="form-group">
+    <label class="form-control-label"><strong>Select Language: <span class="red_start">*</span> </strong> </label>
+    <select class="form-control" name="Language" id="Language_list" required>
+
+        <option value="af">Afrikaans</option>
+        <option value="sq">Albanian</option>
+        <option value="am">Amharic</option>
+        <option value="ar">Arabic</option>
+        <option value="hy">Armenian</option>
+        <option value="as">Assamese</option>
+        <option value="ay">Aymara</option>
+        <option value="az">Azerbaijani</option>
+        <option value="bm">Bambara</option>
+        <option value="eu">Basque</option>
+        <option value="be">Belarusian</option>
+        <option value="bn">Bengali</option>
+        <option value="bho">Bhojpuri</option>
+        <option value="bs">Bosnian</option>
+        <option value="bg">Bulgarian</option>
+        <option value="ca">Catalan</option>
+        <option value="ceb">Cebuano</option>
+        <option value="ny">Chichewa</option>
+        <option value="zh-CN">Chinese (Simplified)</option>
+        <option value="zh-TW">Chinese (Traditional)</option>
+        <option value="co">Corsican</option>
+        <option value="hr">Croatian</option>
+        <option value="cs">Czech</option>
+        <option value="da">Danish</option>
+        <option value="dv">Dhivehi</option>
+        <option value="doi">Dogri</option>
+        <option value="nl">Dutch</option>
+        <option value="en" selected>English</option>
+        <option value="eo">Esperanto</option>
+        <option value="et">Estonian</option>
+        <option value="ee">Ewe</option>
+        <option value="tl">Filipino</option>
+        <option value="fi">Finnish</option>
+        <option value="fr">French</option>
+        <option value="fy">Frisian</option>
+        <option value="gl">Galician</option>
+        <option value="ka">Georgian</option>
+        <option value="de">German</option>
+        <option value="el">Greek</option>
+        <option value="gn">Guarani</option>
+        <option value="gu">Gujarati</option>
+        <option value="ht">Haitian Creole</option>
+        <option value="ha">Hausa</option>
+        <option value="haw">Hawaiian</option>
+        <option value="iw">Hebrew</option>
+        <option value="hi">Hindi</option>
+        <option value="hmn">Hmong</option>
+        <option value="hu">Hungarian</option>
+        <option value="is">Icelandic</option>
+        <option value="ig">Igbo</option>
+        <option value="ilo">Ilocano</option>
+        <option value="id">Indonesian</option>
+        <option value="ga">Irish Gaelic</option>
+        <option value="it">Italian</option>
+        <option value="ja">Japanese</option>
+        <option value="jw">Javanese</option>
+        <option value="kn">Kannada</option>
+        <option value="kk">Kazakh</option>
+        <option value="km">Khmer</option>
+        <option value="rw">Kinyarwanda</option>
+        <option value="gom">Konkani</option>
+        <option value="ko">Korean</option>
+        <option value="kri">Krio</option>
+        <option value="ku">Kurdish (Kurmanji)</option>
+        <option value="ckb">Kurdish (Sorani)</option>
+        <option value="ky">Kyrgyz</option>
+        <option value="lo">Lao</option>
+        <option value="la">Latin</option>
+        <option value="lv">Latvian</option>
+        <option value="ln">Lingala</option>
+        <option value="lt">Lithuanian</option>
+        <option value="lg">Luganda</option>
+        <option value="lb">Luxembourgish</option>
+        <option value="mk">Macedonian</option>
+        <option value="mai">Maithili</option>
+        <option value="mg">Malagasy</option>
+        <option value="ms">Malay</option>
+        <option value="ml">Malayalam</option>
+        <option value="mt">Maltese</option>
+        <option value="mi">Maori</option>
+        <option value="mr">Marathi</option>
+        <option value="mni-Mtei">Meiteilon (Manipuri)</option>
+        <option value="lus">Mizo</option>
+        <option value="mn">Mongolian</option>
+        <option value="my">Myanmar (Burmese)</option>
+        <option value="ne">Nepali</option>
+        <option value="no">Norwegian</option>
+        <option value="or">Odia (Oriya)</option>
+        <option value="om">Oromo</option>
+        <option value="ps">Pashto</option>
+        <option value="fa">Persian</option>
+        <option value="pl">Polish</option>
+        <option value="pt">Portuguese</option>
+        <option value="pa">Punjabi</option>
+        <option value="qu">Quechua</option>
+        <option value="ro">Romanian</option>
+        <option value="ru">Russian</option>
+        <option value="sm">Samoan</option>
+        <option value="sa">Sanskrit</option>
+        <option value="gd">Scots Gaelic</option>
+        <option value="nso">Sepedi</option>
+        <option value="sr">Serbian</option>
+        <option value="st">Sesotho</option>
+        <option value="sn">Shona</option>
+        <option value="sd">Sindhi</option>
+        <option value="si">Sinhala</option>
+        <option value="sk">Slovak</option>
+        <option value="sl">Slovenian</option>
+        <option value="so">Somali</option>
+        <option value="es">Spanish</option>
+        <option value="su">Sundanese</option>
+        <option value="sw">Swahili</option>
+        <option value="sv">Swedish</option>
+        <option value="tg">Tajik</option>
+        <option value="ta">Tamil</option>
+        <option value="tt">Tatar</option>
+        <option value="te">Telugu</option>
+        <option value="th">Thai</option>
+        <option value="ti">Tigrinya</option>
+        <option value="ts">Tsonga</option>
+        <option value="tr">Turkish</option>
+        <option value="tk">Turkmen</option>
+        <option value="ak">Twi</option>
+        <option value="uk">Ukrainian</option>
+        <option value="ur">Urdu</option>
+        <option value="ug">Uyghur</option>
+        <option value="uz">Uzbek</option>
+        <option value="vi">Vietnamese</option>
+        <option value="cy">Welsh</option>
+        <option value="xh">Xhosa</option>
+        <option value="yi">Yiddish</option>
+        <option value="yo">Yoruba</option>
+        <option value="zu">Zulu</option>
+  
+    </select>
+</div>
+
+
+<div class="form-group">
+
+    <label class="form-control-label">Wallet Address : <span class="red_start">*</span> </label>
+    <div class="wallet_btn_inp">
+    <input type="text" class="form-control" placeholder="Connect Wallet" id="Wallet" name="Wallet" required>
+    <button type="button" class="wallet-cnt-btn" id="connect-button">CONNECT WALLET<img src="/static/app/img/connect-wallet.png" alt="Wallet-icon" /></button>
+    </div>
+
+</div>
+
+
+
+<div class="d-grid fixed_submit">
+
+<div class="course_fee">
+    {% comment %} <div class="course_fee_rs">Total Fee <span class="total_rs">Rs.<span id="fee_num"></span></span> </div>
+    <div class="Total_course_fee">Duration <span class="month_num"></span></div> {% endcomment %}
+</div>
+
+<button class="btn btn-primary btn-start submit registration_submit_btn" type="submit">
+    <div class="spinner-border spinner-border-sm " id="form_loading" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>Save Profile</button>
+
+</div>
+
+</form>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+
+<script src="/static/app/login_static/js/jquery-3.6.0.min.js"></script>
+
+<script src="/static/app/login_static/js/bootstrap.bundle.min.js"></script>
+
+<script src="/static/app/login_static/js/owl.carousel.min.js"></script>
+
+<script src="/static/app/login_static/js/validation.js"></script>
+
+<script src="/static/app/login_static/js/script.js"></script>
+
+<script src="/static/app/login_static/js/check_coupon_ajax.js"></script>
+<script src="/static/admin/js/vendor/select2/select2.full.js"></script>
+
+
+<script>
+
+    {% comment %} cnic back {% endcomment %}
+  window.addEventListener('load', function() {
+	document.getElementById('user_pp_inp').addEventListener('change', function() {
+		if (this.files && this.files[0]) {
+			var img = document.getElementById('pp_img_tag');
+			img.onload = () => {
+				URL.revokeObjectURL(img.src);  // no longer needed, free memory
+			}
+  
+			img.src = URL.createObjectURL(this.files[0]); // set src to blob url
+            $("#pp_img_tag").css({'border':'2px dashed #a4df64'})
+		}
+        else{
+            var img = document.getElementById('pp_img_tag');
+            img.src = '/static/app/login_static/img/user_placeholder.jpg'
+            $("#pp_img_tag").css({'border':'2px dashed #ff0000'})
+        }
+	});
+  });
+
+
+
+
+
+$(".submit").click(function(){
+
+       if($("#user_pp_inp").val() == '') {
+            $("#pp_img_tag").css({'border':'2px dashed #ff0000'})
+       }
+       else{
+        $("#pp_img_tag").css({'border':'2px dashed #a4df64'})
+       }
+
+      
+
+})
+
+
+
+document.getElementById('connect-button').addEventListener('click', event => {
+    let account;
+
+    ethereum.request({method: 'eth_requestAccounts'}).then(accounts => {
+      account = accounts[0];
+      console.log(account);
+      $("#Wallet").val(account)
+  
+    });
+
+    // ethereum.request({method: 'eth_getBalance' , params: [account, 'latest']}).then(result => {
+        //let wei = parseInt(result,16); 
+        //let balance = wei / (10**18);
+        //console.log(balance + " ETH");
+        //console.log(result);
+
+      
+      //}); 
+
+
+  });
+
+
+
+
+
+$('#registration_form').submit(function(){
+
+    $('#form_loading').css('display' , 'inline-block')
+    $(".registration_submit_btn").attr('disabled' , 'disabled')
+})
+
+
+$('select').select2()
+
+</script>
+
+
+</body>
+
+<!-- Mirrored from IEPS.dreamguystech.com/html/register.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jan 2023 10:43:38 GMT -->
+</html>

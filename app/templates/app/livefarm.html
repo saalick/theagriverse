@@ -1,0 +1,1249 @@
+
+{% extends 'app/dashboard_base.html' %}
+{% block title %}Live Farm{% endblock title %}
+{% block head %}
+{% load split %}
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+{% comment %} <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" /> {% endcomment %}
+
+<link rel="stylesheet" href="/static/app/css/L.switchBasemap.css">
+
+
+
+
+
+{% endblock head %}
+
+
+{% block css %}
+
+
+div#main_live_farm_map {
+    
+    width: auto;
+    height: 460px;
+}
+
+
+
+    
+
+.formbold-mb-5 {
+    margin-bottom: 20px;
+}
+.formbold-pt-3 {
+    padding-top: 12px;
+}
+.formbold-main-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    background: #f5f5f6;
+    border-radius: 6px;
+}
+
+.formbold-form-wrapper {
+    margin: 0 auto;
+   
+    width: 100%;
+   
+}
+.formbold-form-label {
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+    color: black;
+    margin-bottom: 12px;
+}
+.formbold-form-label-2 {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.formbold-form-input {
+    width: 100%;
+    padding: 12px 24px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+    background: white;
+    font-weight: 500;
+    font-size: 16px;
+    color: #6b7280;
+    outline: none;
+    resize: none;
+}
+.formbold-form-input:focus {
+    border-color: #78cb49;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.formbold-btn {
+    text-align: center;
+    font-size: 16px;
+    border-radius: 6px;
+    padding: 14px 32px;
+    border: none;
+    font-weight: 600;
+    background: linear-gradient(268.09deg, #A2D82C -32.92%, #11AB90 100%);
+    color: white;
+    width: 100%;
+    cursor: pointer;
+}
+.formbold-btn:hover {
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.formbold--mx-3 {
+    margin-left: -12px;
+    margin-right: -12px;
+}
+.formbold-px-3 {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+.flex {
+    display: flex;
+}
+.flex-wrap {
+    flex-wrap: wrap;
+}
+.w-full {
+    width: 100%;
+}
+
+
+.phone_num_div_and_email_div {
+  display: flex;
+  align-items: center;
+  margin: 10px 0px;
+}
+
+.confirmation_label > p {
+  margin: 0px;
+  font-size: 13px;
+  color: #489700;
+  font-weight: bold;
+}
+
+.confirmation_appointment {
+  margin: 20px 2px;
+}
+
+
+input[type="radio"] {
+	appearance: none;
+	width: 16px;
+	height: 16px;
+	border: 2px solid #555555;
+	border-radius: 50%;
+	background-clip: content-box;
+	padding: 3px;
+  margin-right: 3px;
+}
+
+input[type="radio"]:checked {
+  background-color: #3ea500;
+  border: 2px solid #1c7400;
+}
+
+
+#appointment_submit_loader{
+  display:none;
+}
+
+
+
+
+.select_camera:checked + .selcet_camera_label {
+  border: 2px solid #6bdd32;
+  border-radius: 6px;
+  background: #6ee5011a;
+}
+
+
+.select_camera {
+  display: none;
+}
+
+label.selcet_camera_label {
+  background: #f5f5f6;
+}
+
+.personal_inp {
+  width: 32%;
+}
+
+.Address_details_inp {
+  width: 24%;
+}
+
+.appointment_schedule_inp {
+  width: 49%;
+}
+
+.left_desc > p {
+  margin: 3px 0px;
+  font-size: 14px;
+  padding: 0px 16px;
+}
+
+
+.card {
+  background: #f5f5f6;
+  border-radius: 4px;
+  box-shadow: none;
+  display: flex;
+  flex-direction: row;
+  border-radius: 25px;
+  position: unset;
+  border: 1px solid #ededed;
+}
+
+.confirmation_email , .confirmation_phone {
+  display: flex;
+  align-items: center;
+}
+
+
+.empty_appoint_list {
+  background: white;
+  padding: 60px 10px;
+  border-radius: 10px;
+}
+
+.icon_div {
+  font-size: 135px;
+  text-align: center;
+  color: #cdcdcd;
+  height: 200px;
+}
+
+
+.appointmrny_msg_list > h4 {
+  text-align: center;
+  margin: 4px;
+  font-size: 20px;
+}
+
+.appointmrny_msg_list > p {
+  font-size: 15px;
+  text-align: center;
+  color: #a1a1a1;
+  padding: 0px 14px;
+}
+
+
+
+.appoint_userName > p {
+  margin: 0px 0px;
+  text-transform: capitalize;
+  line-height: 0.9;
+}
+
+.user_icon_for_app {
+  display: flex;
+  align-items: center;
+}
+
+
+
+.mobile_create_appointment_btn{
+  display:none;
+}
+
+
+button.create_appointment_btn {
+  border: none;
+  width: 100%;
+  height: 45px;
+  border-radius: 6px;
+  background: linear-gradient(268.09deg, #A2D82C -32.92%, #11AB90 100%);
+  color: whitesmoke;
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+.booked_date > small {
+  font-size: 13px;
+}
+
+
+.profile_img > img {
+  width: 35px;
+  height: 35px;
+  margin-right: 6px;
+}
+
+
+
+.farm_msg_txt > p {
+  margin: 0px 0px;
+  color: #ff5b5b;
+  font-size: 14px;
+  font-family: sans-serif;
+}
+
+@media (min-width: 540px) {
+    .sm\:w-half {
+    width: 50%;
+    }
+}
+
+
+
+
+@media screen and (max-width:990px){
+  .title-total{
+    display:block;
+  }
+  .card .desc {
+    border-left: none;
+    border-top: 1px solid #646464;
+  }
+
+
+
+
+  
+
+  .main-swap-img {
+    width: 25px;
+    height: 25px;
+    margin-right: 6px;
+}
+
+
+.livefarm-greet-div {
+  display: block;
+  margin: 0px 0px;
+}
+
+.user-greet-div>div:first-of-type {
+  margin: 0px 0px;
+}
+
+
+  .camera_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    grid-auto-rows: minmax(100px, auto);
+  }
+
+  .farm_search_form_div {
+    width: 100%;
+}
+
+input#farm_search_id {
+
+  width: 100%;
+}
+
+
+.Appointment_main_div .flex {
+  display: block;
+}
+
+.personal_inp {
+  width: auto;
+}
+
+.appointment_schedule_inp {
+  width: auto;
+}
+
+.Address_details_inp {
+  width: auto;
+}
+
+
+
+
+
+
+
+}
+
+
+button#mobile_appoinment_form_slide_close {
+  background: #970000;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  padding: 13px 17px;
+  margin-right: 9px;
+  display:none;
+}
+
+
+@media screen and (max-width:600px){
+
+  .bottom_submit_btn{
+    position: fixed;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 4px 10px;
+    bottom: 0;
+    box-shadow: 5px -1px 14px 3px #cfcfcf;
+    display: flex;
+    align-items: center;
+  }
+
+
+  .row.mt-2.livefarm-main {
+    position: absolute;
+    left: 0px;
+    
+    width: auto;
+    z-index: 2000;
+    background: white;
+    top: 52px;
+    margin: 0px;
+    transform: translateX(-600px);
+    padding: 12px 0px;
+    transition: transform .3s ease-in-out;
+}
+
+
+.mobile_create_appointment_btn{
+  display:block;
+  margin: 17px 0px;
+ 
+}
+
+
+.middle {
+
+  min-height: auto;
+  position:unset;
+  
+}
+
+button#mobile_appoinment_form_slide_close {
+
+  display:flex;
+}
+
+
+}
+
+
+/*
+@media screen and (max-width:500px){
+
+
+  
+.mobile_create_appointment_btn{
+  display:flex;
+}
+
+
+
+
+.middle {
+
+  min-height: auto;
+}
+
+
+  div#main_live_farm_map {
+    position: fixed;
+    height: 92%;
+    top: 61px;
+    bottom: 0;
+    width: 100%;
+    left: -500px;
+    right: 0;
+    transition: 500ms;
+    z-index: 20;
+  }
+  
+
+ 
+  
+  
+  .Appointment_details_card {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    right: 0;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 250ms;
+  }
+  
+  
+  .camera_main_div {
+    position: fixed;
+    top: 0;
+    left: -500%;
+    right: 0;
+    width: 100%;
+    transition: 500ms;
+  }
+  
+  .Appointment_main_div {
+    position: absolute;
+    left: -500px;
+    right: 0;
+    width: 100%;
+    top: -15px;
+    background: black;
+    padding: 12px 10px;
+    transition: 500ms;
+  }
+
+
+  .farm_details_card_bg {
+    position: fixed;
+    background: #000000a6;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 22;
+    display: none;
+}
+  
+
+
+} */
+
+
+{% endblock css %}
+
+
+{% block body %}
+
+<div class="middle">
+  <div class="livefarm-greet-div user-greet-div">
+    <div class="">
+        <img
+        src="/static/app/img/livefarm-icon.png"
+        alt="icon"
+        class="main-swap-img"
+        />
+        <div class="swap-head">Live farm</div>
+      </div>
+    <div class="livefarm-top">
+      <!-- <form action="" class="w-100">
+        <div class="farm_form_child_container">
+          <div class="farm_search_form_div">
+            <input type="text" name="farm_query" placeholder="Search Farm " id="farm_search_id" class="farm_search_inp">
+        </div>
+        <button type="submit" class="btn done-btn">Search</button>
+
+        </div>
+      </form> -->
+    </div>
+  </div>
+  <div class="mobile_create_appointment_btn">
+    <div class="create_appointment_btn_div">
+    <button class="create_appointment_btn" id="mobile_create_appointment_btn_id"><i class="bi bi-wifi"></i> Make A Live Appointment</button>
+    </div>
+  </div>
+
+    <div class="row mt-2 livefarm-main">
+    <form action="" method="post" id="main_appointment_farm">
+      <input type="hidden" name="Farm_id" id="farm_id_inp" required>
+      {% csrf_token %}
+    <div class="row">
+      <div class="col-md-12">
+        <div class="farm_msg_txt" id="map_foucs_id">
+          <p></p>
+        </div>
+      </div>
+      <div class="col-md-12">
+          <div class="map_div_container" id="main_live_farm_map"></div>
+      </div>
+    </div>
+
+    <div class="farm_details_card_bg">
+
+    </div>
+
+
+    <div class="row" id="selected_farm_container">  
+      
+  </div>
+
+    <div class="row">
+      <div class="col-12 col-md-12 camera_main_div">
+          <p class="cameraselect-head">SELECT A CAMERA <span class="required_star">*</span> </p>
+          <div class="camera_container">
+
+            <input type="radio" name="select_camera" class="select_camera" checked value="Drone 1" id="select_camera_1">
+            <label for="select_camera_1" class="selcet_camera_label">
+              <div id="cam1" class="col-md-5 cameraselect-div">
+                <div><img src="/static/app/img/drone-1.png" alt="drone" /></div>
+                <p>Drone 1</p>
+              </div>
+            </label>
+            
+            <input type="radio" name="select_camera" class="select_camera" value="Drone 2" id="select_camera_2">
+            <label for="select_camera_2" class="selcet_camera_label">
+              <div id="cam2" class="col-md-5 cameraselect-div">
+                <div><img src="/static/app/img/drone-2.png" alt="drone" /></div>
+                <p>Drone 2</p>
+              </div>
+            </label>
+      
+            <input type="radio" name="select_camera" class="select_camera" value="Drone 3" id="select_camera_3">
+            <label for="select_camera_3" class="selcet_camera_label">
+              <div id="cam3" class="col-md-5 cameraselect-div">
+                <div><img src="/static/app/img/drone-3.png" alt="drone" /></div>
+                <p>Drone 3</p>
+              </div>
+            </label>
+
+            <input type="radio" name="select_camera" class="select_camera" value="Camera 1" id="select_camera_4">
+            <label for="select_camera_4" class="selcet_camera_label">
+              <div id="cam4" class="col-md-5 cameraselect-div">
+                <div><img src="/static/app/img/cam-1.png" alt="camera" /></div>
+                <p>cam 1</p>
+              </div>
+            </label>
+              
+          </div>
+
+          <!-- <div class="Appointment_details_card">
+            
+            <div class="card_heading_div">
+              <p class="cameraselect-head">Appointment Details</p>
+            </div>
+
+            <div class="appointment_details_content">
+              <div class="card">
+                <div class="img-avatar">
+                <img src="/static/app/img/logo.png" alt="">
+                </div>
+                <div class="card-text">
+                  <div class="portada" style="background-image: url(/static/app/img/pngwing1.png);">
+                  
+                  </div>
+                  <div class="title-total">   
+                    <div class="title">District: Bangalore Rural</div>
+                    <h2>Agriverse Farm</h2>
+                
+                <div class="desc">
+
+                  <p>Plot NO# : <span>340</span> </p>
+                  <p>Date: <span>14-04-2023 10:00PM</span> </p>
+                  <hr>
+                  <div><small>Notification:</small></div>
+                  <p>Phone: <span>032423423423</span> </p>
+                  <p>OR</p>
+                  <p>Email: <span>Email@gmail.com</span> </p>
+
+
+                </div>
+                <div class="actions">
+                
+                </div>
+                </div>
+              
+                </div>
+                
+              
+                
+              </div>
+            </div>
+
+
+          </div> -->
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-md-12 Appointment_main_div">
+          <p class="cameraselect-head">SCHEDULE A VISIT</p>
+          <div class="calendar-main">
+              <div class="formbold-main-wrapper">
+                  <!-- Author: FormBold Team -->
+                  <!-- Learn More: https://formbold.com -->
+                  <div class="formbold-form-wrapper">
+                    <form action="https://formbold.com/s/FORM_ID" method="POST">
+                      <div class="flex flex-wrap justify-content-between">
+                        <div class="formbold-mb-5 personal_inp">
+                          <label for="name" class="formbold-form-label"> Full Name <span class="required_star">*</span> </label>
+                          <input
+                            type="text"
+                            name="fullname"
+                            id="name"
+                            placeholder="Full Name"
+                            class="formbold-form-input" required
+                          />
+                        </div>
+                        <div class="formbold-mb-5 personal_inp">
+                          <label for="phone" class="formbold-form-label"> Phone Number <span class="required_star">*</span></label>
+                          <input
+                            type="text"
+                            name="phone"
+                            id="phone"
+                            placeholder="Enter your phone number"
+                            class="formbold-form-input" required
+                          />
+                        </div>
+                        <div class="formbold-mb-5 personal_inp">
+                          <label for="email" class="formbold-form-label"> Email Address <span class="required_star">*</span> </label>
+                          <input
+                            type="email"
+                            name="email"
+                            id="email"
+                            placeholder="Enter your email"
+                            class="formbold-form-input" required
+                          />
+                        </div>
+                      </div>
+                      <div class="flex flex-wrap justify-content-between">
+                        <div class="appointment_schedule_inp">
+                          <div class="formbold-mb-5 w-full">
+                            <label for="date" class="formbold-form-label"> Date <span class="required_star">*</span></label>
+                            <input
+                              type="date"
+                              name="date"
+                              id="appointment_date"
+                              class="formbold-form-input" required
+                            />
+                          </div>
+                        </div>
+                        <div class="appointment_schedule_inp">
+                          <div class="formbold-mb-5">
+                            <label for="time" class="formbold-form-label"> Time <span class="required_star">*</span></label>
+                            <input
+                              type="time"
+                              name="time"
+                              id="appointment_time"
+                              class="formbold-form-input" required
+                            />
+                          </div>
+                        </div>
+
+
+                        
+                      </div>
+                      <div class="appointment_note">
+                        <small><span>Note:</span> Live Visit Only 30 Minutes Allow</small>
+                      </div>
+                      <hr>
+                      <div class="formbold-mb-5 formbold-pt-3">
+                        <label class="formbold-form-label formbold-form-label-2">
+                          Address Details (Optional)
+                        </label>
+                        <div class="flex flex-wrap justify-content-between">
+                          <div class="Address_details_inp">
+                            <div class="formbold-mb-5">
+                              <input
+                                type="text"
+                                name="address"
+                                id="area"
+                                placeholder="Enter Address"
+                                class="formbold-form-input"
+                              />
+                            </div>
+                          </div>
+                          <div class="Address_details_inp">
+                            <div class="formbold-mb-5">
+                              <input
+                                type="text"
+                                name="city"
+                                id="city"
+                                placeholder="Enter city"
+                                class="formbold-form-input"
+                              />
+                            </div>
+                          </div>
+                          <div class="Address_details_inp">
+                            <div class="formbold-mb-5">
+                              <input
+                                type="text"
+                                name="state"
+                                id="state"
+                                placeholder="Enter state"
+                                class="formbold-form-input"
+                              />
+                            </div>
+                          </div>
+                          <div class="Address_details_inp">
+                            <div class="formbold-mb-5">
+                              <input
+                                type="text"
+                                name="post_code"
+                                id="post-code"
+                                placeholder="Post Code"
+                                class="formbold-form-input"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+                          <div class="confirmation_appointment">
+                            <div class="confirmation_label">
+                              <p >Confirmation:</p>
+                            </div>
+                            <div class="phone_num_div_and_email_div">
+    
+                                <div class="confirmation_email  me-3">
+                                  <input type="radio" name="confirmation" checked class="confirmation_inp" id="confirmation_inp_Email">
+                                  <label for="confirmation_inp_Email">Email</label>
+                                </div>
+    
+                                <div class="confirmation_phone">
+                                  <input type="radio" name="confirmation" class="confirmation_inp" id="confirmation_inp_phone">
+                                  <label for="confirmation_inp_phone">Phone</label>
+                                </div>
+    
+    
+                            </div>
+                          </div>
+                    
+                          <div class="bottom_submit_btn">
+                            <button type="button" id="mobile_appoinment_form_slide_close" class="mobile_appoinment_form_slide_close  align-items-center">
+                              <i class="bi bi-x-circle-fill me-1"></i> Close
+                            </button>
+                            <button type="submit" id="main_farm_appointment_form_btn" class="formbold-btn">
+                            <div class="spinner-border spinner-border-sm" id="appointment_submit_loader" role="status">
+                              <span class="visually-hidden">Loading...</span>
+                            </div> 
+                            Book Appointment</button>
+                          </div>
+
+
+
+
+
+                    </form>
+                  </div>
+                </div>
+          </div>
+      </div>
+    </div>
+
+    
+  </form>
+  </div>
+    
+</div>
+
+
+
+<div class="right">
+
+    {% if appointment_booked or appointment_complate %}
+    
+    {% if appointment_booked %}
+
+    <p class="livefarm-right-p">Scheduled Visits</p>
+    <div class="nft-holder-div">
+    {% for i in appointment_booked  %}
+    <div class="nft-holder-item">
+
+      <div class="appointment_list_items">
+        <div class="user_icon_for_app">
+          <div class="profile_img">
+            <img src="/static/app/img/user_placeholder.png" alt="">
+          </div>
+
+          <div class="appoint_details">
+            <div class="appoint_userName">
+              <p>{{i.Full_Name}}</p>
+            </div>
+            <div class="booked_date">
+              <small>{{i.Appointment_Date}} At {{i.Start_Appointment_Time}}</small>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="appoint_status_badge">
+          <span class="badge rounded-pill text-bg-danger">{{i.Status}}</span>
+        </div>
+
+
+      </div>
+
+    </div>
+
+    {% endfor %}
+    </div>
+
+    {% endif %}
+
+
+    {% if appointment_complate %}
+    <p class="livefarm-right-p">Completed Visits</p>
+    <div class="nft-holder-div">
+      {% for i in appointment_complate  %}
+    <div class="nft-holder-item">
+
+      <div class="appointment_list_items">
+        <div class="user_icon_for_app">
+          <div class="profile_img">
+            <img src="/static/app/img/user_placeholder.png" alt="">
+          </div>
+
+          <div class="appoint_details">
+            <div class="appoint_userName">
+              <p>{{i.Full_Name}}</p>
+            </div>
+            <div class="booked_date">
+              <small>{{i.Appointment_Date}} At {{i.End_Appointment_Time}}</small>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="appoint_status_badge">
+          <span class="badge rounded-pill text-bg-success">{{i.Status}}</span>
+        </div>
+
+
+      </div>
+
+    </div>
+
+    {% endfor %}
+    </div>
+    {% endif %}
+
+    {% else %}
+    
+    <div class="empty_title">
+      <p>Appointment is Empty</p>
+    </div>
+    <div class="empty_appoint_list">
+      <div class="appointment_empty_icon">
+        <div class="icon_div">
+          <i class="bi bi-list-columns"></i>
+        </div>
+      </div>
+
+      <div class="appointmrny_msg_list">
+        <h4>Empty List</h4>
+        <p>Please fill out the appointment form below as soon as possible. It's free.</p>
+      </div>
+
+
+
+    </div>
+
+
+
+
+
+
+    {% endif %}
+
+
+</div>
+
+{% endblock body %}
+
+
+
+{% block js %}
+
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+{% comment %} <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script> {% endcomment %}
+
+<script src="/static/app/js/L.switchBasemap.js" ></script>
+<script src="/static/app/js/live_farm_map.js"></script>
+
+
+
+
+
+<script>
+
+
+
+var all_farm = {
+  "type": "FeatureCollection",
+  "features": [
+    {% for i in all_farm %}
+    {
+      "type": "Feature",
+      "properties": {
+        "farm_id": {{i.id}},
+        "farm_name":"{{i.Farm_Name}}",
+        "farm_area":"{{i.total_area}}",
+        "farm_district":"{{i.district}}",
+        "farm_latlng":"{{i.Map}}",
+        "farm_Number_of_trees":"{{i.Number_of_trees}}",
+        "farm_logo":"/media/{{i.Farm_logo}}",
+        "Land_Type":"{{i.Land_Type}}",
+        "Farm_contact_Email":"{{i.Farm_contact_Email}}",
+        "Farm_contact_phone":"{{i.Farm_contact_phone}}",
+        "location":"{{i.location}}"
+
+
+
+      },
+      "geometry": {
+        "coordinates": [
+        {% with i.Map|split:',' as latlng %}
+          {{latlng.1}} , {{latlng.0}}
+        {% endwith %},
+         
+        ],
+        "type": "Point"
+      }
+    },
+    {% endfor %}
+  
+  ]
+}
+var farm_marker = L.icon({
+  iconUrl: '/static/app/img/farm_marker.png',
+  iconSize: [40, 60]
+});
+
+L.geoJSON(all_farm, {
+  onEachFeature: function(feature,layer){
+    layer.bindPopup(`<div class="d-flex align-items-center"><div class="farm_logo"><img class="farm_map_point_popup_logo" src="${feature.properties.farm_logo}" alt="logo"></div><h4 style="font-size: 20px;" class="m-0">${feature.properties.farm_name}</h4></div><p class="my-2">Total Area: ${feature.properties.farm_area}</p><p class="my-2">District: ${feature.properties.farm_district}</p><p class="my-2">Number of Trees: ${feature.properties.farm_Number_of_trees}</p><button type="button" class="show_plot btn btn-secondary" id="show_farm_plot" data-farmid="${feature.properties.farm_id}" data-farmname="${feature.properties.farm_name}"
+    data-district="${feature.properties.farm_district}"
+    data-area="${feature.properties.farm_area}"
+    data-numberoftrees="${feature.properties.farm_Number_of_trees}"
+    data-logo="${feature.properties.farm_logo}"
+    data-landtype="${feature.properties.Land_Type}"
+    data-contactemail="${feature.properties.Farm_contact_Email}
+    "
+    data-contactphone="${feature.properties.Farm_contact_phone}"
+    data-location="${feature.properties.location}"
+    >Select Farm</button>`)
+    
+    },
+  pointToLayer: function (feature, latlng) {
+      return L.marker(latlng , {icon:farm_marker}).addTo(map);
+  }
+}).addTo(map);
+
+
+</script>
+
+
+<!-- mobile animation script  -->
+
+
+<script>
+
+
+$("#mobile_create_appointment_btn_id").click(function(){
+
+  
+    $(".row.mt-2.livefarm-main").css({"transform":"unset"})
+ 
+
+
+  
+});
+
+
+$("#mobile_appoinment_form_slide_close").click(function(){
+  $(".row.mt-2.livefarm-main").css({"transform":"translateX(-650px)"})
+  
+  // setTimeout(function(){
+  //   $(".row.mt-2.livefarm-main").css({"display":"none"})
+  // },200)
+})
+
+
+
+$("body").on("click", ".show_plot", function(){
+  $(this).html('Selected <i class="bi bi-check-circle-fill"></i>')
+  $(this).css({"background":"#267e1a"})
+  $("#farm_id_inp").val($(this).data('farmid'))
+  var selected_farm_card = `  <div class="Appointment_details_card">
+    
+    <div class="card_heading_div">
+      <p class="cameraselect-head">Selected Farm Details</p>
+    </div>
+
+    <div class="appointment_details_content">
+      <div class="card">
+        
+        <div class="card-text">
+          
+          
+          <div class="title-total">   
+            <div class="left_desc">
+            <h2 class="d-flex align-items-center">
+              <div class="img-avatar">
+              <img src="${$(this).data('logo')}" alt="">
+              </div> 
+              ${$(this).data('farmname')}</h2>
+            <p>Email: <span>${$(this).data('contactemail')}</span> </p>
+            <p>Phone: <span>${$(this).data('contactphone')}</span> </p>
+          </div> 
+        
+        <div class="desc">
+          <div class="title">District: ${$(this).data('district')}</div>
+          
+          <div><small>Details:</small></div>
+          <p>Total Area: <span>${$(this).data('area')}</span> </p>
+          <p>Number_of_trees: <span>${$(this).data('numberoftrees')}</span> </p>
+          <P>Location: <span>${$(this).data('location')}</span></P>
+          <p>Land Type : <span>${$(this).data('landtype')}</span></p>
+
+
+        </div>
+        
+        </div>
+      
+        </div>
+        
+      
+        
+      </div>
+    </div>
+
+
+    </div> `
+
+
+    $("#selected_farm_container").html(selected_farm_card)
+    // $(".farm_details_card_bg").css({'display':'block'})
+    // $(".cameraselect-head").hide()
+    // $(".Appointment_details_card").css({"transform":"translate(-50%, -50%) scale(1)" , "z-index":"24"})
+
+})
+
+
+
+$(function(){
+    var dtToday = new Date();
+
+    var month = dtToday.getMonth() + 1;
+    var day = dtToday.getDate();
+    var year = dtToday.getFullYear();
+    if(month < 10)
+        month = '0' + month.toString();
+    if(day < 10)
+        day = '0' + day.toString();
+
+    var minDate= year + '-' + month + '-' + day;
+
+    $('#appointment_date').attr('min', minDate);
+});
+
+
+
+$("#main_farm_appointment_form_btn").click(function(e){
+  
+  var get_farm_select  = $("#farm_id_inp").val()
+  console.log(get_farm_select)
+  if (get_farm_select == ''){
+    e.preventDefault()
+    $(".farm_msg_txt > p").html("<i class='bi bi-info-circle-fill'></i> Please Select Farm Point !")
+    $("#main_live_farm_map").css({"border": "1px solid #fd0000"})
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+    setTimeout(function(){
+      $(".farm_msg_txt > p").hide()
+      $("#main_live_farm_map").css({"border": "none"})
+    },10000)
+    
+  }
+
+
+  $("#main_appointment_farm").submit(function(){
+    $("#appointment_submit_loader").css({'display':'inline-block'})
+    $("#main_farm_appointment_form_btn").attr('disabled' , 'disabled')
+    
+  })
+  
+
+})
+
+
+
+
+
+
+
+function tConvert (time) {
+  // Check correct time format and split into components
+  time = time.toString ().match (/^([01]\d|2[0-3])(:)([0-5]\d)(:[0-5]\d)?$/) || [time];
+
+  if (time.length > 1) { // If time format correct
+    time = time.slice (1);  // Remove full string match value
+    time[5] = +time[0] < 12 ? 'AM' : 'PM'; // Set AM/PM
+    time[0] = +time[0] % 12 || 12; // Adjust hours
+  }
+  return time.join (''); // return adjusted time or original string
+}
+
+
+
+
+$('#appointment_date , #appointment_time').change(function(){
+
+    var _date = $("#appointment_date").val()
+    var _time = $("#appointment_time").val()
+
+    
+
+    if (_date && _time){
+
+      $.ajax({
+        url:'/appointment_check_api/',
+        data:{
+          date:_date,
+          time:_time
+        },
+        datatype:'json',
+        beforeSend:function(){
+          $(".appointment_note > small").html(`<span><div class="spinner-border spinner-border-sm" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div> Loading... </span>`)
+        },
+        success:function(res){
+          
+          if(res.data == 'appointment_available'){
+            $(".appointment_note > small").html(`<span style="color: green;"><i class="bi bi-check-circle-fill"></i> <span>Appointment Are Available for ${res.ava_date} at ${res.time_12housr} </span></span>`)
+            $("#main_farm_appointment_form_btn").removeAttr('disabled')
+          }
+
+          else if (res.data == 'appointment_not_available'){
+            $(".appointment_note > small").html(`<span style="color: red;"><i class="bi bi-x-circle-fill"></i> <span>Appointment Already Booked for ${res.ava_date} at ${res.time_12housr} </span></span>`)
+            $("#main_farm_appointment_form_btn").attr('disabled' , 'disabled')
+          }
+          else{
+            $(".appointment_note > small").html(`<span style="color: red;"><i class="bi bi-x-circle-fill"></i> <span> Unknow Error </span></span>`)
+            $("#main_farm_appointment_form_btn").attr('disabled' , 'disabled')
+          }
+
+        }
+
+
+      })
+
+    }
+
+
+
+})
+
+
+
+
+</script>
+
+
+
+
+
+
+{% endblock js %}
